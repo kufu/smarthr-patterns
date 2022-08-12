@@ -1,3 +1,6 @@
 module.exports = {
-  extends: "smarthr",
-};
+  extends: 'smarthr',
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+  },
+}
