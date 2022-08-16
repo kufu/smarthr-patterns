@@ -9,94 +9,71 @@ const Wrapper = styled(Stack)`
   `}
 `
 
-type DeleteDialogProps = {
-  objectName: string
-  objectInstanceName: string
-  relatedObjectName?: string
-  childObjectName?: string
+type DialogProps = {
+  isOpen: boolean
+  handleAction: () => void
+  handleClose: () => void
 }
 
-const Template: Story<DeleteDialogProps> = ({ objectName, objectInstanceName, relatedObjectName, childObjectName }) => {
-  const [isOpen, setIsOpen] = useState(true)
-  const handleClose = () => setIsOpen(false)
-
-  const hasEffects = relatedObjectName || childObjectName
-
+const DeleteDialog: React.FC<DialogProps> = ({ isOpen, handleAction, handleClose }) => {
   return (
     <ActionDialog
       isOpen={isOpen}
-      title={`${objectName}を削除しますか？`}
+      title="{オブジェクト名}を削除しますか？"
       actionText="削除"
       actionTheme="danger"
-      onClickAction={() => ({})}
+      onClickAction={handleAction}
       onClickClose={handleClose}
       onClickOverlay={handleClose}
     >
       <Wrapper>
-        <Text as="p">
-          【{objectInstanceName}】を削除します。
-          {relatedObjectName && (
-            <>
-              <br />
-              {relatedObjectName}に登録されているデータも削除されます。
-            </>
-          )}
-          {childObjectName && (
-            <>
-              <br />
-              {objectInstanceName}に含まれる{childObjectName}も削除されます。
-            </>
-          )}
-          {hasEffects && (
-            <>
-              <br />
-              削除した{objectName}は元に戻せません。
-            </>
-          )}
-        </Text>
-        {hasEffects && <Text as="p">{objectName}を削除しますか？</Text>}
+        <Text as="p">【{'{オブジェクトのインスタンス名}'}】を削除します。</Text>
       </Wrapper>
     </ActionDialog>
   )
 }
 
-export const Default = Template.bind({})
-Default.args = {
-  objectName: '{オブジェクト名}',
-  objectInstanceName: '{オブジェクトのインスタンス名}',
-  relatedObjectName: '',
-  childObjectName: '',
-}
-Default.storyName = '基本'
-
-export const HasEffect = Template.bind({})
-HasEffect.args = {
-  ...Default.args,
-  relatedObjectName: '{関連するオブジェクト名など}',
-  childObjectName: '{オブジェクト名}',
-}
-HasEffect.storyName = '影響範囲がある場合'
-
-type CancelDialogProps = {
-  operationName: string
-}
-
-const CancelTemplate: Story<CancelDialogProps> = ({ operationName }) => {
-  const [isOpen, setIsOpen] = useState(true)
-  const handleClose = () => setIsOpen(false)
+const DeleteWithEffectsDialog: React.FC<DialogProps> = ({ isOpen, handleAction, handleClose }) => {
   return (
     <ActionDialog
       isOpen={isOpen}
-      title={`${operationName}を取り消しますか？`}
-      actionText="取り消し"
+      title="{オブジェクト名}を削除しますか？"
+      actionText="削除"
       actionTheme="danger"
-      onClickAction={() => ({})}
+      onClickAction={handleAction}
       onClickClose={handleClose}
       onClickOverlay={handleClose}
     >
       <Wrapper>
         <Text as="p">
-          {operationName}を取り消します。
+          【{'{オブジェクトのインスタンス名}'}】を削除します。
+          <br />
+          {'{関連するオブジェクト名など}'}に登録されているデータも削除されます。
+          <br />
+          {'{オブジェクトのインスタンス名}'}に含まれる{'{オブジェクト名}'}も削除されます。
+          <br />
+          削除した{'{オブジェクト名}'}は元に戻せません。
+        </Text>
+        <Text as="p">{'{オブジェクト名}'}を削除しますか？</Text>
+      </Wrapper>
+    </ActionDialog>
+  )
+}
+
+const CancelDialog: React.FC<DialogProps> = ({ isOpen, handleAction, handleClose }) => {
+  return (
+    <ActionDialog
+      isOpen={isOpen}
+      title="{操作名}を取り消しますか？"
+      actionText="取り消し"
+      actionTheme="danger"
+      onClickAction={handleAction}
+      onClickClose={handleClose}
+      onClickOverlay={handleClose}
+    >
+      <Wrapper>
+        <Text as="p">
+          {'{操作名}'}を取り消します。
           <br />
           「取り消し」を押すと変更内容が破棄されます。
         </Text>
@@ -105,8 +82,30 @@ const CancelTemplate: Story<CancelDialogProps> = ({ operationName }) => {
   )
 }
 
-export const Cancel = CancelTemplate.bind({})
-Cancel.args = { operationName: '{操作名}' }
+type StoryProps = {
+  hasEffect?: boolean
+  cancel?: boolean
+}
+
+const Template: Story<StoryProps> = ({ hasEffect, cancel }) => {
+  const [isOpen, setIsOpen] = useState(true)
+  const handleClose = () => setIsOpen(false)
+  const handleAction = () => null
+
+  if (hasEffect) return <DeleteWithEffectsDialog isOpen={isOpen} handleAction={handleAction} handleClose={handleClose} />
+  if (cancel) return <CancelDialog isOpen={isOpen} handleAction={handleAction} handleClose={handleClose} />
+  return <DeleteDialog isOpen={isOpen} handleAction={handleAction} handleClose={handleClose} />
+}
+
+export const Default = Template.bind({})
+Default.storyName = '基本'
+
+export const HasEffect = Template.bind({})
+HasEffect.args = { hasEffect: true }
+HasEffect.storyName = '影響範囲がある場合'
+
+export const Cancel = Template.bind({})
+Cancel.args = { cancel: true }
 Cancel.storyName = '取り消しダイアログ'
 
 export default {
