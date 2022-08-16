@@ -1,12 +1,16 @@
 {
   "name": "smarthr-patterns",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "dev": "run-s storybook",
     "storybook": "start-storybook -p 8008",
     "build-storybook": "build-storybook",
-    "lint": "eslint 'src/**/*.ts{,x}'"
+    "lint": "run-p lint:*",
+    "lint:js": "eslint './**/*.ts{,x}'",
+    "lint:css": "echo \"後でちゃんとして! stylelint './**/*.ts{,x}'\"",
+    "format": "run-p format:*",
+    "format:js": "run-s 'lint:js --fix'",
+    "format:css": "echo \"後でちゃんとして! runs-s 'lint:css --fix\""
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -31,6 +35,7 @@
     "babel-loader": "^8.2.5",
     "eslint": "^8.21.0",
     "eslint-config-smarthr": "^6.0.8",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
     "prettier-config-smarthr": "^1.0.0",
     "stylelint-config-smarthr": "^1.0.3",
