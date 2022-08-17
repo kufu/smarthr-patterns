@@ -33,7 +33,7 @@ const DeleteDialog: React.FC<DialogProps> = ({ isOpen, handleAction, handleClose
   )
 }
 
-const DeleteWithEffectsDialog: React.FC<DialogProps> = ({ isOpen, handleAction, handleClose }) => {
+const DeleteWithInfluenceDialog: React.FC<DialogProps> = ({ isOpen, handleAction, handleClose }) => {
   return (
     <ActionDialog
       isOpen={isOpen}
@@ -83,16 +83,16 @@ const CancelDialog: React.FC<DialogProps> = ({ isOpen, handleAction, handleClose
 }
 
 type StoryProps = {
-  hasEffect?: boolean
+  withInfluence?: boolean
   cancel?: boolean
 }
 
-const Template: Story<StoryProps> = ({ hasEffect, cancel }) => {
+const Template: Story<StoryProps> = ({ withInfluence, cancel }) => {
   const [isOpen, setIsOpen] = useState(true)
   const handleClose = () => setIsOpen(false)
   const handleAction = () => null
 
-  if (hasEffect) return <DeleteWithEffectsDialog isOpen={isOpen} handleAction={handleAction} handleClose={handleClose} />
+  if (withInfluence) return <DeleteWithInfluenceDialog isOpen={isOpen} handleAction={handleAction} handleClose={handleClose} />
   if (cancel) return <CancelDialog isOpen={isOpen} handleAction={handleAction} handleClose={handleClose} />
   return <DeleteDialog isOpen={isOpen} handleAction={handleAction} handleClose={handleClose} />
 }
@@ -100,9 +100,9 @@ const Template: Story<StoryProps> = ({ hasEffect, cancel }) => {
 export const Default = Template.bind({})
 Default.storyName = '基本'
 
-export const HasEffect = Template.bind({})
-HasEffect.args = { hasEffect: true }
-HasEffect.storyName = '影響範囲がある場合'
+export const WithInfluence = Template.bind({})
+WithInfluence.args = { withInfluence: true }
+WithInfluence.storyName = '影響範囲がある場合'
 
 export const Cancel = Template.bind({})
 Cancel.args = { cancel: true }
