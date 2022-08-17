@@ -6,6 +6,7 @@ import { CharRelativeSize } from 'smarthr-ui/lib/themes/createSpacing'
 
 // TODO 共通のやつは置き方や使い方を考えたい
 import { GlobalNav } from '../../GlobalNav/GlobalNav'
+import { UpwardLinkWrapper } from '@patterns/UpwardNavigation'
 
 type StoryProps = {
   upwardLink?: FunctionComponentElement<ComponentProps<typeof TextLink>>
@@ -20,23 +21,6 @@ const UpwardLink = () => (
     </TextLink>
   </UpwardLinkWrapper>
 )
-const UpwardLinkWrapper = styled.div`
-  ${({ theme: { leading, space } }) => css`
-    /* アイコン(1)とその間隔（0.25）分をずらしている */
-    transform: translateX(${space(-1.25)});
-    /* Stack の margin を上書くために詳細度を上げる
-     * https://styled-components.com/docs/faqs#how-can-i-override-styles-with-higher-specificity */
-    &&& {
-      /* UpwardLink がない場合にレイアウトが崩れないように negative margin で制御 */
-      margin-block-start: ${space(-1)};
-    }
-    e-height: ${leading.NONE};
-
-    @media (max-width: 480px) {
-      transform: revert;
-    }
-  `}
-`
 
 const Template: Story<StoryProps> = ({ upwardLink, withAppNavi = true, wrapperGap = 1.5 }) => (
   <>
