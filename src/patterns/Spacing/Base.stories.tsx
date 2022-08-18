@@ -232,7 +232,7 @@ const Base = styled(shrBase)`
   `}
 `
 
-const BaseColumn = styled(shrBase)`
+const BaseColumn = styled.div`
   ${({ theme: { color, space } }) =>
     css`
       background-color: ${color.COLUMN};

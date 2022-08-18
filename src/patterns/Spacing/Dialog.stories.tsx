@@ -11,7 +11,7 @@ const Wrapper = styled(Stack).attrs({ gap: 2 })`
 
 const Fieldset = styled(Stack).attrs({ gap: 0.5, as: 'fieldset' })``
 
-const BaseColumn = styled(Base)`
+const BaseColumn = styled.div`
   ${({ theme: { color, space } }) => css`
     background-color: ${color.COLUMN};
     padding: ${space(1)};
