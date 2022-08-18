@@ -1,5 +1,5 @@
 export { Default as 基本 } from './Base.stories'
-export { Default as 活用例 } from './Practice.stories'
+export { Default as 応用 } from './Practice.stories'
 export { Default as ダイアログ } from './Dialog.stories'
 
 export default {

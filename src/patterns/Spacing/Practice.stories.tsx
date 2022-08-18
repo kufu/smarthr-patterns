@@ -49,8 +49,8 @@ const Template: Story<StoryProps> = ({ withInformationPanel, withUpwardNavigatio
                 <StatusLabel>連帯債務</StatusLabel>
                 <Heading>雇入れ又は離職に係る事業所</Heading>
               </Cluster>
-              <DropdownButton>
-                <Button>列の表示項目設定</Button>
+              <DropdownButton label="操作">
+                <Button>削除</Button>
               </DropdownButton>
             </TitleArea>
             <Text as="p">
