@@ -107,21 +107,17 @@ const Template: Story<StoryProps> = ({ withInformationPanel, withUpwardNavigatio
                     <Stack>
                       <Text as="p">申告書の下段の「住宅借入金等特別控除証明書」が見えるように撮影してください。</Text>
                       <Cluster gap={1}>
-                        <Stack gap={0.5}>
-                          <label htmlFor="roleName">
-                            <Heading type="subBlockTitle" tag="span">
-                              評価ロール名
-                            </Heading>
-                          </label>
-                          <Input id="roleName" />
+                        <Stack gap={0.5} as="label">
+                          <Heading type="subBlockTitle" tag="span">
+                            評価ロール名
+                          </Heading>
+                          <Input />
                         </Stack>
-                        <Stack gap={0.5} as="span">
-                          <label htmlFor="kenpoName">
-                            <Heading type="subBlockTitle" tag="span">
-                              健保名（任意）
-                            </Heading>
-                          </label>
-                          <Input id="kenpoName" />
+                        <Stack gap={0.5} as="label">
+                          <Heading type="subBlockTitle" tag="span">
+                            健保名（任意）
+                          </Heading>
+                          <Input />
                         </Stack>
                       </Cluster>
                     </Stack>
@@ -172,25 +168,23 @@ const Template: Story<StoryProps> = ({ withInformationPanel, withUpwardNavigatio
                 口座情報
               </Heading>
               <Base>
-                <Stack>
+                <Stack align="flex-start">
                   <BlockGroup>
                     <Heading type="blockTitle" tag="h3">
                       被保険者氏名（ヨミ）
                     </Heading>
                     <Text as="p">申請が役所に到達しました。審査終了までお待ちください。</Text>
                   </BlockGroup>
-                  <Stack gap={0.75} align="flex-start">
-                    <label htmlFor="routeName">
-                      <Stack gap={0.5} as="span">
-                        <Heading type="subBlockTitle" tag="span">
-                          経路名
-                        </Heading>
-                        <Text as="span">
-                          <FaExclamationCircleIcon color="DANGER" text="削除したカスタムマスターは元に戻せません。" />
-                        </Text>
-                      </Stack>
-                    </label>
-                    <DatePicker id="routeName" />
+                  <Stack gap={0.75} align="flex-start" as="label">
+                    <Stack gap={0.5} as="span">
+                      <Heading type="subBlockTitle" tag="span">
+                        経路名
+                      </Heading>
+                      <Text as="span">
+                        <FaExclamationCircleIcon color="DANGER" text="削除したカスタムマスターは元に戻せません。" />
+                      </Text>
+                    </Stack>
+                    <DatePicker />
                   </Stack>
                 </Stack>
               </Base>
