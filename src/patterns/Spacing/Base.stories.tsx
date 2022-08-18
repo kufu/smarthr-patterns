@@ -91,7 +91,7 @@ const Template: Story<StoryProps> = ({ withInformationPanel, withUpwardNavigatio
                       <Text as="p">
                         作成済みの給与明細一覧に、給与明細を追加・更新するには、CSVファイルを取り込みます。取り込み処理中は、給与明細の操作（追加・削除・確定など）が一時的に制限されます。
                       </Text>
-                      <Cluster gap={1.25}>
+                      <Cluster gap={{ column: 1.5, row: 1 }}>
                         <CheckBox checked>扶養親族が23歳未満</CheckBox>
                         <CheckBox checked>高齢任意加入被保険者</CheckBox>
                         <CheckBox>退職済み</CheckBox>
@@ -158,7 +158,7 @@ const Template: Story<StoryProps> = ({ withInformationPanel, withUpwardNavigatio
                     </Text>
                   </BlockGroup>
                   <BaseColumn>
-                    <Cluster gap={1.25}>
+                    <Cluster gap={{ column: 1.5, row: 1 }}>
                       <CheckBox>法人・団体</CheckBox>
                       <CheckBox checked>雇入れ又は離職に係る事業所</CheckBox>
                       <CheckBox checked>短期雇用特例被保険者</CheckBox>

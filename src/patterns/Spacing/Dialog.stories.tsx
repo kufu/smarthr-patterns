@@ -49,7 +49,7 @@ const Template: Story<StoryProps> = ({ withInformationPanel, numberOfBlocks }) =
               </Heading>
             </legend>
             <BaseColumn>
-              <Cluster gap={1.25}>
+              <Cluster gap={{ column: 1.5, row: 1 }}>
                 <CheckBox>系列</CheckBox>
                 <CheckBox checked>タスク</CheckBox>
                 <CheckBox checked>主たる事務所</CheckBox>
