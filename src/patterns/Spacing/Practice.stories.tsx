@@ -216,7 +216,7 @@ const HeadArea = styled(Stack)``
 
 const TitleArea = styled(Cluster).attrs({ justify: 'space-between' })``
 
-const SectionGroup = styled(Stack).attrs({ gap: 0.75 })``
+const SectionGroup = styled(Stack)``
 
 const BlockGroup = styled(Stack).attrs({ gap: 0.5 })``
 
