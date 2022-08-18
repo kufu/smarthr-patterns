@@ -14,11 +14,13 @@ const Theme: React.FC<React.PropsWithChildren> = ({ children }) => (
 )
 
 const GlobalStyle = createGlobalStyle`
-  ${({ theme: { color } }) => css`
+  ${({ theme: { color, leading } }) => css`
     ${CssBaseLine}
 
     body {
+      line-height: ${leading.NONE};
       background-color: ${color.BACKGROUND};
+      color: ${color.TEXT_BLACK};
     }
   `}
 `
