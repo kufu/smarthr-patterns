@@ -1,48 +1,27 @@
-import { ComponentProps, FunctionComponentElement } from 'react'
 import styled, { css } from 'styled-components'
 import { Story } from '@storybook/react'
 import { FaArrowLeftIcon, Heading, Stack, Text, TextLink } from 'smarthr-ui'
-import { CharRelativeSize } from 'smarthr-ui/lib/themes/createSpacing'
 
 // TODO 共通のやつは置き方や使い方を考えたい
 import { GlobalNav } from '../../GlobalNav/GlobalNav'
+import { UpwardLinkWrapper } from '@patterns/UpwardNavigation'
 
 type StoryProps = {
-  upwardLink?: FunctionComponentElement<ComponentProps<typeof TextLink>>
-  withAppNavi?: boolean
-  wrapperGap?: CharRelativeSize
+  withAppNavi: boolean
+  withUpwardLink: boolean
 }
 
-const UpwardLink = () => (
-  <UpwardLinkWrapper>
-    <TextLink href="#" prefix={<FaArrowLeftIcon />}>
-      分析レポートに戻る
-    </TextLink>
-  </UpwardLinkWrapper>
-)
-const UpwardLinkWrapper = styled.div`
-  ${({ theme: { leading, space } }) => css`
-    /* アイコン(1)とその間隔（0.25）分をずらしている */
-    transform: translateX(${space(-1.25)});
-    /* Stack の margin を上書くために詳細度を上げる
-     * https://styled-components.com/docs/faqs#how-can-i-override-styles-with-higher-specificity */
-    &&& {
-      /* UpwardLink がない場合にレイアウトが崩れないように negative margin で制御 */
-      margin-block-start: ${space(-1)};
-    }
-    e-height: ${leading.NONE};
-
-    @media (max-width: 480px) {
-      transform: revert;
-    }
-  `}
-`
-
-const Template: Story<StoryProps> = ({ upwardLink, withAppNavi = true, wrapperGap = 1.5 }) => (
+const Template: Story<StoryProps> = ({ withAppNavi, withUpwardLink }) => (
   <>
     <GlobalNav withAppNavi={withAppNavi} />
-    <Wrapper gap={wrapperGap}>
-      {upwardLink}
+    <Wrapper>
+      {withUpwardLink && (
+        <UpwardLinkWrapper withAppNavi={withAppNavi}>
+          <TextLink href="#" prefix={<FaArrowLeftIcon />}>
+            分析レポートに戻る
+          </TextLink>
+        </UpwardLinkWrapper>
+      )}
       <Stack>
         <Heading>分析対象の従業員項目</Heading>
         <Text as="p">
@@ -55,23 +34,26 @@ const Template: Story<StoryProps> = ({ upwardLink, withAppNavi = true, wrapperGa
 
 export const Default = Template.bind({})
 Default.args = {
-  upwardLink: <UpwardLink />,
-  wrapperGap: 1.5,
+  withAppNavi: true,
+  withUpwardLink: true,
 }
 Default.storyName = '基本'
 
 export const WithoutAppNavi = Template.bind({})
 WithoutAppNavi.args = {
   withAppNavi: false,
-  upwardLink: <UpwardLink />,
-  wrapperGap: 1,
+  withUpwardLink: true,
 }
 WithoutAppNavi.storyName = 'AppNavi なし'
 
 export const NoUpwardNav = Template.bind({})
+NoUpwardNav.args = {
+  withAppNavi: true,
+  withUpwardLink: false,
+}
 NoUpwardNav.storyName = '上に戻るリンクなし'
 
-const Wrapper = styled(Stack)`
+const Wrapper = styled(Stack).attrs({ gap: 1.5 })`
   ${({ theme: { space } }) => css`
     margin-inline: auto;
     padding: ${space(2)} ${space(1.5)};

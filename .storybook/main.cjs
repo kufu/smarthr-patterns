@@ -1,3 +1,5 @@
+const tsconfigPaths = require('vite-tsconfig-paths')
+
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
@@ -14,5 +16,16 @@ module.exports = {
   },
   "features": {
     "storyStoreV7": true
+  },
+  /* https://github.com/storybookjs/builder-vite/issues/85
+   * alias を storybook with vite で効かせるため */
+  viteFinal: async (config) => {
+    return {
+      ...config,
+      plugins: [
+        ...config.plugins,
+        tsconfigPaths.default(),
+      ]
+    }
   }
 }

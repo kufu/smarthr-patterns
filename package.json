@@ -16,7 +16,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "smarthr-normalize-css": "^1.0.4",
-    "smarthr-ui": "^22.3.0",
+    "smarthr-ui": "^22.4.0",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
@@ -40,6 +40,7 @@
     "prettier-config-smarthr": "^1.0.0",
     "stylelint-config-smarthr": "^1.0.3",
     "typescript": "^4.6.4",
-    "vite": "^3.0.6"
+    "vite": "^3.0.8",
+    "vite-tsconfig-paths": "^3.5.0"
   }
 }
