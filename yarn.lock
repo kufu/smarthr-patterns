@@ -10009,7 +10009,7 @@ styled-reset@^4.3.4:
   resolved "https://registry.yarnpkg.com/styled-reset/-/styled-reset-4.4.2.tgz#4da1becb2f6d22a2b22c7ee7ca09b739fe6a685f"
   integrity sha512-VzVhEZHpO/CD/F5ZllqTAY+GTaKlNDZt5mTrtPf/kXZSe85+wMkhRIiPARgvCP9/HQMk+ZGaEWk1IkdP2SYAUQ==
 
-stylelint-config-smarthr@^1.0.3:
+stylelint-config-smarthr@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/stylelint-config-smarthr/-/stylelint-config-smarthr-1.1.0.tgz#ebd233eeb386acc3cde7aec480eddb5ceea3521b"
   integrity sha512-g+AjRpbA1mJ+G/Id7yqNlwpH6VD51vNrLVJ6fgSgSgaeLzQN3ibSbin49fQ1wEo/zAwh8+sB5I9gjc9HS1uaBQ==
