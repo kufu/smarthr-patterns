@@ -1,1 +1,1 @@
-export { UpwardLinkWrapper } from './UpwardLinkWrapper'
+export { UpwardLinkWrapper } from './UpwardNavigation'
