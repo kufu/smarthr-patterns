@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 
 import { Base, Button, Heading, RadioButton, Stack } from 'smarthr-ui'
 
-const companyList = [...Array(4)].map((_, id) => {
+const companyList = [...Array(4).fill(0)].map((_, id) => {
   return { id, name: `株式会社スマートエイチアール${id}` }
 })
 

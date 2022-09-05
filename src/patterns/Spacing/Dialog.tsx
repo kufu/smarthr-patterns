@@ -25,7 +25,7 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
         選択した評価を削除します。評価シートの入力内容や評価者設定などのデータも削除されます。削除された評価は元に戻せません。
       </Text>
       <Stack gap={1.5}>
-        {[...Array(numberOfBlocks)].map((_, i) => (
+        {[...Array(numberOfBlocks).fill(0)].map((_, i) => (
           <Fieldset key={i}>
             <legend>
               <Heading type="blockTitle" tag="h3">
