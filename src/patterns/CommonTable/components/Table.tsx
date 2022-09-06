@@ -48,7 +48,7 @@ export const Table: React.FC<Props> = (props) => {
               <Stack>
                 <Text>オブジェクトはまだ登録されていません。</Text>
                 <div>
-                  <Button variant="secondary" size="s" prefix={<FaPlusCircleIcon />}>
+                  <Button size="s" prefix={<FaPlusCircleIcon />}>
                     項目を追加
                   </Button>
                 </div>
@@ -79,13 +79,13 @@ export const Table: React.FC<Props> = (props) => {
               <Td>{info2}</Td>
               <Td>
                 <Cluster>
-                  <Button variant="secondary" size="s" prefix={<FaPenIcon />}>
+                  <Button size="s" prefix={<FaPenIcon />}>
                     操作1
                   </Button>
-                  <Button variant="secondary" size="s" prefix={<FaCopyIcon />}>
+                  <Button size="s" prefix={<FaCopyIcon />}>
                     操作2
                   </Button>
-                  <Button variant="secondary" size="s" prefix={<FaTrashIcon />}>
+                  <Button size="s" prefix={<FaTrashIcon />}>
                     操作3
                   </Button>
                 </Cluster>

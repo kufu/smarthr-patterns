@@ -21,12 +21,10 @@ export const TemporaryOperationArea: React.FC<Props> = (props) => {
             <label>
               <Input prefix={<FaSearchIcon alt="検索" color="TEXT_GREY" />} placeholder="オブジェクト名" value={searchValue} />
             </label>
-            <Button variant="secondary" type="submit">
-              検索
-            </Button>
+            <Button type="submit">検索</Button>
           </Cluster>
           <FilterDropdown onApply={() => null}>絞り込みの中身</FilterDropdown>
-          <Button variant="secondary" type="submit" prefix={<FaCloudDownloadAltIcon />}>
+          <Button type="submit" prefix={<FaCloudDownloadAltIcon />}>
             ダウンロード
           </Button>
         </Cluster>
