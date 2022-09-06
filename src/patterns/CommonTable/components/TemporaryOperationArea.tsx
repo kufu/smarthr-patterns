@@ -14,16 +14,12 @@ export const TemporaryOperationArea: React.FC<Props> = (props) => {
   } = props
 
   return (
-    <HeaderCluster justify="space-between" align="center">
+    <Wrapper justify="space-between" align="center">
       <form role="search" onSubmit={(e) => e.preventDefault()}>
         <Cluster align="center" gap={1}>
           <Cluster gap={0.5}>
             <label>
-              <Input
-                prefix={<FaSearchIcon size={14} alt="検索" color="TEXT_GREY" />}
-                placeholder="オブジェクト名"
-                value={searchValue}
-              />
+              <Input prefix={<FaSearchIcon alt="検索" color="TEXT_GREY" />} placeholder="オブジェクト名" value={searchValue} />
             </label>
             <Button variant="secondary" type="submit">
               検索
@@ -41,11 +37,11 @@ export const TemporaryOperationArea: React.FC<Props> = (props) => {
           <Pagination current={currentPage} total={totalPages} withoutNumbers onClick={() => null} />
         </Cluster>
       )}
-    </HeaderCluster>
+    </Wrapper>
   )
 }
 
-const HeaderCluster = styled(Cluster)`
+const Wrapper = styled(Cluster)`
   ${({ theme: { space } }) => css`
     padding: ${space(1)};
   `}

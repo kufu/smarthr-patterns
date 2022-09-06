@@ -7,6 +7,7 @@ export interface Props {
   total?: number
 }
 
+// TODO: smarthr-ui で提供する
 export const PageCounter: React.FC<Props> = ({ start, end, total }) => (
   <Container>
     <Text weight="bold" as="b">
