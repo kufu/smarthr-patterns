@@ -10,6 +10,13 @@ Default.storyName = '基本'
 Default.args = {
   isInitialState: false,
   hasNoSearchResult: false,
+  sampleObjects: [...Array(3).fill(0)].map((_, i) => ({
+    id: `${i}`,
+    name: `オブジェクト${i + 1}`,
+    info1: `${i + 1}`,
+    info2: `2021-01-0${i + 1}`,
+    status: 'ステータス',
+  })),
 }
 
 export const InitialState = Template.bind({})
