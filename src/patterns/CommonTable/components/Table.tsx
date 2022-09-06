@@ -19,10 +19,17 @@ import styled, { css } from 'styled-components'
 type Props = {
   isInitialState: boolean
   hasNoSearchResult: boolean
+  sampleObjects: Array<{
+    id: string
+    status: string
+    name: string
+    info1: string
+    info2: string
+  }>
 }
 
 export const Table: React.FC<Props> = (props) => {
-  const { isInitialState, hasNoSearchResult } = props
+  const { isInitialState, hasNoSearchResult, sampleObjects } = props
 
   return (
     <ShrTable>
@@ -59,34 +66,32 @@ export const Table: React.FC<Props> = (props) => {
             </EmptyCell>
           </tr>
         ) : (
-          [...new Array(3)].map((_, i) => {
-            return (
-              <tr key={i}>
-                <Td>
-                  <CheckBox />
-                </Td>
-                <Td>
-                  <StatusLabel>ステータス</StatusLabel>
-                </Td>
-                <Td>{`オブジェクト${i + 1}`}</Td>
-                <Td>{i + 1}</Td>
-                <Td>{`2021-01-0${i + 1}`}</Td>
-                <Td>
-                  <Cluster>
-                    <Button variant="secondary" size="s" prefix={<FaPenIcon />}>
-                      操作1
-                    </Button>
-                    <Button variant="secondary" size="s" prefix={<FaCopyIcon />}>
-                      操作2
-                    </Button>
-                    <Button variant="secondary" size="s" prefix={<FaTrashIcon />}>
-                      操作3
-                    </Button>
-                  </Cluster>
-                </Td>
-              </tr>
-            )
-          })
+          sampleObjects.map(({ id, status, name, info1, info2 }) => (
+            <tr key={id}>
+              <Td>
+                <CheckBox />
+              </Td>
+              <Td>
+                <StatusLabel>{status}</StatusLabel>
+              </Td>
+              <Td>{name}</Td>
+              <Td>{info1}</Td>
+              <Td>{info2}</Td>
+              <Td>
+                <Cluster>
+                  <Button variant="secondary" size="s" prefix={<FaPenIcon />}>
+                    操作1
+                  </Button>
+                  <Button variant="secondary" size="s" prefix={<FaCopyIcon />}>
+                    操作2
+                  </Button>
+                  <Button variant="secondary" size="s" prefix={<FaTrashIcon />}>
+                    操作3
+                  </Button>
+                </Cluster>
+              </Td>
+            </tr>
+          ))
         )}
       </tbody>
     </ShrTable>
@@ -94,6 +99,7 @@ export const Table: React.FC<Props> = (props) => {
 }
 
 const CheckBoxTh = styled(Th)`
+  // TODO: smarthr-ui 側でチェックボックス用の Th を指定できるようにする
   width: 16px;
 `
 

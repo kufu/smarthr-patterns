@@ -22,6 +22,13 @@ Default.args = {
     totalPages: 4,
   },
   searchValue: '',
+  sampleObjects: [...Array(25).fill(0)].map((_, i) => ({
+    id: `${i}`,
+    name: `オブジェクト${i + 1}`,
+    info1: `${i + 1}`,
+    info2: `2021-01-0${i + 1}`,
+    status: 'ステータス',
+  })),
 }
 
 export const InitialState = Template.bind({})
@@ -61,6 +68,13 @@ LessThanOnePage.args = {
     totalPages: 1,
   },
   searchValue: 'あああ',
+  sampleObjects: [...Array(3).fill(0)].map((_, i) => ({
+    id: `${i}`,
+    name: `オブジェクト${i + 1}`,
+    info1: `${i + 1}`,
+    info2: `2021-01-0${i + 1}`,
+    status: 'ステータス',
+  })),
 }
 
 export const NoDescription = Template.bind({})

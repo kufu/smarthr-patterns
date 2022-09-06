@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ComponentProps } from 'react'
 import { Base, Cluster, Pagination, Stack } from 'smarthr-ui'
 import styled from 'styled-components'
 import { Table, TableOperationArea, TemporaryOperationArea, TitleArea } from './components'
@@ -8,10 +8,11 @@ type Props = {
   description: string
   searchValue: string
   pagination: { totalPages: number; currentPage: number; totalCount: number; limitValue: number }
+  sampleObjects: ComponentProps<typeof Table>['sampleObjects']
 }
 
 export const CommonTable: React.FC<Props> = (props) => {
-  const { title, description, searchValue, pagination } = props
+  const { title, description, searchValue, pagination, sampleObjects } = props
   const { totalPages, currentPage, totalCount } = pagination
 
   const TitleAreaWrapper: React.FC<React.PropsWithChildren> = ({ children }) =>
@@ -29,7 +30,7 @@ export const CommonTable: React.FC<Props> = (props) => {
       <Stack gap={1.5}>
         <Base>
           {!isInitialState && <TemporaryOperationArea pagination={pagination} searchValue={searchValue} />}
-          <Table isInitialState={isInitialState} hasNoSearchResult={hasNoSearchResult} />
+          <Table isInitialState={isInitialState} hasNoSearchResult={hasNoSearchResult} sampleObjects={sampleObjects} />
         </Base>
         {totalPages > 1 && !isInitialState && !hasNoSearchResult && (
           <Center>
