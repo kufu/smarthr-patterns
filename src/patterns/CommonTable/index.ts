@@ -1,0 +1,1 @@
+export { CommonTable } from './CommonTable'
