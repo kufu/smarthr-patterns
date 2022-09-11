@@ -17,7 +17,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "smarthr-normalize-css": "^1.0.4",
-    "smarthr-ui": "^23.0.0",
+    "smarthr-ui": "^23.0.1",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
