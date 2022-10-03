@@ -2022,16 +2022,16 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/builder-vite@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@storybook/builder-vite/-/builder-vite-0.2.2.tgz#8d10281bcc39dde3fc6f62b70f80b271980c79e7"
-  integrity sha512-kFY/Rbk+Bu5KmXOCP8CMxp6gfbNGGyNZwikWZe21NHcrVzwHg/aTs+MR37maRqlWcpJvTZmbkKMHak0+vDqpvw==
+"@storybook/builder-vite@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@storybook/builder-vite/-/builder-vite-0.2.3.tgz#6193460435dca53aa280380ea4c1481cdcd1fb47"
+  integrity sha512-qoYLMscM8ih7rYS9vU6WER2ADW28dB/3/TPg/27Q/shJM3yy/++us62arWAa3TJoFx1cB2MhAqhJGYyNH09wuQ==
   dependencies:
     "@joshwooding/vite-plugin-react-docgen-typescript" "0.0.5"
-    "@rollup/pluginutils" "^4.2.1"
     "@storybook/core-common" "^6.4.3"
     "@storybook/mdx1-csf" "^0.0.4"
     "@storybook/node-logger" "^6.4.3"
+    "@storybook/semver" "^7.3.2"
     "@storybook/source-loader" "^6.4.3"
     "@vitejs/plugin-react" "^2.0.0"
     ast-types "^0.14.2"
