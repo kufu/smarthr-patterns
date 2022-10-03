@@ -1,0 +1,53 @@
+import { Meta, Story, ArgsTable, Canvas, Title, Subtitle, Heading, Subheading, Description, Primary } from '@storybook/addon-docs'
+import { CommonTable } from './CommonTable.tsx'
+import { Default, InitialState, NoSearchResult, LessThanOnePage, NoDescription } from './CommonTable.stories.tsx'
+
+<Meta title="よくあるテーブル" component={CommonTable} />
+
+<Title />
+
+<Description>
+  [「よくあるテーブル」 | デザインパターン（共通） | SmartHRDesign
+  System](https://smarthr.design/products/design-patterns/smarthr-table/)
+</Description>
+
+<Heading>プロダクトごとの実装</Heading>
+
+### 従業員サーベイ
+
+- [コード](https://github.com/kufu/meyasu/blob/staging/client/src/app/components/presentations/blocks/CommonTable/CommonTable.tsx)
+- [Storybook](https://staging--618dc41b452a67003aa1fedb.chromatic.com/?path=/story/blocks-commontable--default)
+
+<Heading>パターン</Heading>
+
+<Subheading>基本</Subheading>
+
+<Canvas>
+  <Story story={Default} name="基本" />
+</Canvas>
+
+<Subheading>初期状態</Subheading>
+
+<Canvas>
+  <Story story={InitialState} name="初期状態" />
+</Canvas>
+
+<Subheading>検索結果なし</Subheading>
+
+<Canvas>
+  <Story story={NoSearchResult} name="検索結果なし" />
+</Canvas>
+
+<Subheading>1ページ未満</Subheading>
+
+<Canvas>
+  <Story story={LessThanOnePage} name="1ページ未満" />
+</Canvas>
+
+<Subheading>テーブルの説明なし</Subheading>
+
+<Canvas>
+  <Story story={NoDescription} name="テーブルの説明なし" />
+</Canvas>
+
+<ArgsTable of={CommonTable} />
