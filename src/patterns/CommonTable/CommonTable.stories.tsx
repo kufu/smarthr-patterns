@@ -2,6 +2,7 @@ import { Story } from '@storybook/react'
 import { ComponentProps } from 'react'
 
 import { CommonTable } from './CommonTable'
+import mdx from './CommonTable.mdx'
 
 const Template: Story<ComponentProps<typeof CommonTable>> = (props) => (
   <div style={{ padding: '32px' }}>
@@ -10,6 +11,7 @@ const Template: Story<ComponentProps<typeof CommonTable>> = (props) => (
 )
 
 export const Default = Template.bind({})
+Default.storyName = '基本'
 Default.args = {
   title: 'よくあるテーブルのタイトル',
   description:
@@ -31,6 +33,7 @@ Default.args = {
 }
 
 export const InitialState = Template.bind({})
+InitialState.storyName = '初期状態'
 InitialState.args = {
   ...Default.args,
   pagination: {
@@ -43,6 +46,7 @@ InitialState.args = {
 }
 
 export const NoSearchResult = Template.bind({})
+NoSearchResult.storyName = '検索結果なし'
 NoSearchResult.args = {
   ...Default.args,
   pagination: {
@@ -55,6 +59,7 @@ NoSearchResult.args = {
 }
 
 export const LessThanOnePage = Template.bind({})
+LessThanOnePage.storyName = '1ページ未満'
 LessThanOnePage.args = {
   ...Default.args,
   pagination: {
@@ -74,7 +79,17 @@ LessThanOnePage.args = {
 }
 
 export const NoDescription = Template.bind({})
+NoDescription.storyName = 'テーブルの説明なし'
 NoDescription.args = {
   ...Default.args,
   description: '',
+}
+
+export default {
+  title: 'よくあるテーブル',
+  parameters: {
+    docs: {
+      page: mdx,
+    },
+  },
 }
