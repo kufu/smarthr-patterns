@@ -2,6 +2,7 @@ import { Story } from '@storybook/react'
 import { ComponentProps } from 'react'
 
 import { CommonTable } from './CommonTable'
+import mdx from './CommonTable.mdx'
 
 const Template: Story<ComponentProps<typeof CommonTable>> = (props) => (
   <div style={{ padding: '32px' }}>
@@ -86,4 +87,9 @@ NoDescription.args = {
 
 export default {
   title: 'よくあるテーブル',
+  parameters: {
+    docs: {
+      page: mdx,
+    },
+  },
 }
