@@ -32,7 +32,7 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.26",
-    "@vitejs/plugin-react": "^2.1.0",
+    "@vitejs/plugin-react": "^2.2.0",
     "babel-loader": "^9.0.0",
     "eslint": "^8.26.0",
     "eslint-config-smarthr": "^6.2.1",
