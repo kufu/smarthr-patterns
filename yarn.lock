@@ -5041,10 +5041,10 @@ damerau-levenshtein@^1.0.8:
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"
   integrity sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==
 
-dayjs@^1.11.5:
-  version "1.11.5"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.5.tgz#00e8cc627f231f9499c19b38af49f56dc0ac5e93"
-  integrity sha512-CAdX5Q3YW3Gclyo5Vpqkgpj8fSdLQcRuzfX6mC6Phy0nfJ0eGYOeS7m4mt2plDWLAtA4TqTakvbboHvUxfe4iA==
+dayjs@^1.11.6:
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.6.tgz#2e79a226314ec3ec904e3ee1dd5a4f5e5b1c7afb"
+  integrity sha512-zZbY5giJAinCG+7AGaw0wIhNZ6J8AhWuSXKvuc1KAyMiRsvGQWqh4L+MomvhdAYjN+lqvVCMq1I41e3YHvXkyQ==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0:
   version "2.6.9"
@@ -10152,12 +10152,12 @@ smarthr-normalize-css@^1.0.4:
   dependencies:
     styled-reset "^4.3.4"
 
-smarthr-ui@^23.2.0:
-  version "23.2.0"
-  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-23.2.0.tgz#44a615b94d666c30241fd2725c577c24809a863d"
-  integrity sha512-D/4CG3CtYBYalQHx1+s71SWlkHlGnQvGTrInf2sKLy9o4xpNT6Dcg9qJ7M/lx+J/5RvV3mr0Oq6BPotcl0Uzlg==
+smarthr-ui@^23.3.0:
+  version "23.3.0"
+  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-23.3.0.tgz#7b503289c6d879c009f8719ae9b48f1e2f69ff61"
+  integrity sha512-WU/IUD9mUn8KB+W1AubIVqxVHOI4Qn9RYxrT2FgPwC4KewX8wqR4sB7l+5lwIBmMO9u6ZhajxXmThfkLYMvoeg==
   dependencies:
-    dayjs "^1.11.5"
+    dayjs "^1.11.6"
     lodash.merge "^4.6.2"
     lodash.range "^3.2.0"
     polished "^4.2.2"
