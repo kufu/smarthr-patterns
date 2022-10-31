@@ -10145,12 +10145,12 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-smarthr-normalize-css@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/smarthr-normalize-css/-/smarthr-normalize-css-1.0.4.tgz#0deb8672ad91217fefee3cca16e900c5520a137c"
-  integrity sha512-az9xuSgU3fJMugZwt7pyqQbiJ5p7JX+neKsZTotULdFvMvWXrjE/BhRZrZGrCZ/qyzzI8amr7reqdSCYl0kbUA==
+smarthr-normalize-css@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/smarthr-normalize-css/-/smarthr-normalize-css-1.1.0.tgz#7e626bf197445e8e89524331a6096aee509afe59"
+  integrity sha512-RNi5bkp8dYvZs/yqOihZ+an5Wf3oXiBMRRvSYhCKNhV+Qkg1otqIxmP3ELUWVwMZx9v+zZG1LLAJ0sxPkHXOcg==
   dependencies:
-    styled-reset "^4.3.4"
+    styled-reset "^4.4.2"
 
 smarthr-ui@^23.3.0:
   version "23.3.0"
@@ -10531,7 +10531,7 @@ styled-components@^5.3.6:
     shallowequal "^1.1.0"
     supports-color "^5.5.0"
 
-styled-reset@^4.3.4:
+styled-reset@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/styled-reset/-/styled-reset-4.4.2.tgz#4da1becb2f6d22a2b22c7ee7ca09b739fe6a685f"
   integrity sha512-VzVhEZHpO/CD/F5ZllqTAY+GTaKlNDZt5mTrtPf/kXZSe85+wMkhRIiPARgvCP9/HQMk+ZGaEWk1IkdP2SYAUQ==
