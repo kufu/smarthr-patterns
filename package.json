@@ -29,7 +29,7 @@
     "@storybook/builder-vite": "^0.2.5",
     "@storybook/react": "^6.5.13",
     "@storybook/testing-library": "^0.0.13",
-    "@types/react": "^18.0.21",
+    "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^2.2.0",
