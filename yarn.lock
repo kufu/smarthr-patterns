@@ -10093,10 +10093,10 @@ smarthr-normalize-css@^1.1.0:
   dependencies:
     styled-reset "^4.4.2"
 
-smarthr-ui@^23.3.0:
-  version "23.3.0"
-  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-23.3.0.tgz#7b503289c6d879c009f8719ae9b48f1e2f69ff61"
-  integrity sha512-WU/IUD9mUn8KB+W1AubIVqxVHOI4Qn9RYxrT2FgPwC4KewX8wqR4sB7l+5lwIBmMO9u6ZhajxXmThfkLYMvoeg==
+smarthr-ui@^23.4.1:
+  version "23.4.1"
+  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-23.4.1.tgz#8fa6c6dff8e9a591e884009ed25560a6e8adb233"
+  integrity sha512-8bITUIPtuP9maHEG2Rif72lGZw8IzplrZeLtWU7XvbIywTDqSIO4VoBZnvWRH5W2mobFW9OYFnsxzpY5E7GnpA==
   dependencies:
     dayjs "^1.11.6"
     lodash.merge "^4.6.2"
