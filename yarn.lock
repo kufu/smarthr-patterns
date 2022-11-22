@@ -1800,6 +1800,11 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@smarthr/wareki@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@smarthr/wareki/-/wareki-1.2.0.tgz#140fc252f1cf2f5b93abf29f50be9d714a1b078b"
+  integrity sha512-uoJQhnvPD8/iWrLWxmqk1yS6w4A+GJhxOZ1mG7lSsRgAOIL59gToyTIz0fM9w7irYfcPWXA+WnPCWZWu1p4pHA==
+
 "@storybook/addon-actions@6.5.13", "@storybook/addon-actions@^6.5.13":
   version "6.5.13"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.5.13.tgz#84535dda78c7fe15fc61f19a23ed1440952f3c76"
@@ -10198,11 +10203,12 @@ smarthr-normalize-css@^1.1.0:
   dependencies:
     styled-reset "^4.4.2"
 
-smarthr-ui@^23.5.0:
-  version "23.5.0"
-  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-23.5.0.tgz#0d15cc1bb4bbe3cc84a8888af5d0ca93fd686015"
-  integrity sha512-Xce/VdH6nyj+4b8Z+sbC56L78b0s8EzjO9ImwQ/w3/HvTYtKw+goHSrOyA8ycG2AqsQmiwh/FjS8uEijKO/6VQ==
+smarthr-ui@^23.6.0:
+  version "23.6.0"
+  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-23.6.0.tgz#1e310a45ae915152cb7ad8c4433ae4267fdb9ebb"
+  integrity sha512-ENS2Ugp+rz+/27Ku872BA4+cB3j5/fxDssvisAnrpBVhTnBPr2iAqUVLIwf9j6CZ7KXfhBCOF+RoNxrX3Xwf4g==
   dependencies:
+    "@smarthr/wareki" "^1.2.0"
     dayjs "^1.11.6"
     lodash.merge "^4.6.2"
     lodash.range "^3.2.0"
