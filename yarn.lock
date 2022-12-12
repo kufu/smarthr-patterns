@@ -5133,10 +5133,10 @@ damerau-levenshtein@^1.0.8:
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"
   integrity sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==
 
-dayjs@^1.11.6:
-  version "1.11.6"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.6.tgz#2e79a226314ec3ec904e3ee1dd5a4f5e5b1c7afb"
-  integrity sha512-zZbY5giJAinCG+7AGaw0wIhNZ6J8AhWuSXKvuc1KAyMiRsvGQWqh4L+MomvhdAYjN+lqvVCMq1I41e3YHvXkyQ==
+dayjs@^1.11.7:
+  version "1.11.7"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.7.tgz#4b296922642f70999544d1144a2c25730fce63e2"
+  integrity sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   version "2.6.9"
@@ -9662,10 +9662,10 @@ react-element-to-jsx-string@^14.3.4:
     is-plain-object "5.0.0"
     react-is "17.0.2"
 
-react-icons@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.6.0.tgz#f83eda179af5d02c047449a20b702c858653d397"
-  integrity sha512-rR/L9m9340yO8yv1QT1QurxWQvWpbNHqVX0fzMln2HEb9TEIrQRGsqiNFQfiv9/JEUbyHmHPlNTB2LWm2Ttz0g==
+react-icons@^4.7.1:
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.7.1.tgz#0f4b25a5694e6972677cb189d2a72eabea7a8345"
+  integrity sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==
 
 react-innertext@^1.1.5:
   version "1.1.5"
@@ -10398,18 +10398,18 @@ smarthr-normalize-css@^1.1.0:
   dependencies:
     styled-reset "^4.4.2"
 
-smarthr-ui@^24.1.0:
-  version "24.1.0"
-  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-24.1.0.tgz#35c4e051633e904722e536593796aa84a43d5c9d"
-  integrity sha512-dqzmO9IP725LdAlNwz9M5Z+DXCCPmJyxwHEyBLySz3u3nOUVwdtI1SGWyMnD6G1mhB3EGM6NMeOq7ODlOHFHUA==
+smarthr-ui@^24.3.0:
+  version "24.3.0"
+  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-24.3.0.tgz#b5f9fbb98b0b7fa93f0d42a9b6804af01333bf0b"
+  integrity sha512-UHWCGSu22yhukgGXHKvPdynpdRT4whJ1k31Zgj2bwrxYnUriW2bZpHX5x8VrPYNVD1E9l3t4HDGL3n2u0ORywQ==
   dependencies:
     "@smarthr/wareki" "^1.2.0"
-    dayjs "^1.11.6"
+    dayjs "^1.11.7"
     lodash.merge "^4.6.2"
     lodash.range "^3.2.0"
     polished "^4.2.2"
     react-draggable "^4.4.5"
-    react-icons "^4.6.0"
+    react-icons "^4.7.1"
     react-innertext "^1.1.5"
     react-transition-group "^4.4.5"
 
