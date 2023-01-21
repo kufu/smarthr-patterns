@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components'
 import { Heading, InformationPanel, Stack, Text, Base as shrBase } from 'smarthr-ui'
+import styled, { css } from 'styled-components'
 
 type Props = {
   withInformationPanel: boolean

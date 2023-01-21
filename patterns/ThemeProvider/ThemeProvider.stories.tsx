@@ -1,7 +1,6 @@
+import { action } from '@storybook/addon-actions'
 import { Story } from '@storybook/react'
 import { ReactElement } from 'react'
-import styled, { css } from 'styled-components'
-import { action } from '@storybook/addon-actions'
 import {
   AppNavi,
   Button,
@@ -19,6 +18,7 @@ import {
   Base as shrBase,
   Header as shrHeader,
 } from 'smarthr-ui'
+import styled, { css } from 'styled-components'
 
 import { Theme } from './Theme'
 

@@ -1,5 +1,6 @@
 import { Button, Cluster, FaCloudDownloadAltIcon, FaSearchIcon, FilterDropdown, Input, Pagination } from 'smarthr-ui'
 import styled, { css } from 'styled-components'
+
 import { PageCounter } from './PageCounter'
 
 type Props = {

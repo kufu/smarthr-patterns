@@ -1,6 +1,7 @@
 import React, { ComponentProps } from 'react'
 import { Base, Cluster, Pagination, Stack } from 'smarthr-ui'
 import styled from 'styled-components'
+
 import { Table, TableOperationArea, TemporaryOperationArea, TitleArea } from './components'
 
 type Props = {
@@ -16,7 +17,7 @@ export const CommonTable: React.FC<Props> = (props) => {
   const { totalPages, currentPage, totalCount } = pagination
 
   const TitleAreaWrapper: React.FC<React.PropsWithChildren> = ({ children }) =>
-    description ? <>{children}</> : <Cluster align="center">{children}</Cluster>
+    description ? <> {children} </> : <Cluster align="center">{children}</Cluster>
 
   const isInitialState = searchValue === '' && totalCount === 0
   const hasNoSearchResult = searchValue !== '' && totalCount === 0

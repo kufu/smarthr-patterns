@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components'
-import { ActionDialog, CheckBox, Cluster, CompactInformationPanel, Heading, Select, Stack, Text } from 'smarthr-ui'
 import { action } from '@storybook/addon-actions'
+import { ActionDialog, CheckBox, Cluster, CompactInformationPanel, Heading, Select, Stack, Text } from 'smarthr-ui'
+import styled, { css } from 'styled-components'
 
 type Props = {
   withInformationPanel: boolean

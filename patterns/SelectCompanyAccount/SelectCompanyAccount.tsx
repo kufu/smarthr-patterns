@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import styled, { css } from 'styled-components'
-
 import { Base, Button, Heading, RadioButton, Stack } from 'smarthr-ui'
+import styled, { css } from 'styled-components'
 
 const companyList = [...Array(4).fill(0)].map((_, id) => {
   return { id, name: `株式会社スマートエイチアール${id}` }

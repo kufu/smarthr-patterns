@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components'
 import { ActionDialog, Stack, Text } from 'smarthr-ui'
+import styled, { css } from 'styled-components'
 
 type Props = {
   isOpen: boolean

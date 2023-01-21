@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components'
 import { FaArrowLeftIcon, Heading, Stack, Text, TextLink } from 'smarthr-ui'
+import styled, { css } from 'styled-components'
 
 type Props = {
   withAppNavi: boolean

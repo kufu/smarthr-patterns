@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components'
+import { UpwardLinkWrapper } from '@patterns/UpwardNavigation'
+import { action } from '@storybook/addon-actions'
 import {
   Button,
   CheckBox,
@@ -18,9 +19,7 @@ import {
   TextLink,
   Base as shrBase,
 } from 'smarthr-ui'
-import { action } from '@storybook/addon-actions'
-
-import { UpwardLinkWrapper } from '@patterns/UpwardNavigation'
+import styled, { css } from 'styled-components'
 
 type Props = {
   withInformationPanel: boolean
