@@ -1,6 +1,6 @@
 import 'styled-components'
 
-import { appTheme } from '../src/Theme'
+import { appTheme } from '@global'
 
 type AppTheme = typeof appTheme
 

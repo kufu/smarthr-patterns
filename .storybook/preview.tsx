@@ -1,7 +1,7 @@
 import React from 'react'
 import { Story } from '@storybook/react'
 
-import { Theme } from '../src/Theme'
+import { Theme } from '@global'
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

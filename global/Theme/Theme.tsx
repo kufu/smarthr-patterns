@@ -1,6 +1,6 @@
-import { ThemeProvider, createGlobalStyle, css } from 'styled-components'
-import { ThemeProvider as ShrThemeProvider, createTheme } from 'smarthr-ui'
 import CssBaseLine from 'smarthr-normalize-css/lib'
+import { ThemeProvider as ShrThemeProvider, createTheme } from 'smarthr-ui'
+import { ThemeProvider, createGlobalStyle, css } from 'styled-components'
 
 const appTheme = createTheme()
 

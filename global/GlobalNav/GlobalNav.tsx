@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 import { AppNavi, Header } from 'smarthr-ui'
 
 export const GlobalNav: React.FC<{

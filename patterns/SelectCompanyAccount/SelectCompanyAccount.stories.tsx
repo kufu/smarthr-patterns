@@ -1,6 +1,6 @@
+import { GlobalNav } from '@global'
 import { Story } from '@storybook/react'
 
-import { GlobalNav } from '@GlobalNav/GlobalNav'
 import { SelectCompanyAccount } from './SelectCompanyAccount'
 
 const Template: Story = () => {
