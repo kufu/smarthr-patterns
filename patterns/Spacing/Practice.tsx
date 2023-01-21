@@ -1,4 +1,4 @@
-import { UpwardLinkWrapper } from '@patterns/UpwardNavigation'
+import { UpwardLinkWrapper } from '@patterns'
 import { action } from '@storybook/addon-actions'
 import {
   Button,
