@@ -1,4 +1,4 @@
-import { Button, Cluster, FaCloudDownloadAltIcon, FaSearchIcon, FilterDropdown, Input, PageCounter, Pagination } from 'smarthr-ui'
+import { Button, Cluster, FaCloudDownloadAltIcon, FilterDropdown, PageCounter, Pagination, SearchInput } from 'smarthr-ui'
 import styled, { css } from 'styled-components'
 
 type Props = {
@@ -17,9 +17,7 @@ export const TemporaryOperationArea: React.FC<Props> = (props) => {
       <form role="search" onSubmit={(e) => e.preventDefault()}>
         <Cluster align="center" gap={1}>
           <Cluster gap={0.5}>
-            <label>
-              <Input prefix={<FaSearchIcon alt="検索" color="TEXT_GREY" />} placeholder="オブジェクト名" value={searchValue} />
-            </label>
+            <SearchInput tooltipMessage="オブジェクト名で検索できます。" value={searchValue} />
             <Button type="submit">検索</Button>
           </Cluster>
           <FilterDropdown onApply={() => null}>絞り込みの中身</FilterDropdown>
