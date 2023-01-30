@@ -3,6 +3,7 @@ import { Story } from '@storybook/react'
 import { ReactElement } from 'react'
 import {
   AppNavi,
+  Base,
   Button,
   CheckBox,
   Cluster,
@@ -15,7 +16,6 @@ import {
   TabItem,
   Text,
   createTheme,
-  Base as shrBase,
   Header as shrHeader,
 } from 'smarthr-ui'
 import styled, { css } from 'styled-components'
@@ -62,7 +62,7 @@ const Template: Story<StoryProps> = ({ logo, BRAND, MAIN, TEXT_BLACK }) => {
           <Heading type="sectionTitle" tag="h2">
             SmartHR管理者以外の方
           </Heading>
-          <Base>
+          <Base padding={1.5}>
             <Stack gap={2}>
               <LabelGroup>
                 <Heading type="blockTitle" tag="h3">
@@ -109,12 +109,6 @@ const Container = styled(Stack).attrs({ gap: 1.5 })`
     margin-inline: auto;
     padding: ${space(2)} ${space(1.5)};
     max-width: 80em;
-  `}
-`
-
-const Base = styled(shrBase)`
-  ${({ theme: { space } }) => css`
-    padding: ${space(1.5)};
   `}
 `
 
