@@ -2,6 +2,7 @@
   "name": "smarthr-patterns",
   "version": "0.0.1",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "run-s storybook",
     "storybook": "start-storybook -p 8008",
