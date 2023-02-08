@@ -5,7 +5,7 @@ import {
   CheckBox,
   Cluster,
   DatePicker,
-  DropdownButton,
+  DropdownMenuButton,
   FaArrowLeftIcon,
   FaExclamationCircleIcon,
   Heading,
@@ -43,9 +43,9 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
               <StatusLabel>連帯債務</StatusLabel>
               <Heading>雇入れ又は離職に係る事業所</Heading>
             </Cluster>
-            <DropdownButton label="操作">
+            <DropdownMenuButton label="操作">
               <Button>削除</Button>
-            </DropdownButton>
+            </DropdownMenuButton>
           </TitleArea>
           <Text as="p">
             エンゲージメントサーベイに紐付いている質問タグをスコアで分析する際の見方は以下のとおりです。
