@@ -3,6 +3,7 @@ import {
   Button,
   CheckBox,
   Cluster,
+  EmptyTableBody,
   FaCopyIcon,
   FaPenIcon,
   FaPlusCircleIcon,
@@ -41,32 +42,28 @@ export const Table: React.FC<Props> = (props) => {
         <Th>オブジェクトの情報</Th>
         <Th>操作</Th>
       </thead>
-      <tbody>
-        {isInitialState ? (
-          <tr>
-            <EmptyCell colSpan={6}>
-              <Stack>
-                <Text>オブジェクトはまだ登録されていません。</Text>
-                <div>
-                  <Button size="s" prefix={<FaPlusCircleIcon />}>
-                    項目を追加
-                  </Button>
-                </div>
-              </Stack>
-            </EmptyCell>
-          </tr>
-        ) : hasNoSearchResult ? (
-          <tr>
-            <EmptyCell colSpan={6}>
-              <Text as="p">
-                <Text>お探しの条件にに該当するオブジェクトはありません。</Text>
-                <br />
-                <Text>別の条件をお試しください。</Text>
-              </Text>
-            </EmptyCell>
-          </tr>
-        ) : (
-          sampleObjects.map(({ id, status, name, info1, info2 }) => (
+      {isInitialState ? (
+        <EmptyTableBody>
+          <Stack align="center">
+            <Text>オブジェクトはまだ登録されていません。</Text>
+            <div>
+              <Button size="s" prefix={<FaPlusCircleIcon />}>
+                項目を追加
+              </Button>
+            </div>
+          </Stack>
+        </EmptyTableBody>
+      ) : hasNoSearchResult ? (
+        <EmptyTableBody>
+          <Text as="p">
+            <Text>お探しの条件にに該当するオブジェクトはありません。</Text>
+            <br />
+            <Text>別の条件をお試しください。</Text>
+          </Text>
+        </EmptyTableBody>
+      ) : (
+        <tbody>
+          {sampleObjects.map(({ id, status, name, info1, info2 }) => (
             <tr key={id}>
               <Td>
                 <CheckBox />
@@ -91,9 +88,9 @@ export const Table: React.FC<Props> = (props) => {
                 </Cluster>
               </Td>
             </tr>
-          ))
-        )}
-      </tbody>
+          ))}
+        </tbody>
+      )}
     </ShrTable>
   )
 }
@@ -101,11 +98,4 @@ export const Table: React.FC<Props> = (props) => {
 const CheckBoxTh = styled(Th)`
   // TODO: smarthr-ui 側でチェックボックス用の Th を指定できるようにする
   width: 16px;
-`
-
-const EmptyCell = styled(Td)`
-  text-align: center;
-  ${({ theme: { space } }) => css`
-    padding: ${space(4)};
-  `}
 `

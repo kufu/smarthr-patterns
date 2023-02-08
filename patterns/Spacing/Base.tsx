@@ -1,4 +1,4 @@
-import { Heading, InformationPanel, Stack, Text, Base as shrBase } from 'smarthr-ui'
+import { Base, Heading, InformationPanel, Stack, Text } from 'smarthr-ui'
 import styled, { css } from 'styled-components'
 
 type Props = {
@@ -28,7 +28,7 @@ export const SpacingBase: React.FC<Props> = ({ withInformationPanel }) => (
         <Heading type="sectionTitle" tag="h2">
           セクション見出し
         </Heading>
-        <Base>
+        <Base padding={1.5}>
           <Stack gap={1.5}>
             <Stack>
               <Heading type="blockTitle" tag="h3">
@@ -66,11 +66,5 @@ const Container = styled(Stack).attrs({ gap: 1.5 })`
     margin-inline: auto;
     padding: ${space(2)} ${space(1.5)};
     max-width: 80em;
-  `}
-`
-
-const Base = styled(shrBase)`
-  ${({ theme: { space } }) => css`
-    padding: ${space(1.5)};
   `}
 `

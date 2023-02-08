@@ -1,11 +1,12 @@
 import { UpwardLinkWrapper } from '@patterns'
 import { action } from '@storybook/addon-actions'
 import {
+  Base,
   Button,
   CheckBox,
   Cluster,
   DatePicker,
-  DropdownButton,
+  DropdownMenuButton,
   FaArrowLeftIcon,
   FaExclamationCircleIcon,
   Heading,
@@ -17,7 +18,6 @@ import {
   TabItem,
   Text,
   TextLink,
-  Base as shrBase,
 } from 'smarthr-ui'
 import styled, { css } from 'styled-components'
 
@@ -43,9 +43,9 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
               <StatusLabel>連帯債務</StatusLabel>
               <Heading>雇入れ又は離職に係る事業所</Heading>
             </Cluster>
-            <DropdownButton label="操作">
+            <DropdownMenuButton label="操作">
               <Button>削除</Button>
-            </DropdownButton>
+            </DropdownMenuButton>
           </TitleArea>
           <Text as="p">
             エンゲージメントサーベイに紐付いている質問タグをスコアで分析する際の見方は以下のとおりです。
@@ -68,7 +68,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
         <Heading type="sectionTitle" tag="h2">
           制限されている操作
         </Heading>
-        <Base>
+        <Base padding={1.5}>
           <Stack gap={2}>
             <Text as="p">
               評価シートとその工程や役割をひな形として保存します。評価シートごとにテンプレートを作成してください。
@@ -135,7 +135,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
             <Heading type="sectionTitle" tag="h2">
               質問番号
             </Heading>
-            <Base>
+            <Base padding={1.5}>
               <Stack as="fieldset">
                 <BlockGroup>
                   <legend>
@@ -161,7 +161,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
             <Heading type="sectionTitle" tag="h2">
               口座情報
             </Heading>
-            <Base>
+            <Base padding={1.5}>
               <Stack align="flex-start">
                 <BlockGroup>
                   <Heading type="blockTitle" tag="h3">
@@ -206,12 +206,6 @@ const TitleArea = styled(Cluster).attrs({ justify: 'space-between' })``
 const SectionGroup = styled(Stack)``
 
 const BlockGroup = styled(Stack).attrs({ gap: 0.5 })``
-
-const Base = styled(shrBase)`
-  ${({ theme: { space } }) => css`
-    padding: ${space(1.5)};
-  `}
-`
 
 const BaseColumn = styled.div`
   ${({ theme: { color, space } }) =>
