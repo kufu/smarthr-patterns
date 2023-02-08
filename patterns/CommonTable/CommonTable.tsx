@@ -1,5 +1,5 @@
 import React, { ComponentProps } from 'react'
-import { Base, Cluster, Pagination, Stack } from 'smarthr-ui'
+import { Base, Center, Cluster, Pagination, Stack } from 'smarthr-ui'
 import styled from 'styled-components'
 
 import { Table, TableOperationArea, TemporaryOperationArea, TitleArea } from './components'
@@ -42,11 +42,6 @@ export const CommonTable: React.FC<Props> = (props) => {
     </Stack>
   )
 }
-
-const Center = styled.div`
-  display: flex;
-  justify-content: center;
-`
 
 const StyledTableOperationArea = styled(TableOperationArea)`
   margin-left: auto;
