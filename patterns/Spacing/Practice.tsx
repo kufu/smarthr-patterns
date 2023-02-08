@@ -2,6 +2,7 @@ import { UpwardLinkWrapper } from '@patterns'
 import { action } from '@storybook/addon-actions'
 import {
   Base,
+  BaseColumn,
   Button,
   CheckBox,
   Cluster,
@@ -80,7 +81,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
                     在籍状況
                   </Heading>
                 </legend>
-                <BaseColumn>
+                <BaseColumn padding={1}>
                   <Stack>
                     <Text as="p">
                       作成済みの給与明細一覧に、給与明細を追加・更新するには、CSVファイルを取り込みます。取り込み処理中は、給与明細の操作（追加・削除・確定など）が一時的に制限されます。
@@ -97,7 +98,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
                 <Heading type="blockTitle" tag="h3">
                   添付書類
                 </Heading>
-                <BaseColumn>
+                <BaseColumn padding={1}>
                   <Stack>
                     <Text as="p">申告書の下段の「住宅借入金等特別控除証明書」が見えるように撮影してください。</Text>
                     <Cluster gap={1}>
@@ -147,7 +148,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
                     ファイルに書き出したい評価対象者の従業員項目と評価項目を選択して「書き出し」を押すと、CSVファイルをバックグラウンド処理で作成します。
                   </Text>
                 </BlockGroup>
-                <BaseColumn>
+                <BaseColumn padding={1}>
                   <Cluster gap={{ column: 1.5, row: 1 }}>
                     <CheckBox>法人・団体</CheckBox>
                     <CheckBox checked>雇入れ又は離職に係る事業所</CheckBox>
@@ -206,11 +207,3 @@ const TitleArea = styled(Cluster).attrs({ justify: 'space-between' })``
 const SectionGroup = styled(Stack)``
 
 const BlockGroup = styled(Stack).attrs({ gap: 0.5 })``
-
-const BaseColumn = styled.div`
-  ${({ theme: { color, space } }) =>
-    css`
-      background-color: ${color.COLUMN};
-      padding: ${space(1)};
-    `}
-`

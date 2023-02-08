@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions'
-import { ActionDialog, CheckBox, Cluster, CompactInformationPanel, Heading, Select, Stack, Text } from 'smarthr-ui'
+import { ActionDialog, BaseColumn, CheckBox, Cluster, CompactInformationPanel, Heading, Select, Stack, Text } from 'smarthr-ui'
 import styled, { css } from 'styled-components'
 
 type Props = {
@@ -32,7 +32,7 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
                 進捗状況{i + 1}
               </Heading>
             </legend>
-            <BaseColumn>
+            <BaseColumn padding={1}>
               <Cluster gap={{ column: 1.5, row: 1 }}>
                 <CheckBox>系列</CheckBox>
                 <CheckBox checked>タスク</CheckBox>
@@ -47,7 +47,7 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
               分析対象の従業員項目
             </Heading>
           </legend>
-          <BaseColumn>
+          <BaseColumn padding={1}>
             <Stack align="flex-start">
               <Text as="p">
                 ダウンロード項目を連携先のフォーマットに変換する設定です。「項目を追加」から連携先項目を登録できます。連携先項目名を登録の上、対応するSmartHRの項目や変換方法を設定してください。
@@ -73,10 +73,3 @@ const Wrapper = styled(Stack).attrs({ gap: 2 })`
 `
 
 const Fieldset = styled(Stack).attrs({ gap: 0.5, as: 'fieldset' })``
-
-const BaseColumn = styled.div`
-  ${({ theme: { color, space } }) => css`
-    background-color: ${color.COLUMN};
-    padding: ${space(1)};
-  `}
-`
