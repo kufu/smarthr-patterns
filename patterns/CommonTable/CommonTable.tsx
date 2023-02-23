@@ -29,7 +29,7 @@ export const CommonTable: React.FC<Props> = (props) => {
         <StyledTableOperationArea isInitialState={isInitialState} />
       </TitleAreaWrapper>
       <Stack gap={1.5}>
-        <Base>
+        <Base overflow="auto">
           {!isInitialState && <TemporaryOperationArea pagination={pagination} searchValue={searchValue} />}
           <Table isInitialState={isInitialState} hasNoSearchResult={hasNoSearchResult} sampleObjects={sampleObjects} />
         </Base>
