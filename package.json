@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "run-s storybook",
     "storybook": "start-storybook -p 8008",
-    "build-storybook": "build-storybook",
+    "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
     "lint": "run-p lint:*",
     "lint:js": "eslint './**/*.ts{,x}'",
     "lint:css": "echo \"後でちゃんとして! stylelint './**/*.ts{,x}'\"",
