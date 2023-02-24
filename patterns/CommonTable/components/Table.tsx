@@ -1,7 +1,6 @@
 import React from 'react'
 import {
   Button,
-  CheckBox,
   Cluster,
   EmptyTableBody,
   FaCopyIcon,
@@ -12,10 +11,11 @@ import {
   Stack,
   StatusLabel,
   Td,
+  TdCheckbox,
   Text,
   Th,
+  ThCheckbox,
 } from 'smarthr-ui'
-import styled, { css } from 'styled-components'
 
 type Props = {
   isInitialState: boolean
@@ -35,12 +35,14 @@ export const Table: React.FC<Props> = (props) => {
   return (
     <ShrTable>
       <thead>
-        <CheckBoxTh>{!isInitialState && !hasNoSearchResult && <CheckBox />}</CheckBoxTh>
-        <Th>ステータス</Th>
-        <Th>オブジェクト名</Th>
-        <Th>オブジェクトの情報</Th>
-        <Th>オブジェクトの情報</Th>
-        <Th>操作</Th>
+        <tr>
+          <ThCheckbox name="allRowCheckbox" disabled={isInitialState || hasNoSearchResult} />
+          <Th>ステータス</Th>
+          <Th>オブジェクト名</Th>
+          <Th>オブジェクトの情報</Th>
+          <Th>オブジェクトの情報</Th>
+          <Th>操作</Th>
+        </tr>
       </thead>
       {isInitialState ? (
         <EmptyTableBody>
@@ -65,13 +67,11 @@ export const Table: React.FC<Props> = (props) => {
         <tbody>
           {sampleObjects.map(({ id, status, name, info1, info2 }) => (
             <tr key={id}>
-              <Td>
-                <CheckBox />
-              </Td>
+              <TdCheckbox name={`table-checkbox`} aria-labelledby={`name-${id}`} />
               <Td>
                 <StatusLabel>{status}</StatusLabel>
               </Td>
-              <Td>{name}</Td>
+              <Td id={`name-${id}`}>{name}</Td>
               <Td>{info1}</Td>
               <Td>{info2}</Td>
               <Td>
@@ -94,8 +94,3 @@ export const Table: React.FC<Props> = (props) => {
     </ShrTable>
   )
 }
-
-const CheckBoxTh = styled(Th)`
-  // TODO: smarthr-ui 側でチェックボックス用の Th を指定できるようにする
-  width: 16px;
-`
