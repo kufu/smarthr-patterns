@@ -91,7 +91,7 @@ const Template: Story<StoryProps> = ({ logo, BRAND, MAIN, TEXT_BLACK }) => {
         <FloatArea
           primaryButton={<Button variant="primary">保存</Button>}
           secondaryButton={<Button>元に戻す</Button>}
-          bottom={24}
+          bottom={1.5}
         />
       </Container>
     </Theme>
