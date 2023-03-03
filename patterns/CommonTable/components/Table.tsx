@@ -58,7 +58,7 @@ export const Table: React.FC<Props> = (props) => {
       ) : hasNoSearchResult ? (
         <EmptyTableBody>
           <Text as="p">
-            <Text>お探しの条件にに該当するオブジェクトはありません。</Text>
+            <Text>お探しの条件に該当するオブジェクトはありません。</Text>
             <br />
             <Text>別の条件をお試しください。</Text>
           </Text>
