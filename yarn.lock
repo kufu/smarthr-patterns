@@ -9815,10 +9815,10 @@ react-element-to-jsx-string@^14.3.4:
     is-plain-object "5.0.0"
     react-is "17.0.2"
 
-react-icons@^4.7.1:
-  version "4.7.1"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.7.1.tgz#0f4b25a5694e6972677cb189d2a72eabea7a8345"
-  integrity sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==
+react-icons@^4.8.0:
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.8.0.tgz#621e900caa23b912f737e41be57f27f6b2bff445"
+  integrity sha512-N6+kOLcihDiAnj5Czu637waJqSnwlMNROzVZMhfX68V/9bu9qHaMIJC4UdozWoOk57gahFCNHwVvWzm0MTzRjg==
 
 react-innertext@^1.1.5:
   version "1.1.5"
@@ -10546,10 +10546,10 @@ smarthr-normalize-css@^1.1.0:
   dependencies:
     styled-reset "^4.4.2"
 
-smarthr-ui@^30.1.0:
-  version "30.1.0"
-  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-30.1.0.tgz#0b9aa89c45451052ff0a9d3718a9892f0cf71465"
-  integrity sha512-hfWo3RnCj+0YdBDTiKKuNGGIK9sju0cdy+wWn67wfFHCnuBMGzw/uC0VIVSCcGBI/FfZf6hxUHq44L/k3NjDGQ==
+smarthr-ui@^30.1.1:
+  version "30.1.1"
+  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-30.1.1.tgz#775afdb82e01dae53ebc38d0b5a9e99278a87f5c"
+  integrity sha512-SF8NupiHF40RdrhF94mONIOPEfiP8iKfDSDwXb61i5PnYaLBH8LG1j4Qdjk0QAbd17J91JYdZB2bvBZfbexLpQ==
   dependencies:
     "@smarthr/wareki" "^1.2.0"
     dayjs "^1.11.7"
@@ -10557,7 +10557,7 @@ smarthr-ui@^30.1.0:
     lodash.range "^3.2.0"
     polished "^4.2.2"
     react-draggable "^4.4.5"
-    react-icons "^4.7.1"
+    react-icons "^4.8.0"
     react-innertext "^1.1.5"
     react-transition-group "^4.4.5"
 
