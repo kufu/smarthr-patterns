@@ -42,7 +42,7 @@
     "prettier-config-smarthr": "^1.0.0",
     "stylelint-config-smarthr": "^1.1.0",
     "typescript": "^5.0.4",
-    "vite": "^4.2.1",
+    "vite": "^4.2.2",
     "vite-tsconfig-paths": "^4.0.9"
   }
 }
