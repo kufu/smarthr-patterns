@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "run-s storybook",
-    "storybook": "start-storybook -p 8008",
-    "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
+    "storybook": "storybook dev -p 8008",
+    "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider storybook build",
     "lint": "run-p lint:*",
     "lint:js": "eslint './**/*.ts{,x}'",
     "lint:css": "echo \"後でちゃんとして! stylelint './**/*.ts{,x}'\"",
