@@ -4,6 +4,13 @@ import { ComponentProps } from 'react'
 
 import { SpacingPractice } from './Practice'
 
+export default {
+  title: '余白の取り方/応用',
+  docs: {
+    inlineStories: false,
+  },
+}
+
 const Template: Story<ComponentProps<typeof SpacingPractice>> = (props) => (
   <>
     <GlobalNav />
