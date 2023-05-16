@@ -7367,10 +7367,10 @@ smarthr-normalize-css@^1.1.0:
   dependencies:
     styled-reset "^4.4.2"
 
-smarthr-ui@^30.8.0:
-  version "30.8.0"
-  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-30.8.0.tgz#15f1db72bbee7a05cbcd2fc87b6ff32f1f300c23"
-  integrity sha512-z8LbHArTLRT6Gb8n5qp2TRMkfXyA0KGI8dvvjOFn7NIt1SfLfmIRhwmDRjrtYq8yyflG4JA7gk5wr0KytXruOA==
+smarthr-ui@^30.9.0:
+  version "30.9.0"
+  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-30.9.0.tgz#d40e5f15025f82dee62609b6d5ed9b67713272f5"
+  integrity sha512-mW6hME+29duMFepXuxyNeejT1P7OdU629u7n5XGXfF8htnAn56S1sRQT2UldeoaGfBoX+xtqXS1SQyuntt2gZQ==
   dependencies:
     "@smarthr/wareki" "^1.2.0"
     dayjs "^1.11.7"
