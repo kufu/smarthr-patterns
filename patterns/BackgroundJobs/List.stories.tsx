@@ -1,5 +1,6 @@
 import { GlobalNav } from '@global'
 import { action } from '@storybook/addon-actions'
+import { hrefTo } from '@storybook/addon-links'
 import { StoryFn } from '@storybook/react'
 import dayjs from 'dayjs'
 import { Base, Center, Heading, Pagination, Stack, StatusLabel, Table, Text, TextLink, Th, Td as shrTd } from 'smarthr-ui'
@@ -7,7 +8,21 @@ import styled, { css } from 'styled-components'
 
 import { backgroundJobsData } from './data'
 
-const Template: StoryFn = () => {
+const Template: StoryFn = (_, { loaded: { detailProcessUri, detailSuccessUri, detailPartFailUri, detailFailUri } }) => {
+  const data = backgroundJobsData.map((item) => {
+    switch (item.status.label) {
+      case '処理中':
+        return { ...item, uri: detailProcessUri }
+      case '成功':
+        return { ...item, uri: detailSuccessUri }
+      case '一部失敗':
+        return { ...item, uri: detailPartFailUri }
+      case '失敗':
+        return { ...item, uri: detailFailUri }
+      default:
+        return item
+    }
+  })
   return (
     <>
       <GlobalNav current="バックグラウンド処理" />
@@ -25,7 +40,7 @@ const Template: StoryFn = () => {
                 </tr>
               </thead>
               <tbody>
-                {backgroundJobsData.map(({ status, name, uri, datetime, results }, i) => {
+                {data.map(({ status, name, uri, datetime, results }, i) => {
                   const resultsArr = Array.isArray(results) ? results : [results]
                   return (
                     <tr key={i}>
@@ -58,7 +73,17 @@ const Template: StoryFn = () => {
   )
 }
 
-export const 一覧 = { render: Template }
+export const 一覧 = {
+  render: Template,
+  loaders: [
+    async () => ({
+      detailProcessUri: await hrefTo('バックグラウンド処理/詳細', '処理中'),
+      detailSuccessUri: await hrefTo('バックグラウンド処理/詳細', '成功'),
+      detailPartFailUri: await hrefTo('バックグラウンド処理/詳細', '一部失敗'),
+      detailFailUri: await hrefTo('バックグラウンド処理/詳細', '失敗'),
+    }),
+  ],
+}
 
 export default {
   title: 'バックグラウンド処理',

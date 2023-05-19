@@ -80,9 +80,9 @@ export const 処理中 = {
       { term: '添付ファイル', description: '-' },
     ],
   },
-  laoders: [
+  loaders: [
     async () => ({
-      listUri: hrefTo('バックグラウンド処理', '一覧'),
+      listUri: await hrefTo('バックグラウンド処理', '一覧'),
     }),
   ],
 }
@@ -103,6 +103,11 @@ export const 成功 = {
       { term: '添付ファイル', description: <Button prefix={<FaCloudDownloadAltIcon />}>ダウンロード</Button> },
     ],
   },
+  loaders: [
+    async () => ({
+      listUri: await hrefTo('バックグラウンド処理', '一覧'),
+    }),
+  ],
 }
 
 export const 一部失敗 = {
@@ -133,6 +138,11 @@ export const 一部失敗 = {
       { term: '添付ファイル', description: '-' },
     ],
   },
+  loaders: [
+    async () => ({
+      listUri: await hrefTo('バックグラウンド処理', '一覧'),
+    }),
+  ],
 }
 
 export const 失敗 = {
@@ -163,6 +173,11 @@ export const 失敗 = {
       { term: '添付ファイル', description: '-' },
     ],
   },
+  loaders: [
+    async () => ({
+      listUri: await hrefTo('バックグラウンド処理', '一覧'),
+    }),
+  ],
 }
 
 export default {
