@@ -9,7 +9,8 @@ import {
   DatePicker,
   DropdownMenuButton,
   FaArrowLeftIcon,
-  FaExclamationCircleIcon,
+  Fieldset,
+  FormControl,
   Heading,
   InformationPanel,
   Input,
@@ -75,12 +76,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
               評価シートとその工程や役割をひな形として保存します。評価シートごとにテンプレートを作成してください。
             </Text>
             <Stack gap={1.5}>
-              <BlockGroup as="fieldset">
-                <legend>
-                  <Heading type="blockTitle" tag="h3">
-                    在籍状況
-                  </Heading>
-                </legend>
+              <Fieldset title="在籍状況" innerMargin={0.5}>
                 <BaseColumn padding={1}>
                   <Stack>
                     <Text as="p">
@@ -93,31 +89,22 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
                     </Cluster>
                   </Stack>
                 </BaseColumn>
-              </BlockGroup>
-              <BlockGroup>
-                <Heading type="blockTitle" tag="h3">
-                  添付書類
-                </Heading>
+              </Fieldset>
+              <Fieldset title="添付書類" innerMargin={0.5}>
                 <BaseColumn padding={1}>
                   <Stack>
                     <Text as="p">申告書の下段の「住宅借入金等特別控除証明書」が見えるように撮影してください。</Text>
                     <Cluster gap={1}>
-                      <Stack gap={0.5} as="label">
-                        <Heading type="subBlockTitle" tag="span">
-                          評価ロール名
-                        </Heading>
+                      <FormControl title="評価ロール名" titleType="subBlockTitle">
                         <Input />
-                      </Stack>
-                      <Stack gap={0.5} as="label">
-                        <Heading type="subBlockTitle" tag="span">
-                          健保名（任意）
-                        </Heading>
+                      </FormControl>
+                      <FormControl title="健保名（任意）" titleType="subBlockTitle">
                         <Input />
-                      </Stack>
+                      </FormControl>
                     </Cluster>
                   </Stack>
                 </BaseColumn>
-              </BlockGroup>
+              </Fieldset>
             </Stack>
           </Stack>
         </Base>
@@ -137,17 +124,10 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
               質問番号
             </Heading>
             <Base padding={1.5}>
-              <Stack as="fieldset">
-                <BlockGroup>
-                  <legend>
-                    <Heading type="blockTitle" tag="h3">
-                      スコアの再計算
-                    </Heading>
-                  </legend>
-                  <Text as="p">
-                    ファイルに書き出したい評価対象者の従業員項目と評価項目を選択して「書き出し」を押すと、CSVファイルをバックグラウンド処理で作成します。
-                  </Text>
-                </BlockGroup>
+              <Fieldset
+                title="スコアの再計算"
+                helpMessage="ファイルに書き出したい評価対象者の従業員項目と評価項目を選択して「書き出し」を押すと、CSVファイルをバックグラウンド処理で作成します。"
+              >
                 <BaseColumn padding={1}>
                   <Cluster gap={{ column: 1.5, row: 1 }}>
                     <CheckBox>法人・団体</CheckBox>
@@ -155,7 +135,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
                     <CheckBox checked>短期雇用特例被保険者</CheckBox>
                   </Cluster>
                 </BaseColumn>
-              </Stack>
+              </Fieldset>
             </Base>
           </SectionGroup>
           <SectionGroup>
@@ -163,25 +143,11 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
               口座情報
             </Heading>
             <Base padding={1.5}>
-              <Stack align="flex-start">
-                <BlockGroup>
-                  <Heading type="blockTitle" tag="h3">
-                    被保険者氏名（ヨミ）
-                  </Heading>
-                  <Text as="p">申請が役所に到達しました。審査終了までお待ちください。</Text>
-                </BlockGroup>
-                <Stack gap={0.75} align="flex-start" as="label">
-                  <Stack gap={0.5} as="span">
-                    <Heading type="subBlockTitle" tag="span">
-                      経路名
-                    </Heading>
-                    <Text as="span">
-                      <FaExclamationCircleIcon color="DANGER" text="削除したカスタムマスターは元に戻せません。" />
-                    </Text>
-                  </Stack>
+              <Fieldset title="被保険者氏名（ヨミ）" helpMessage="申請が役所に到達しました。審査終了までお待ちください。">
+                <FormControl title="経路名" titleType="subBlockTitle" errorMessages="削除したカスタムマスターは元に戻せません。">
                   <DatePicker />
-                </Stack>
-              </Stack>
+                </FormControl>
+              </Fieldset>
             </Base>
           </SectionGroup>
         </Stack>
@@ -205,5 +171,3 @@ const HeadArea = styled(Stack)``
 const TitleArea = styled(Cluster).attrs({ justify: 'space-between' })``
 
 const SectionGroup = styled(Stack)``
-
-const BlockGroup = styled(Stack).attrs({ gap: 0.5 })``

@@ -1,5 +1,16 @@
 import { action } from '@storybook/addon-actions'
-import { ActionDialog, BaseColumn, CheckBox, Cluster, CompactInformationPanel, Heading, Select, Stack, Text } from 'smarthr-ui'
+import {
+  ActionDialog,
+  BaseColumn,
+  CheckBox,
+  Cluster,
+  CompactInformationPanel,
+  Fieldset,
+  FormControl,
+  Select,
+  Stack,
+  Text,
+} from 'smarthr-ui'
 import styled, { css } from 'styled-components'
 
 type Props = {
@@ -26,12 +37,7 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
       </Text>
       <Stack gap={1.5}>
         {[...Array(numberOfBlocks).fill(0)].map((_, i) => (
-          <Fieldset key={i}>
-            <legend>
-              <Heading type="blockTitle" tag="h3">
-                進捗状況{i + 1}
-              </Heading>
-            </legend>
+          <Fieldset title={`進捗状況${i + 1}`} key={i} innerMargin={0.5}>
             <BaseColumn padding={1}>
               <Cluster gap={{ column: 1.5, row: 1 }}>
                 <CheckBox>系列</CheckBox>
@@ -41,23 +47,15 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
             </BaseColumn>
           </Fieldset>
         ))}
-        <Fieldset>
-          <legend>
-            <Heading type="blockTitle" tag="h3">
-              分析対象の従業員項目
-            </Heading>
-          </legend>
+        <Fieldset title="分析対象の従業員項目" innerMargin={0.5}>
           <BaseColumn padding={1}>
             <Stack align="flex-start">
               <Text as="p">
                 ダウンロード項目を連携先のフォーマットに変換する設定です。「項目を追加」から連携先項目を登録できます。連携先項目名を登録の上、対応するSmartHRの項目や変換方法を設定してください。
               </Text>
-              <Stack gap={0.5} as="label">
-                <Heading type="subBlockTitle" tag="span">
-                  被保険者氏名（ヨミ）
-                </Heading>
+              <FormControl title="被保険者氏名（ヨミ）" titleType="subBlockTitle">
                 <Select options={[]} />
-              </Stack>
+              </FormControl>
             </Stack>
           </BaseColumn>
         </Fieldset>
@@ -71,5 +69,3 @@ const Wrapper = styled(Stack).attrs({ gap: 2 })`
     padding: ${space(1.5)};
   `}
 `
-
-const Fieldset = styled(Stack).attrs({ gap: 0.5, as: 'fieldset' })``
