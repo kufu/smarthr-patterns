@@ -1,20 +1,22 @@
 import { action } from '@storybook/addon-actions'
-import { Story } from '@storybook/react'
+import { StoryFn } from '@storybook/react'
 import { ReactElement } from 'react'
 import {
   AppNavi,
   Base,
+  BaseColumn,
   Button,
   CheckBox,
   Cluster,
+  Fieldset,
   FloatArea,
+  FormControl,
   Heading,
   Input,
   RadioButton,
   Stack,
   TabBar,
   TabItem,
-  Text,
   createTheme,
   Header as shrHeader,
 } from 'smarthr-ui'
@@ -29,7 +31,7 @@ type StoryProps = {
   TEXT_BLACK?: string
 }
 
-const Template: Story<StoryProps> = ({ logo, BRAND, MAIN, TEXT_BLACK }) => {
+const Template: StoryFn<StoryProps> = ({ logo, BRAND, MAIN, TEXT_BLACK }) => {
   const theme = createTheme({
     color: {
       BRAND,
@@ -64,26 +66,24 @@ const Template: Story<StoryProps> = ({ logo, BRAND, MAIN, TEXT_BLACK }) => {
           </Heading>
           <Base padding={1.5}>
             <Stack gap={2}>
-              <LabelGroup>
-                <Heading type="blockTitle" tag="h3">
-                  評価テンプレート名
-                </Heading>
+              <FormControl title="評価テンプレート名">
                 <Input />
-              </LabelGroup>
-              <FieldsetGroup>
-                <Legend>添付書類</Legend>
-                <CheckBox defaultChecked>デフォルトの色を復元</CheckBox>
-              </FieldsetGroup>
-              <FieldsetGroup>
-                <Legend>公文書の有無</Legend>
-                <Cluster>
-                  <RadioButton defaultChecked name="sample-radio">
-                    あり
-                  </RadioButton>
-                  <RadioButton name="sample-radio">なし</RadioButton>
-                </Cluster>
-              </FieldsetGroup>
-              {/* Buttonのstretch防止用div */}
+              </FormControl>
+              <Fieldset title="添付書類" innerMargin={0.5}>
+                <BaseColumn>
+                  <CheckBox defaultChecked>デフォルトの色を復元</CheckBox>
+                </BaseColumn>
+              </Fieldset>
+              <Fieldset title="公文書の有無" innerMargin={0.5}>
+                <BaseColumn>
+                  <Cluster>
+                    <RadioButton defaultChecked name="sample-radio">
+                      あり
+                    </RadioButton>
+                    <RadioButton name="sample-radio">なし</RadioButton>
+                  </Cluster>
+                </BaseColumn>
+              </Fieldset>
             </Stack>
           </Base>
         </Stack>
@@ -111,18 +111,6 @@ const Container = styled(Stack).attrs({ gap: 1.5 })`
     max-width: 80em;
   `}
 `
-
-const LabelGroup = styled(Stack).attrs({ as: 'label', gap: 0.5 })`
-  cursor: pointer;
-`
-
-const FieldsetGroup = styled(Stack).attrs({ as: 'fieldset', gap: 0.5 })`
-  border: unset;
-  margin: unset;
-  padding: unset;
-`
-
-const Legend = styled(Text).attrs({ forwardedAs: 'legend', weight: 'bold', leading: 'TIGHT' })``
 
 export const Default = Template.bind({})
 Default.storyName = 'SmartHR'
