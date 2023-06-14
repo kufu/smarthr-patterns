@@ -75,9 +75,9 @@ export const 処理中 = {
       { term: '所要時間', description: '-' },
     ],
     jobResultData: [
-      { term: '結果詳細', description: '-' },
-      { term: 'エラー内容', description: '-' },
-      { term: '添付ファイル', description: '-' },
+      { term: '結果詳細', description: '-', fullWidth: true },
+      { term: 'エラー内容', description: '-', fullWidth: true },
+      { term: '添付ファイル', description: '-', fullWidth: true },
     ],
   },
   loaders: [
@@ -98,9 +98,9 @@ export const 成功 = {
       { term: '所要時間', description: '1時間2分' },
     ],
     jobResultData: [
-      { term: '結果詳細', description: 'CSVファイルを出力しました。' },
-      { term: 'エラー内容', description: '-' },
-      { term: '添付ファイル', description: <Button prefix={<FaCloudDownloadAltIcon />}>ダウンロード</Button> },
+      { term: '結果詳細', description: 'CSVファイルを出力しました。', fullWidth: true },
+      { term: 'エラー内容', description: '-', fullWidth: true },
+      { term: '添付ファイル', description: <Button prefix={<FaCloudDownloadAltIcon />}>ダウンロード</Button>, fullWidth: true },
     ],
   },
   loaders: [
@@ -129,13 +129,15 @@ export const 一部失敗 = {
             <p>1件のPDFファイルのアップロードに失敗しました。</p>
           </>
         ),
+        fullWidth: true,
       },
       {
         term: 'エラー内容',
         description:
           '「PDFファイルのアップロード.pdf」のファイル形式が正しくありません。ファイルを確認し、正しいPDFファイルを再度取り込んでください。',
+        fullWidth: true,
       },
-      { term: '添付ファイル', description: '-' },
+      { term: '添付ファイル', description: '-', fullWidth: true },
     ],
   },
   loaders: [
@@ -156,7 +158,7 @@ export const 失敗 = {
       { term: '所要時間', description: '1時間2分' },
     ],
     jobResultData: [
-      { term: '結果詳細', description: '2件のPDFファイルのアップロードに失敗しました。' },
+      { term: '結果詳細', description: '2件のPDFファイルのアップロードに失敗しました。', fullWidth: true },
       {
         term: 'エラー内容',
         description: (
@@ -169,8 +171,9 @@ export const 失敗 = {
             </p>
           </>
         ),
+        fullWidth: true,
       },
-      { term: '添付ファイル', description: '-' },
+      { term: '添付ファイル', description: '-', fullWidth: true },
     ],
   },
   loaders: [
