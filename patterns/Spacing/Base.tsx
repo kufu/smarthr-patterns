@@ -1,4 +1,4 @@
-import { Base, Heading, InformationPanel, Stack, Text } from 'smarthr-ui'
+import { Base, Heading, InformationPanel, PageHeading, Stack, Text } from 'smarthr-ui'
 import styled, { css } from 'styled-components'
 
 type Props = {
@@ -10,7 +10,7 @@ export const SpacingBase: React.FC<Props> = ({ withInformationPanel }) => (
     <Stack gap={2}>
       <Stack gap={1.5}>
         <Stack>
-          <Heading>画面見出し</Heading>
+          <PageHeading>画面見出し</PageHeading>
           <Text as="p">
             これは本文です。以下はダミーテキストです。エンゲージメントサーベイに紐付いている質問タグをスコアで分析する際の見方は以下のとおりです。
           </Text>
@@ -25,7 +25,7 @@ export const SpacingBase: React.FC<Props> = ({ withInformationPanel }) => (
         )}
       </Stack>
       <Stack>
-        <Heading type="sectionTitle" tag="h2">
+        <Heading>
           セクション見出し
         </Heading>
         <Base padding={1.5}>

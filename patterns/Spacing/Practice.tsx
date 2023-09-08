@@ -14,6 +14,7 @@ import {
   Heading,
   InformationPanel,
   Input,
+  PageHeading,
   Stack,
   StatusLabel,
   TabBar,
@@ -43,7 +44,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
           <TitleArea>
             <Cluster align="center">
               <StatusLabel>連帯債務</StatusLabel>
-              <Heading>雇入れ又は離職に係る事業所</Heading>
+              <PageHeading>雇入れ又は離職に係る事業所</PageHeading>
             </Cluster>
             <DropdownMenuButton label="操作">
               <Button>削除</Button>
@@ -67,7 +68,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
         )}
       </Stack>
       <SectionGroup>
-        <Heading type="sectionTitle" tag="h2">
+        <Heading>
           制限されている操作
         </Heading>
         <Base padding={1.5}>
@@ -120,7 +121,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
         </TabBar>
         <Stack gap={2}>
           <SectionGroup>
-            <Heading type="sectionTitle" tag="h2">
+            <Heading>
               質問番号
             </Heading>
             <Base padding={1.5}>
@@ -139,7 +140,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
             </Base>
           </SectionGroup>
           <SectionGroup>
-            <Heading type="sectionTitle" tag="h2">
+            <Heading>
               口座情報
             </Heading>
             <Base padding={1.5}>

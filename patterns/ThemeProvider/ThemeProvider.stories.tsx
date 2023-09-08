@@ -13,6 +13,7 @@ import {
   FormControl,
   Heading,
   Input,
+  PageHeading,
   RadioButton,
   Stack,
   TabBar,
@@ -45,7 +46,7 @@ const Template: StoryFn<StoryProps> = ({ logo, BRAND, MAIN, TEXT_BLACK }) => {
       <AppNavi label="スマパタ" buttons={[{ children: 'ダッシュボード', current: true }, { children: '設定' }]}></AppNavi>
       <Container>
         <Stack>
-          <Heading tag="h1">ThemeProvider の利用例</Heading>
+          <PageHeading>ThemeProvider の利用例</PageHeading>
           <p>
             人事評価機能を管理者として利用するアカウントに権限を付与します。詳しくは、人事評価機能の権限を管理するを参照してください。
           </p>
@@ -61,7 +62,7 @@ const Template: StoryFn<StoryProps> = ({ logo, BRAND, MAIN, TEXT_BLACK }) => {
         </TabBar>
 
         <Stack>
-          <Heading type="sectionTitle" tag="h2">
+          <Heading>
             SmartHR管理者以外の方
           </Heading>
           <Base padding={1.5}>

@@ -1,4 +1,4 @@
-import { FaArrowLeftIcon, Heading, Stack, Text, TextLink } from 'smarthr-ui'
+import { FaArrowLeftIcon, Heading, PageHeading, Stack, Text, TextLink } from 'smarthr-ui'
 import styled, { css } from 'styled-components'
 
 type Props = {
@@ -16,7 +16,7 @@ export const UpwardNavigation: React.FC<Props> = ({ withAppNavi, withUpwardLink 
       </UpwardLinkWrapper>
     )}
     <Stack>
-      <Heading>分析対象の従業員項目</Heading>
+      <PageHeading>分析対象の従業員項目</PageHeading>
       <Text as="p">
         一部の数値データにおいて、クロス集計する際の集計単位を変更できます例えば「年齢」を「60」以上をまとめる、「20」以下をまとめる、「10」単位でまとめるのように設定すると、以下のように出力されます。
       </Text>

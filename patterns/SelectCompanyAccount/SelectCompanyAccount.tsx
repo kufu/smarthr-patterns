@@ -1,17 +1,15 @@
 import { useState } from 'react'
-import { Base, Button, Heading, RadioButton, RadioButtonPanel, Stack } from 'smarthr-ui'
+import { Button, Heading, RadioButtonPanel, Stack } from 'smarthr-ui'
 import styled, { css } from 'styled-components'
 
-const companyList = [...Array(4).fill(0)].map((_, id) => {
-  return { id, name: `株式会社スマートエイチアール${id}` }
-})
+const companyList = [...Array(4).fill(0)].map((_, id) => ({ id, name: `株式会社スマートエイチアール${id}` }))
 
 export const SelectCompanyAccount = () => {
   const [selectedId, setSelectedId] = useState<number>(0)
 
   return (
     <Wrapper>
-      <Heading type="sectionTitle">&#x7B;機能名&#x7D;を利用する企業アカウントを選択してください。</Heading>
+      <Heading>&#x7B;機能名&#x7D;を利用する企業アカウントを選択してください。</Heading>
       <CompanyList>
         {companyList.map(({ id, name }) => (
           <RadioButtonPanel key={id} name="companyAccount" checked={id === selectedId} onChange={() => setSelectedId(id)}>
