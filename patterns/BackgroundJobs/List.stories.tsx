@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 import { hrefTo } from '@storybook/addon-links'
 import { StoryFn } from '@storybook/react'
 import dayjs from 'dayjs'
-import { Base, Center, Heading, Pagination, Stack, StatusLabel, Table, Text, TextLink, Th, Td as shrTd } from 'smarthr-ui'
+import { Base, Center, PageHeading, Pagination, Stack, StatusLabel, Table, Text, TextLink, Th, Td as shrTd } from 'smarthr-ui'
 import styled, { css } from 'styled-components'
 
 import { backgroundJobsData } from './data'
@@ -28,7 +28,7 @@ const Template: StoryFn = (_, { loaded: { detailProcessUri, detailSuccessUri, de
       <GlobalNav current="バックグラウンド処理" />
       <Container>
         <Stack>
-          <Heading>バックグラウンド処理</Heading>
+          <PageHeading>バックグラウンド処理</PageHeading>
           <Base overflow="auto">
             <Table>
               <thead>

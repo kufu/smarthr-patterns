@@ -13,7 +13,9 @@ import {
   FormControl,
   Heading,
   Input,
+  PageHeading,
   RadioButton,
+  Section,
   Stack,
   TabBar,
   TabItem,
@@ -45,7 +47,7 @@ const Template: StoryFn<StoryProps> = ({ logo, BRAND, MAIN, TEXT_BLACK }) => {
       <AppNavi label="スマパタ" buttons={[{ children: 'ダッシュボード', current: true }, { children: '設定' }]}></AppNavi>
       <Container>
         <Stack>
-          <Heading tag="h1">ThemeProvider の利用例</Heading>
+          <PageHeading>ThemeProvider の利用例</PageHeading>
           <p>
             人事評価機能を管理者として利用するアカウントに権限を付与します。詳しくは、人事評価機能の権限を管理するを参照してください。
           </p>
@@ -60,33 +62,33 @@ const Template: StoryFn<StoryProps> = ({ logo, BRAND, MAIN, TEXT_BLACK }) => {
           </TabItem>
         </TabBar>
 
-        <Stack>
-          <Heading type="sectionTitle" tag="h2">
-            SmartHR管理者以外の方
-          </Heading>
-          <Base padding={1.5}>
-            <Stack gap={2}>
-              <FormControl title="評価テンプレート名">
-                <Input />
-              </FormControl>
-              <Fieldset title="添付書類" innerMargin={0.5}>
-                <BaseColumn>
-                  <CheckBox defaultChecked>デフォルトの色を復元</CheckBox>
-                </BaseColumn>
-              </Fieldset>
-              <Fieldset title="公文書の有無" innerMargin={0.5}>
-                <BaseColumn>
-                  <Cluster>
-                    <RadioButton defaultChecked name="sample-radio">
-                      あり
-                    </RadioButton>
-                    <RadioButton name="sample-radio">なし</RadioButton>
-                  </Cluster>
-                </BaseColumn>
-              </Fieldset>
-            </Stack>
-          </Base>
-        </Stack>
+        <Section>
+          <Stack>
+            <Heading>SmartHR管理者以外の方</Heading>
+            <Base padding={1.5}>
+              <Stack gap={2}>
+                <FormControl title="評価テンプレート名">
+                  <Input />
+                </FormControl>
+                <Fieldset title="添付書類" innerMargin={0.5}>
+                  <BaseColumn>
+                    <CheckBox defaultChecked>デフォルトの色を復元</CheckBox>
+                  </BaseColumn>
+                </Fieldset>
+                <Fieldset title="公文書の有無" innerMargin={0.5}>
+                  <BaseColumn>
+                    <Cluster>
+                      <RadioButton defaultChecked name="sample-radio">
+                        あり
+                      </RadioButton>
+                      <RadioButton name="sample-radio">なし</RadioButton>
+                    </Cluster>
+                  </BaseColumn>
+                </Fieldset>
+              </Stack>
+            </Base>
+          </Stack>
+        </Section>
 
         <FloatArea
           primaryButton={<Button variant="primary">保存</Button>}

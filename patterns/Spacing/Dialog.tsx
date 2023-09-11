@@ -27,6 +27,7 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
     onClickAction={action('clicked action')}
     onClickClose={action('clicked close')}
     onClickOverlay={action('clicked overlay')}
+    width="50em"
   >
     <Wrapper>
       {withInformationPanel && (

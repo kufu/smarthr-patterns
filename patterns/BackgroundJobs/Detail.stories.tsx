@@ -13,6 +13,8 @@ import {
   FaArrowLeftIcon,
   FaCloudDownloadAltIcon,
   Heading,
+  PageHeading,
+  Section,
   Sidebar,
   Stack,
   StatusLabel,
@@ -25,44 +27,42 @@ const Template: StoryFn<{
   status: { label: string; type: ComponentProps<typeof StatusLabel>['type'] }
   jobInfoData: ComponentProps<typeof DefinitionList>['items']
   jobResultData: ComponentProps<typeof DefinitionList>['items']
-}> = ({ jobTitle, status, jobInfoData, jobResultData }, { loaded: { listUri } }) => {
-  return (
-    <>
-      <GlobalNav current="バックグラウンド処理" />
-      <Container>
-        <Stack gap={1.5}>
-          <UpwardLinkWrapper>
-            <TextLink href={listUri} prefix={<FaArrowLeftIcon />}>
-              一覧に戻る
-            </TextLink>
-          </UpwardLinkWrapper>
-          <Cluster align="center">
-            <StatusLabel type={status.type}>{status.label}</StatusLabel>
-            <Heading>{jobTitle}</Heading>
-          </Cluster>
-          <Sidebar gap={1.5}>
-            <JobInfo gap={0.75}>
-              <Heading type="sectionTitle" tag="h2">
-                処理情報
-              </Heading>
+}> = ({ jobTitle, status, jobInfoData, jobResultData }, { loaded: { listUri } }) => (
+  <>
+    <GlobalNav current="バックグラウンド処理" />
+    <Container>
+      <Stack gap={1.5}>
+        <UpwardLinkWrapper>
+          <TextLink href={listUri} prefix={<FaArrowLeftIcon />}>
+            一覧に戻る
+          </TextLink>
+        </UpwardLinkWrapper>
+        <Cluster align="center">
+          <StatusLabel type={status.type}>{status.label}</StatusLabel>
+          <PageHeading>{jobTitle}</PageHeading>
+        </Cluster>
+        <Sidebar gap={1.5}>
+          <JobInfoSection>
+            <Stack gap={0.75}>
+              <Heading>処理情報</Heading>
               <Base padding={1.5}>
                 <DefinitionList items={jobInfoData} />
               </Base>
-            </JobInfo>
+            </Stack>
+          </JobInfoSection>
+          <Section>
             <Stack gap={0.75}>
-              <Heading type="sectionTitle" tag="h2">
-                処理結果
-              </Heading>
+              <Heading>処理結果</Heading>
               <Base padding={1.5}>
                 <DefinitionList items={jobResultData} />
               </Base>
             </Stack>
-          </Sidebar>
-        </Stack>
-      </Container>
-    </>
-  )
-}
+          </Section>
+        </Sidebar>
+      </Stack>
+    </Container>
+  </>
+)
 
 export const 処理中 = {
   render: Template,
@@ -199,6 +199,6 @@ const Container = styled(Center).attrs({ maxWidth: '75em' })`
   `}
 `
 
-const JobInfo = styled(Stack)`
+const JobInfoSection = styled(Section)`
   flex-basis: 10em;
 `
