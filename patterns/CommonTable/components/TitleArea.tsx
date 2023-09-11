@@ -1,4 +1,4 @@
-import { Cluster, Heading, Stack, Text } from 'smarthr-ui'
+import { Heading, Stack, Text } from 'smarthr-ui'
 
 type Props = {
   title: string
@@ -10,7 +10,7 @@ export const TitleArea: React.FC<Props> = (props) => {
 
   return (
     <Stack gap={1}>
-      <Heading tag="h1" type="screenTitle">
+      <Heading type="screenTitle">
         {title}
       </Heading>
       {description && <Text as="p">{description}</Text>}

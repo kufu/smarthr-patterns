@@ -1,4 +1,4 @@
-import { FaArrowLeftIcon, Heading, PageHeading, Stack, Text, TextLink } from 'smarthr-ui'
+import { FaArrowLeftIcon, PageHeading, Stack, Text, TextLink } from 'smarthr-ui'
 import styled, { css } from 'styled-components'
 
 type Props = {

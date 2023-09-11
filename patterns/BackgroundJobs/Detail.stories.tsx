@@ -14,6 +14,7 @@ import {
   FaCloudDownloadAltIcon,
   Heading,
   PageHeading,
+  Section,
   Sidebar,
   Stack,
   StatusLabel,
@@ -41,18 +42,22 @@ const Template: StoryFn<{
           <PageHeading>{jobTitle}</PageHeading>
         </Cluster>
         <Sidebar gap={1.5}>
-          <JobInfo gap={0.75}>
-            <Heading>処理情報</Heading>
-            <Base padding={1.5}>
-              <DefinitionList items={jobInfoData} />
-            </Base>
-          </JobInfo>
-          <Stack gap={0.75}>
-            <Heading>処理結果</Heading>
-            <Base padding={1.5}>
-              <DefinitionList items={jobResultData} />
-            </Base>
-          </Stack>
+          <JobInfoSection>
+            <Stack gap={0.75}>
+              <Heading>処理情報</Heading>
+              <Base padding={1.5}>
+                <DefinitionList items={jobInfoData} />
+              </Base>
+            </Stack>
+          </JobInfoSection>
+          <Section>
+            <Stack gap={0.75}>
+              <Heading>処理結果</Heading>
+              <Base padding={1.5}>
+                <DefinitionList items={jobResultData} />
+              </Base>
+            </Stack>
+          </Section>
         </Sidebar>
       </Stack>
     </Container>
@@ -194,6 +199,6 @@ const Container = styled(Center).attrs({ maxWidth: '75em' })`
   `}
 `
 
-const JobInfo = styled(Stack)`
+const JobInfoSection = styled(Section)`
   flex-basis: 10em;
 `
