@@ -3636,7 +3636,7 @@ damerau-levenshtein@^1.0.8:
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"
   integrity sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==
 
-dayjs@^1.11.10, dayjs@^1.11.9:
+dayjs@^1.11.10:
   version "1.11.10"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.10.tgz#68acea85317a6e164457d6d6947564029a6a16a0"
   integrity sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==
@@ -7178,13 +7178,13 @@ smarthr-normalize-css@^1.1.0:
   dependencies:
     styled-reset "^4.4.2"
 
-smarthr-ui@^35.2.0:
-  version "35.2.0"
-  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-35.2.0.tgz#a6a3181e1d131cc48bd9e9c1f4ca83b4ceb086bd"
-  integrity sha512-LsijoyCdRCOYU4U2mUCFqWijXd8AVVDaHwETor/Aox1KiT6h3XAe2Ulw9oTRORo80C1aW3iGCFTeW72E+J0OuQ==
+smarthr-ui@^35.4.0:
+  version "35.4.0"
+  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-35.4.0.tgz#b79391fee0222d9feebe4afab8ac95d6965fa34b"
+  integrity sha512-+UoCDRMPpo9aliBGX57498X6pa2XYginW+HdDGVEvthHM4sChNdEWw2Mg4tl27tcM9OfuCMiwmDJqVaDt7Z2uw==
   dependencies:
     "@smarthr/wareki" "^1.2.0"
-    dayjs "^1.11.9"
+    dayjs "^1.11.10"
     lodash.merge "^4.6.2"
     lodash.range "^3.2.0"
     polished "^4.2.2"
