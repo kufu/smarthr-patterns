@@ -3636,7 +3636,7 @@ damerau-levenshtein@^1.0.8:
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"
   integrity sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==
 
-dayjs@^1.11.10, dayjs@^1.11.9:
+dayjs@^1.11.10:
   version "1.11.10"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.10.tgz#68acea85317a6e164457d6d6947564029a6a16a0"
   integrity sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==
@@ -6633,10 +6633,10 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-draggable@^4.4.5:
-  version "4.4.5"
-  resolved "https://registry.yarnpkg.com/react-draggable/-/react-draggable-4.4.5.tgz#9e37fe7ce1a4cf843030f521a0a4cc41886d7e7c"
-  integrity sha512-OMHzJdyJbYTZo4uQE393fHcqqPYsEtkjfMgvCHr6rejT+Ezn4OZbNyGH50vv+SunC1RMvwOTSWkEODQLzw1M9g==
+react-draggable@^4.4.6:
+  version "4.4.6"
+  resolved "https://registry.yarnpkg.com/react-draggable/-/react-draggable-4.4.6.tgz#63343ee945770881ca1256a5b6fa5c9f5983fe1e"
+  integrity sha512-LtY5Xw1zTPqHkVmtM3X8MUOxNDOUhv/khTgBgrUvwaS064bwVvxT+q5El0uUFNx5IEPKXuRejr7UqLwBIg5pdw==
   dependencies:
     clsx "^1.1.1"
     prop-types "^15.8.1"
@@ -7178,17 +7178,17 @@ smarthr-normalize-css@^1.1.0:
   dependencies:
     styled-reset "^4.4.2"
 
-smarthr-ui@^35.2.0:
-  version "35.2.0"
-  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-35.2.0.tgz#a6a3181e1d131cc48bd9e9c1f4ca83b4ceb086bd"
-  integrity sha512-LsijoyCdRCOYU4U2mUCFqWijXd8AVVDaHwETor/Aox1KiT6h3XAe2Ulw9oTRORo80C1aW3iGCFTeW72E+J0OuQ==
+smarthr-ui@^36.0.0:
+  version "36.0.0"
+  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-36.0.0.tgz#f2e250033927078b8b53000878f83292fe6b117c"
+  integrity sha512-LOkb31nTaxdR1yMROpGmyNTpBGJ8VvZBeK+B/4havdz7up9Q4cHHoiWHyXl0atSW9CiGXnkHvGKBJUShjOFhtQ==
   dependencies:
     "@smarthr/wareki" "^1.2.0"
-    dayjs "^1.11.9"
+    dayjs "^1.11.10"
     lodash.merge "^4.6.2"
     lodash.range "^3.2.0"
     polished "^4.2.2"
-    react-draggable "^4.4.5"
+    react-draggable "^4.4.6"
     react-icons "^4.11.0"
     react-innertext "^1.1.5"
     react-transition-group "^4.4.5"
