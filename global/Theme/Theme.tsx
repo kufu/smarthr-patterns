@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     ${CssBaseLine}
 
     body {
-      line-height: ${leading.NONE};
+      line-height: ${leading.NORMAL};
       background-color: ${color.BACKGROUND};
       color: ${color.TEXT_BLACK};
     }

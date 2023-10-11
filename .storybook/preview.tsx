@@ -3,15 +3,17 @@ import { Story } from '@storybook/react'
 
 import { Theme } from '@global'
 
+import 'smarthr-ui/smarthr-ui.css'
+
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
     },
   },
-  layout: 'fullscreen'
+  layout: 'fullscreen',
 }
 
 export const decorators = [
@@ -19,5 +21,5 @@ export const decorators = [
     <Theme>
       <Story />
     </Theme>
-  )
+  ),
 ]
