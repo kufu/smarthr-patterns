@@ -7178,10 +7178,10 @@ smarthr-normalize-css@^1.1.0:
   dependencies:
     styled-reset "^4.4.2"
 
-smarthr-ui@^36.0.0:
-  version "36.0.0"
-  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-36.0.0.tgz#f2e250033927078b8b53000878f83292fe6b117c"
-  integrity sha512-LOkb31nTaxdR1yMROpGmyNTpBGJ8VvZBeK+B/4havdz7up9Q4cHHoiWHyXl0atSW9CiGXnkHvGKBJUShjOFhtQ==
+smarthr-ui@^37.0.0:
+  version "37.0.0"
+  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-37.0.0.tgz#68b5891fdcec84e58a3ab3ca9d15b922467229f6"
+  integrity sha512-43/INedNf8+7wELNngg/u/6yC08jNTlKOojlmXi9Av3epz60XE727xD/u1/L/Qk9eou7VYZPLBoPw4FDu+OLmg==
   dependencies:
     "@smarthr/wareki" "^1.2.0"
     dayjs "^1.11.10"
@@ -7192,6 +7192,7 @@ smarthr-ui@^36.0.0:
     react-icons "^4.11.0"
     react-innertext "^1.1.5"
     react-transition-group "^4.4.5"
+    tailwind-variants "^0.1.14"
 
 source-map-js@^1.0.2:
   version "1.0.2"
@@ -7434,6 +7435,18 @@ synchronous-promise@^2.0.15:
   version "2.0.15"
   resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.15.tgz#07ca1822b9de0001f5ff73595f3d08c4f720eb8e"
   integrity sha512-k8uzYIkIVwmT+TcglpdN50pS2y1BDcUnBPK9iJeGu0Pl1lOI8pD6wtzgw91Pjpe+RxtTncw32tLxs/R0yNL2Mg==
+
+tailwind-merge@^1.13.2:
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.14.0.tgz#e677f55d864edc6794562c63f5001f45093cdb8b"
+  integrity sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==
+
+tailwind-variants@^0.1.14:
+  version "0.1.14"
+  resolved "https://registry.yarnpkg.com/tailwind-variants/-/tailwind-variants-0.1.14.tgz#1c9d59b92f5c902e8157ee14256eb4b90d287963"
+  integrity sha512-qfOkSGP+cSolTTkJboldGmiM+w5uE77pazCRkwixEBsuaml9CmhN0E8qgH7QnZNmOTVSsgRK1tn/MsKOvOKVWA==
+  dependencies:
+    tailwind-merge "^1.13.2"
 
 tar-fs@^2.1.1:
   version "2.1.1"
