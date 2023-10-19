@@ -45,7 +45,7 @@
     "storybook": "^7.5.0",
     "stylelint-config-smarthr": "^2.0.0",
     "typescript": "^5.2.2",
-    "vite": "^4.4.11",
+    "vite": "^4.5.0",
     "vite-tsconfig-paths": "^4.2.1"
   },
   "resolutions": {
