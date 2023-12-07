@@ -44,7 +44,7 @@
     "prettier-config-smarthr": "^1.0.0",
     "storybook": "^7.6.3",
     "stylelint-config-smarthr": "^2.0.1",
-    "typescript": "^5.3.2",
+    "typescript": "^5.3.3",
     "vite": "^4.5.1",
     "vite-tsconfig-paths": "^4.2.1"
   },
