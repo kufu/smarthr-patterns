@@ -26,7 +26,7 @@ const Template: StoryFn = (_, { loaded: { detailProcessUri, detailSuccessUri, de
   return (
     <>
       <GlobalNav current="バックグラウンド処理" />
-      <Container>
+      <ContainerCenter>
         <Stack>
           <PageHeading>バックグラウンド処理</PageHeading>
           <Base overflow="auto">
@@ -68,7 +68,7 @@ const Template: StoryFn = (_, { loaded: { detailProcessUri, detailSuccessUri, de
             <Pagination current={1} total={10} onClick={action('click')} />
           </Center>
         </Stack>
-      </Container>
+      </ContainerCenter>
     </>
   )
 }
@@ -89,7 +89,7 @@ export default {
   title: 'バックグラウンド処理',
 }
 
-const Container = styled(Center).attrs({ maxWidth: '75em' })`
+const ContainerCenter = styled(Center).attrs({ maxWidth: '75em' })`
   ${({ theme: { space } }) => css`
     /* FIXME: props で SeparateGap を指定できるようにしたい */
     padding: ${space(2)} ${space(1.5)};

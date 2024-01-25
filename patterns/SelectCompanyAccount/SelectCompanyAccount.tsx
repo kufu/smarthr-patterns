@@ -8,32 +8,30 @@ export const SelectCompanyAccount = () => {
   const [selectedId, setSelectedId] = useState<number>(0)
 
   return (
-    <Wrapper>
+    <WrapperStack>
       <PageHeading>企業アカウント選択</PageHeading>
       <p>&#x7B;機能名&#x7D;を利用する企業アカウントを選択してください。</p>
-      <CompanyList>
+      <Stack as="ul">
         {companyList.map(({ id, name }) => (
           <RadioButtonPanel key={id} name="companyAccount" checked={id === selectedId} onChange={() => setSelectedId(id)}>
             {name}
           </RadioButtonPanel>
         ))}
-      </CompanyList>
+      </Stack>
       <div>
         <SubmitButton>次へ</SubmitButton>
       </div>
-    </Wrapper>
+    </WrapperStack>
   )
 }
 
-const Wrapper = styled(Stack).attrs({ gap: 1.5 })`
+const WrapperStack = styled(Stack).attrs({ gap: 1.5 })`
   ${({ theme: { space } }) => css`
     margin-inline: auto;
     padding: ${space(3)} ${space(1.5)};
     max-width: 40em;
   `}
 `
-
-const CompanyList = styled(Stack).attrs({ as: 'ul' })``
 
 const SubmitButton = styled(Button).attrs({ variant: 'primary' })`
   padding-inline: 3em;

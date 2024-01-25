@@ -30,7 +30,7 @@ const Template: StoryFn<{
 }> = ({ jobTitle, status, jobInfoData, jobResultData }, { loaded: { listUri } }) => (
   <>
     <GlobalNav current="バックグラウンド処理" />
-    <Container>
+    <ContainerCenter>
       <Stack gap={1.5}>
         <UpwardLinkWrapper>
           <TextLink href={listUri} prefix={<FaArrowLeftIcon />}>
@@ -60,7 +60,7 @@ const Template: StoryFn<{
           </Section>
         </Sidebar>
       </Stack>
-    </Container>
+    </ContainerCenter>
   </>
 )
 
@@ -187,7 +187,7 @@ export default {
   title: 'バックグラウンド処理/詳細',
 }
 
-const Container = styled(Center).attrs({ maxWidth: '75em' })`
+const ContainerCenter = styled(Center).attrs({ maxWidth: '75em' })`
   ${({ theme: { space } }) => css`
     /* FIXME: props で SeparateGap を指定できるようにしたい */
     padding: ${space(2)} ${space(1.5)};

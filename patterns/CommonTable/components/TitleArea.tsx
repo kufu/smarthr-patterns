@@ -10,9 +10,8 @@ export const TitleArea: React.FC<Props> = (props) => {
 
   return (
     <Stack gap={1}>
-      <Heading type="screenTitle">
-        {title}
-      </Heading>
+      {/* eslint-disable-next-line smarthr/a11y-heading-in-sectioning-content */}
+      <Heading type="screenTitle">{title}</Heading>
       {description && <Text as="p">{description}</Text>}
     </Stack>
   )

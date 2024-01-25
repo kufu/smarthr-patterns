@@ -1,16 +1,14 @@
 import { GlobalNav } from '@global'
-import { Story } from '@storybook/react'
+import { StoryFn } from '@storybook/react'
 
 import { SelectCompanyAccount } from './SelectCompanyAccount'
 
-const Template: Story = () => {
-  return (
-    <>
-      <GlobalNav withAppNavi={false} />
-      <SelectCompanyAccount />
-    </>
-  )
-}
+const Template: StoryFn = () => (
+  <>
+    <GlobalNav withAppNavi={false} />
+    <SelectCompanyAccount />
+  </>
+)
 
 export const Default = Template.bind({})
 Default.storyName = '基本'
