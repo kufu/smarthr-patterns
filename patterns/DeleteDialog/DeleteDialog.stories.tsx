@@ -1,9 +1,9 @@
-import { Story } from '@storybook/react'
+import { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 
 import { CancelDialog, DeleteDialog, DeleteWithInfluenceDialog } from './DeleteDialog'
 
-const Template: Story = ({ withInfluence, cancel }) => {
+const Template: StoryFn = ({ withInfluence, cancel }) => {
   const [isOpen, setIsOpen] = useState(true)
   const handleAction = () => null
   const handleClose = () => setIsOpen(false)

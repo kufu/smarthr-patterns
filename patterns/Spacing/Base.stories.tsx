@@ -1,5 +1,5 @@
 import { GlobalNav } from '@global'
-import { Story } from '@storybook/react'
+import { StoryFn } from '@storybook/react'
 import { ComponentProps } from 'react'
 
 import { SpacingBase } from './Base'
@@ -11,7 +11,7 @@ export default {
   },
 }
 
-const Template: Story<ComponentProps<typeof SpacingBase>> = (props) => (
+const Template: StoryFn<ComponentProps<typeof SpacingBase>> = (props) => (
   <>
     <GlobalNav />
     <SpacingBase {...props} />

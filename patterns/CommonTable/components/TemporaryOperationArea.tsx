@@ -1,5 +1,4 @@
 import { Button, Cluster, FaCloudDownloadAltIcon, FilterDropdown, PageCounter, Pagination, SearchInput } from 'smarthr-ui'
-import styled, { css } from 'styled-components'
 
 type Props = {
   searchValue: string
@@ -13,7 +12,7 @@ export const TemporaryOperationArea: React.FC<Props> = (props) => {
   } = props
 
   return (
-    <Wrapper justify="space-between" align="center">
+    <Cluster justify="space-between" align="center" className="shr-p-1">
       <form role="search" onSubmit={(e) => e.preventDefault()}>
         <Cluster align="center" gap={1}>
           <Cluster gap={0.5}>
@@ -32,12 +31,6 @@ export const TemporaryOperationArea: React.FC<Props> = (props) => {
           <Pagination current={currentPage} total={totalPages} withoutNumbers onClick={() => null} />
         </Cluster>
       )}
-    </Wrapper>
+    </Cluster>
   )
 }
-
-const Wrapper = styled(Cluster)`
-  ${({ theme: { space } }) => css`
-    padding: ${space(1)};
-  `}
-`

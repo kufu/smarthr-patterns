@@ -1,6 +1,5 @@
 import React, { ComponentProps } from 'react'
 import { Base, Center, Cluster, Pagination, Stack } from 'smarthr-ui'
-import styled from 'styled-components'
 
 import { Table, TableOperationArea, TemporaryOperationArea, TitleArea } from './components'
 
@@ -26,7 +25,7 @@ export const CommonTable: React.FC<Props> = (props) => {
     <Stack gap={1}>
       <TitleAreaWrapper>
         <TitleArea title={title} description={description} />
-        <StyledTableOperationArea isInitialState={isInitialState} />
+        <TableOperationArea isInitialState={isInitialState} className="shr-ms-auto" />
       </TitleAreaWrapper>
       <Stack gap={1.5}>
         <Base overflow="auto">
@@ -42,7 +41,3 @@ export const CommonTable: React.FC<Props> = (props) => {
     </Stack>
   )
 }
-
-const StyledTableOperationArea = styled(TableOperationArea)`
-  margin-left: auto;
-`

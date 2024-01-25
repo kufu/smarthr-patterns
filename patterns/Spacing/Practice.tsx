@@ -23,7 +23,6 @@ import {
   Text,
   TextLink,
 } from 'smarthr-ui'
-import styled, { css } from 'styled-components'
 
 type Props = {
   withInformationPanel: boolean
@@ -31,7 +30,7 @@ type Props = {
 }
 
 export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpwardNavigation }) => (
-  <ContainerStack>
+  <Stack gap={1.5} className="shr-mx-auto shr-py-2 shr-px-1.5 shr-max-w-[80em]">
     {withUpwardNavigation && (
       <UpwardLinkWrapper>
         <TextLink href="#" prefix={<FaArrowLeftIcon />}>
@@ -161,13 +160,5 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
         </Stack>
       </Section>
     </Stack>
-  </ContainerStack>
+  </Stack>
 )
-
-const ContainerStack = styled(Stack).attrs({ gap: 1.5 })`
-  ${({ theme: { space } }) => css`
-    margin-inline: auto;
-    padding: ${space(2)} ${space(1.5)};
-    max-width: 80em;
-  `}
-`

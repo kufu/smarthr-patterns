@@ -29,7 +29,7 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
     onClickOverlay={action('clicked overlay')}
     width="50em"
   >
-    <WrapperStack>
+    <Stack gap={2} className="shr-p-1.5">
       {withInformationPanel && (
         <CompactInformationPanel type="warning">1行目を削除します。削除された行は元には戻せません。</CompactInformationPanel>
       )}
@@ -61,12 +61,6 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
           </BaseColumn>
         </Fieldset>
       </Stack>
-    </WrapperStack>
+    </Stack>
   </ActionDialog>
 )
-
-const WrapperStack = styled(Stack).attrs({ gap: 2 })`
-  ${({ theme: { space } }) => css`
-    padding: ${space(1.5)};
-  `}
-`

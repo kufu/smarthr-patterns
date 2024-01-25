@@ -1,9 +1,9 @@
-import { Story } from '@storybook/react'
+import { StoryFn } from '@storybook/react'
 import { ComponentProps } from 'react'
 
 import { TitleArea } from '.'
 
-const Template: Story<ComponentProps<typeof TitleArea>> = (props) => <TitleArea {...props} />
+const Template: StoryFn<ComponentProps<typeof TitleArea>> = (props) => <TitleArea {...props} />
 
 export const Default = Template.bind({})
 Default.storyName = '基本'

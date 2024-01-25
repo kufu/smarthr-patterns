@@ -14,13 +14,11 @@ import {
   FaCloudDownloadAltIcon,
   Heading,
   PageHeading,
-  Section,
   Sidebar,
   Stack,
   StatusLabel,
   TextLink,
 } from 'smarthr-ui'
-import styled, { css } from 'styled-components'
 
 const Template: StoryFn<{
   jobTitle: string
@@ -30,8 +28,8 @@ const Template: StoryFn<{
 }> = ({ jobTitle, status, jobInfoData, jobResultData }, { loaded: { listUri } }) => (
   <>
     <GlobalNav current="バックグラウンド処理" />
-    <ContainerCenter>
-      <Stack gap={1.5}>
+    <Center maxWidth="75em" className="shr-px-1.5 shr-py-2 shr-w-[calc(100%_-_theme(spacing[1.5])_*_2)]">
+      <Stack gap={1.5} className="shr-self-stretch">
         <UpwardLinkWrapper>
           <TextLink href={listUri} prefix={<FaArrowLeftIcon />}>
             一覧に戻る
@@ -42,25 +40,21 @@ const Template: StoryFn<{
           <PageHeading>{jobTitle}</PageHeading>
         </Cluster>
         <Sidebar gap={1.5}>
-          <JobInfoSection>
-            <Stack gap={0.75}>
-              <Heading>処理情報</Heading>
-              <Base padding={1.5}>
-                <DefinitionList items={jobInfoData} />
-              </Base>
-            </Stack>
-          </JobInfoSection>
-          <Section>
-            <Stack gap={0.75}>
-              <Heading>処理結果</Heading>
-              <Base padding={1.5}>
-                <DefinitionList items={jobResultData} />
-              </Base>
-            </Stack>
-          </Section>
+          <Stack gap={0.75} as="section" className="shr-basis-[10em]">
+            <Heading>処理情報</Heading>
+            <Base padding={1.5}>
+              <DefinitionList items={jobInfoData} />
+            </Base>
+          </Stack>
+          <Stack gap={0.75} as="section">
+            <Heading>処理結果</Heading>
+            <Base padding={1.5}>
+              <DefinitionList items={jobResultData} />
+            </Base>
+          </Stack>
         </Sidebar>
       </Stack>
-    </ContainerCenter>
+    </Center>
   </>
 )
 
@@ -186,19 +180,3 @@ export const 失敗 = {
 export default {
   title: 'バックグラウンド処理/詳細',
 }
-
-const ContainerCenter = styled(Center).attrs({ maxWidth: '75em' })`
-  ${({ theme: { space } }) => css`
-    /* FIXME: props で SeparateGap を指定できるようにしたい */
-    padding: ${space(2)} ${space(1.5)};
-    width: calc(100% - ${space(1.5)} * 2);
-
-    > div {
-      align-self: stretch;
-    }
-  `}
-`
-
-const JobInfoSection = styled(Section)`
-  flex-basis: 10em;
-`
