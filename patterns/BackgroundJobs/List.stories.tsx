@@ -45,16 +45,16 @@ const Template: StoryFn = (_, { loaded: { detailProcessUri, detailSuccessUri, de
                   const resultsArr = Array.isArray(results) ? results : [results]
                   return (
                     <tr key={i}>
-                      <Td className="shr-align-baseline">
+                      <Td className="[&&&]:shr-align-baseline">
                         <StatusLabel type={status.type}>{status.label}</StatusLabel>
                       </Td>
-                      <Td className="shr-align-baseline">
+                      <Td className="[&&&]:shr-align-baseline">
                         <TextLink href={uri}>{name}</TextLink>
                       </Td>
-                      <Td className="shr-align-baseline">
+                      <Td className="[&&&]:shr-align-baseline">
                         <Text whiteSpace="nowrap">{dayjs(datetime).format('YYYY/MM/DD hh:mm')}</Text>
                       </Td>
-                      <Td className="shr-align-baseline">
+                      <Td className="[&&&]:shr-align-baseline">
                         {resultsArr.map((result, j) => (
                           <p key={j}>{result}</p>
                         ))}
