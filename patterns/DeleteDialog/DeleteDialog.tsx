@@ -7,7 +7,7 @@ type Props = {
   handleClose: () => void
 }
 
-const Wrapper = styled(Stack)`
+const WrapperStack = styled(Stack)`
   ${({ theme: { space } }) => css`
     padding: ${space(1.5)};
   `}
@@ -22,9 +22,9 @@ export const DeleteDialog: React.FC<Props> = ({ isOpen, handleAction, handleClos
     onClickAction={handleAction}
     onClickClose={handleClose}
   >
-    <Wrapper>
+    <WrapperStack>
       <Text as="p">【{'{オブジェクトのインスタンス名}'}】を削除します。</Text>
-    </Wrapper>
+    </WrapperStack>
   </ActionDialog>
 )
 
@@ -37,7 +37,7 @@ export const DeleteWithInfluenceDialog: React.FC<Props> = ({ isOpen, handleActio
     onClickAction={handleAction}
     onClickClose={handleClose}
   >
-    <Wrapper>
+    <WrapperStack>
       <Text as="p">
         【{'{オブジェクトのインスタンス名}'}】を削除します。
         <br />
@@ -48,7 +48,7 @@ export const DeleteWithInfluenceDialog: React.FC<Props> = ({ isOpen, handleActio
         削除した{'{オブジェクト名}'}は元に戻せません。
       </Text>
       <Text as="p">{'{オブジェクト名}'}を削除しますか？</Text>
-    </Wrapper>
+    </WrapperStack>
   </ActionDialog>
 )
 
@@ -61,12 +61,12 @@ export const CancelDialog: React.FC<Props> = ({ isOpen, handleAction, handleClos
     onClickAction={handleAction}
     onClickClose={handleClose}
   >
-    <Wrapper>
+    <WrapperStack>
       <Text as="p">
         {'{操作名}'}を取り消します。
         <br />
         「取り消し」を押すと変更内容が破棄されます。
       </Text>
-    </Wrapper>
+    </WrapperStack>
   </ActionDialog>
 )

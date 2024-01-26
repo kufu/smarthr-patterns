@@ -23,7 +23,6 @@ import {
   Text,
   TextLink,
 } from 'smarthr-ui'
-import styled, { css } from 'styled-components'
 
 type Props = {
   withInformationPanel: boolean
@@ -31,7 +30,7 @@ type Props = {
 }
 
 export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpwardNavigation }) => (
-  <Container>
+  <Stack gap={1.5} className="shr-mx-auto shr-py-2 shr-px-1.5 shr-max-w-[80em]">
     {withUpwardNavigation && (
       <UpwardLinkWrapper>
         <TextLink href="#" prefix={<FaArrowLeftIcon />}>
@@ -39,10 +38,10 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
         </TextLink>
       </UpwardLinkWrapper>
     )}
-    <Main>
+    <Stack gap={2} as="main">
       <Stack gap={1.5}>
-        <HeadArea>
-          <TitleArea>
+        <Stack>
+          <Cluster justify="space-between">
             <Cluster align="center">
               <StatusLabel>連帯債務</StatusLabel>
               <PageHeading>雇入れ又は離職に係る事業所</PageHeading>
@@ -50,13 +49,13 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
             <DropdownMenuButton label="操作">
               <Button>削除</Button>
             </DropdownMenuButton>
-          </TitleArea>
+          </Cluster>
           <Text as="p">
             エンゲージメントサーベイに紐付いている質問タグをスコアで分析する際の見方は以下のとおりです。
             <br />
             評価テンプレートとタスクを選択して「変更」を押してください。変更先のタスク担当者に通知されます。
           </Text>
-        </HeadArea>
+        </Stack>
         {withInformationPanel && (
           <InformationPanel title="CSVファイルに項目コードと項目名の両方が必須です" togglable={false}>
             <Stack align="flex-start">
@@ -70,7 +69,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
       </Stack>
       <Section>
         <Stack gap={2}>
-          <SectionGroup>
+          <Stack>
             <Heading>制限されている操作</Heading>
             <Base padding={1.5}>
               <Stack gap={2}>
@@ -110,7 +109,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
                 </Stack>
               </Stack>
             </Base>
-          </SectionGroup>
+          </Stack>
           <Stack>
             <TabBar>
               <TabItem id="tab1" onClick={action('tab1 clicked')}>
@@ -122,7 +121,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
             </TabBar>
             <Stack gap={2}>
               <Section>
-                <SectionGroup>
+                <Stack>
                   <Heading>質問番号</Heading>
                   <Base padding={1.5}>
                     <Fieldset
@@ -138,10 +137,10 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
                       </BaseColumn>
                     </Fieldset>
                   </Base>
-                </SectionGroup>
+                </Stack>
               </Section>
               <Section>
-                <SectionGroup>
+                <Stack>
                   <Heading>口座情報</Heading>
                   <Base padding={1.5}>
                     <Fieldset title="被保険者氏名（ヨミ）" helpMessage="申請が役所に到達しました。審査終了までお待ちください。">
@@ -154,28 +153,12 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
                       </FormControl>
                     </Fieldset>
                   </Base>
-                </SectionGroup>
+                </Stack>
               </Section>
             </Stack>
           </Stack>
         </Stack>
       </Section>
-    </Main>
-  </Container>
+    </Stack>
+  </Stack>
 )
-
-const Container = styled(Stack).attrs({ gap: 1.5 })`
-  ${({ theme: { space } }) => css`
-    margin-inline: auto;
-    padding: ${space(2)} ${space(1.5)};
-    max-width: 80em;
-  `}
-`
-
-const Main = styled(Stack).attrs({ gap: 2, as: 'main' })``
-
-const HeadArea = styled(Stack)``
-
-const TitleArea = styled(Cluster).attrs({ justify: 'space-between' })``
-
-const SectionGroup = styled(Stack)``

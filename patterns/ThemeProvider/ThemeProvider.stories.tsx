@@ -45,7 +45,7 @@ const Template: StoryFn<StoryProps> = ({ logo, BRAND, MAIN, TEXT_BLACK }) => {
     <Theme theme={theme}>
       <Header logo={logo} />
       <AppNavi label="スマパタ" buttons={[{ children: 'ダッシュボード', current: true }, { children: '設定' }]}></AppNavi>
-      <Container>
+      <ContainerStack>
         <Stack>
           <PageHeading>ThemeProvider の利用例</PageHeading>
           <p>
@@ -95,7 +95,7 @@ const Template: StoryFn<StoryProps> = ({ logo, BRAND, MAIN, TEXT_BLACK }) => {
           secondaryButton={<Button>元に戻す</Button>}
           bottom={1.5}
         />
-      </Container>
+      </ContainerStack>
     </Theme>
   )
 }
@@ -106,7 +106,7 @@ const Header = styled(shrHeader)`
   }
 `
 
-const Container = styled(Stack).attrs({ gap: 1.5 })`
+const ContainerStack = styled(Stack).attrs({ gap: 1.5 })`
   ${({ theme: { space } }) => css`
     margin-inline: auto;
     padding: ${space(2)} ${space(1.5)};

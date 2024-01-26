@@ -1,9 +1,9 @@
 import React from 'react'
-import { Story } from '@storybook/react'
+import { StoryFn } from '@storybook/react'
 
 import { Theme } from '@global'
 
-import 'smarthr-ui/smarthr-ui.css'
+import '../index.css'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -17,7 +17,7 @@ export const parameters = {
 }
 
 export const decorators = [
-  (Story: Story) => (
+  (Story: StoryFn) => (
     <Theme>
       <Story />
     </Theme>

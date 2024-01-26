@@ -6,7 +6,7 @@ type Props = {
 }
 
 export const SpacingBase: React.FC<Props> = ({ withInformationPanel }) => (
-  <Container>
+  <Stack gap={1.5} className="shr-mx-auto shr-py-2 shr-px-1.5 shr-max-w-[80em]">
     <Stack gap={2}>
       <Stack gap={1.5}>
         <Stack>
@@ -60,13 +60,5 @@ export const SpacingBase: React.FC<Props> = ({ withInformationPanel }) => (
         </Stack>
       </Section>
     </Stack>
-  </Container>
+  </Stack>
 )
-
-const Container = styled(Stack).attrs({ gap: 1.5 })`
-  ${({ theme: { space } }) => css`
-    margin-inline: auto;
-    padding: ${space(2)} ${space(1.5)};
-    max-width: 80em;
-  `}
-`

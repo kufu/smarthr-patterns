@@ -29,7 +29,7 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
     onClickOverlay={action('clicked overlay')}
     width="50em"
   >
-    <Wrapper>
+    <Stack gap={2} className="shr-p-1.5">
       {withInformationPanel && (
         <CompactInformationPanel type="warning">1行目を削除します。削除された行は元には戻せません。</CompactInformationPanel>
       )}
@@ -55,18 +55,12 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
                 ダウンロード項目を連携先のフォーマットに変換する設定です。「項目を追加」から連携先項目を登録できます。連携先項目名を登録の上、対応するSmartHRの項目や変換方法を設定してください。
               </Text>
               <FormControl title="被保険者氏名（ヨミ）" titleType="subBlockTitle">
-                <Select options={[]} />
+                <Select options={[]} width="10em" />
               </FormControl>
             </Stack>
           </BaseColumn>
         </Fieldset>
       </Stack>
-    </Wrapper>
+    </Stack>
   </ActionDialog>
 )
-
-const Wrapper = styled(Stack).attrs({ gap: 2 })`
-  ${({ theme: { space } }) => css`
-    padding: ${space(1.5)};
-  `}
-`

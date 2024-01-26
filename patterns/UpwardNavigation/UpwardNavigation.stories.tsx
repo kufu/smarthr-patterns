@@ -1,10 +1,10 @@
 import { GlobalNav } from '@global'
-import { Story } from '@storybook/react'
+import { StoryFn } from '@storybook/react'
 import { ComponentProps } from 'react'
 
 import { UpwardNavigation } from './UpwardNavigation'
 
-const Template: Story<ComponentProps<typeof UpwardNavigation>> = ({ withAppNavi, ...props }) => (
+const Template: StoryFn<ComponentProps<typeof UpwardNavigation>> = ({ withAppNavi, ...props }) => (
   <>
     <GlobalNav withAppNavi={withAppNavi} />
     <UpwardNavigation {...props} withAppNavi={withAppNavi} />

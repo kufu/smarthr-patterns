@@ -7,7 +7,7 @@ type Props = {
 }
 
 export const UpwardNavigation: React.FC<Props> = ({ withAppNavi, withUpwardLink }) => (
-  <Wrapper>
+  <Stack gap={1.5} className="shr-mx-auto shr-py-2 shr-px-1.5 shr-max-w-[80em]">
     {withUpwardLink && (
       <UpwardLinkWrapper withAppNavi={withAppNavi}>
         <TextLink href="#" prefix={<FaArrowLeftIcon />}>
@@ -21,16 +21,8 @@ export const UpwardNavigation: React.FC<Props> = ({ withAppNavi, withUpwardLink 
         一部の数値データにおいて、クロス集計する際の集計単位を変更できます例えば「年齢」を「60」以上をまとめる、「20」以下をまとめる、「10」単位でまとめるのように設定すると、以下のように出力されます。
       </Text>
     </Stack>
-  </Wrapper>
+  </Stack>
 )
-
-const Wrapper = styled(Stack).attrs({ gap: 1.5 })`
-  ${({ theme: { space } }) => css`
-    margin-inline: auto;
-    padding: ${space(2)} ${space(1.5)};
-    max-width: 80em;
-  `}
-`
 
 export const UpwardLinkWrapper = styled.div<{ withAppNavi?: boolean }>`
   ${({ withAppNavi = true, theme: { leading, space } }) => css`

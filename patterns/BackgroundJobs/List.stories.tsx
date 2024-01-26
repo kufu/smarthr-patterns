@@ -3,8 +3,7 @@ import { action } from '@storybook/addon-actions'
 import { hrefTo } from '@storybook/addon-links'
 import { StoryFn } from '@storybook/react'
 import dayjs from 'dayjs'
-import { Base, Center, PageHeading, Pagination, Stack, StatusLabel, Table, Text, TextLink, Th, Td as shrTd } from 'smarthr-ui'
-import styled, { css } from 'styled-components'
+import { Base, Center, PageHeading, Pagination, Stack, StatusLabel, Table, Td, Text, TextLink, Th } from 'smarthr-ui'
 
 import { backgroundJobsData } from './data'
 
@@ -26,16 +25,18 @@ const Template: StoryFn = (_, { loaded: { detailProcessUri, detailSuccessUri, de
   return (
     <>
       <GlobalNav current="バックグラウンド処理" />
-      <Container>
-        <Stack>
+      <Center maxWidth="75em" className="shr-px-1.5 shr-py-2 shr-w-[calc(100%_-_theme(spacing[1.5])_*_2)]">
+        <Stack className="shr-self-stretch">
           <PageHeading>バックグラウンド処理</PageHeading>
           <Base overflow="auto">
             <Table>
               <thead>
                 <tr>
-                  <ThStatus>ステータス</ThStatus>
+                  <Th className="shr-w-em">ステータス</Th>
                   <Th>処理名</Th>
-                  <ThDatetime sort="desc">受付日時</ThDatetime>
+                  <Th sort="desc" className="shr-w-em">
+                    受付日時
+                  </Th>
                   <Th>結果概要</Th>
                 </tr>
               </thead>
@@ -44,16 +45,16 @@ const Template: StoryFn = (_, { loaded: { detailProcessUri, detailSuccessUri, de
                   const resultsArr = Array.isArray(results) ? results : [results]
                   return (
                     <tr key={i}>
-                      <Td>
+                      <Td className="[&&&]:shr-align-baseline">
                         <StatusLabel type={status.type}>{status.label}</StatusLabel>
                       </Td>
-                      <Td>
+                      <Td className="[&&&]:shr-align-baseline">
                         <TextLink href={uri}>{name}</TextLink>
                       </Td>
-                      <Td>
+                      <Td className="[&&&]:shr-align-baseline">
                         <Text whiteSpace="nowrap">{dayjs(datetime).format('YYYY/MM/DD hh:mm')}</Text>
                       </Td>
-                      <Td>
+                      <Td className="[&&&]:shr-align-baseline">
                         {resultsArr.map((result, j) => (
                           <p key={j}>{result}</p>
                         ))}
@@ -68,7 +69,7 @@ const Template: StoryFn = (_, { loaded: { detailProcessUri, detailSuccessUri, de
             <Pagination current={1} total={10} onClick={action('click')} />
           </Center>
         </Stack>
-      </Container>
+      </Center>
     </>
   )
 }
@@ -88,27 +89,3 @@ export const 一覧 = {
 export default {
   title: 'バックグラウンド処理',
 }
-
-const Container = styled(Center).attrs({ maxWidth: '75em' })`
-  ${({ theme: { space } }) => css`
-    /* FIXME: props で SeparateGap を指定できるようにしたい */
-    padding: ${space(2)} ${space(1.5)};
-    width: calc(100% - ${space(1.5)} * 2);
-
-    > div {
-      align-self: stretch;
-    }
-  `}
-`
-
-const ThStatus = styled(Th)`
-  width: 1em;
-`
-
-const ThDatetime = styled(Th)`
-  width: 1em;
-`
-
-const Td = styled(shrTd)`
-  vertical-align: baseline;
-`
