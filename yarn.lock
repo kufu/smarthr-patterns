@@ -6883,10 +6883,10 @@ pkg-dir@^7.0.0:
   dependencies:
     find-up "^6.3.0"
 
-polished@^4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-4.2.2.tgz#2529bb7c3198945373c52e34618c8fe7b1aa84d1"
-  integrity sha512-Sz2Lkdxz6F2Pgnpi9U5Ng/WdWAUZxmHrNPoVlm3aAemxoy2Qy7LGjQg4uf8qKelDAUW94F4np3iH2YPf2qefcQ==
+polished@^4.2.2, polished@^4.3.0:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-4.3.1.tgz#5a00ae32715609f83d89f6f31d0f0261c6170548"
+  integrity sha512-OBatVyC/N7SCW/FaDHrSd+vn0o5cS855TOmYi4OkdWUMSJCET/xip//ch8xGUvtr3i44X9LVyWwQlRMTN3pwSA==
   dependencies:
     "@babel/runtime" "^7.17.8"
 
@@ -7760,16 +7760,16 @@ smarthr-normalize-css@^1.1.0:
   dependencies:
     styled-reset "^4.4.2"
 
-smarthr-ui@^41.1.0:
-  version "41.1.0"
-  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-41.1.0.tgz#ef3d8c4c57d9eb5e70b28df9f34fa5d3408ef82b"
-  integrity sha512-CGvBVa0w2fdAChwJ8H8QQnVQRHp/DFbJSouRcyZkdbCwrEBk0jBr/MFLqNAb8G8vEtXb1kHI/1c3Uh1qlpijYQ==
+smarthr-ui@^41.3.0:
+  version "41.3.0"
+  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-41.3.0.tgz#7a7bd81ac4f2f2f515d36726a72bd9000aef027f"
+  integrity sha512-vpSIp3v20f2NfY/E5+lo709cziuaLfkxshV9ZYKTxBAmcTmxG1Vg21zjkfX5RgqoAYgBJXFZjpJP53TlAb7GaA==
   dependencies:
     "@smarthr/wareki" "^1.2.0"
     dayjs "^1.11.10"
     lodash.merge "^4.6.2"
     lodash.range "^3.2.0"
-    polished "^4.2.2"
+    polished "^4.3.0"
     react-draggable "^4.4.6"
     react-icons "^5.0.1"
     react-innertext "^1.1.5"
