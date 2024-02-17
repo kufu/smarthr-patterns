@@ -16,7 +16,7 @@ export const TemporaryOperationArea: React.FC<Props> = (props) => {
       <form role="search" onSubmit={(e) => e.preventDefault()}>
         <Cluster align="center" gap={1}>
           <Cluster gap={0.5}>
-            <SearchInput tooltipMessage="オブジェクト名で検索できます。" value={searchValue} />
+            <SearchInput tooltipMessage="オブジェクト名で検索できます。" value={searchValue} name="search" />
             <Button type="submit">検索</Button>
           </Cluster>
           <FilterDropdown onApply={() => null}>絞り込みの中身</FilterDropdown>

@@ -33,6 +33,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
   <Stack gap={1.5} className="shr-mx-auto shr-py-2 shr-px-1.5 shr-max-w-[80em]">
     {withUpwardNavigation && (
       <UpwardLinkWrapper>
+        {/* eslint-disable-next-line smarthr/a11y-anchor-has-href-attribute */}
         <TextLink href="#" prefix={<FaArrowLeftIcon />}>
           分析レポートに戻る
         </TextLink>
@@ -84,9 +85,13 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
                           作成済みの給与明細一覧に、給与明細を追加・更新するには、CSVファイルを取り込みます。取り込み処理中は、給与明細の操作（追加・削除・確定など）が一時的に制限されます。
                         </Text>
                         <Cluster gap={{ column: 1.5, row: 1 }}>
-                          <CheckBox checked>扶養親族が23歳未満</CheckBox>
-                          <CheckBox checked>高齢任意加入被保険者</CheckBox>
-                          <CheckBox>退職済み</CheckBox>
+                          <CheckBox name="checkbox_1" checked>
+                            扶養親族が23歳未満
+                          </CheckBox>
+                          <CheckBox name="checkbox_2" checked>
+                            高齢任意加入被保険者
+                          </CheckBox>
+                          <CheckBox name="checkbox_3">退職済み</CheckBox>
                         </Cluster>
                       </Stack>
                     </BaseColumn>
@@ -97,10 +102,10 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
                         <Text as="p">申告書の下段の「住宅借入金等特別控除証明書」が見えるように撮影してください。</Text>
                         <Cluster gap={1}>
                           <FormControl title="評価ロール名" titleType="subBlockTitle">
-                            <Input />
+                            <Input name="input_1" />
                           </FormControl>
                           <FormControl title="健保名（任意）" titleType="subBlockTitle">
-                            <Input />
+                            <Input name="input_2" />
                           </FormControl>
                         </Cluster>
                       </Stack>
@@ -130,9 +135,13 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
                     >
                       <BaseColumn padding={1}>
                         <Cluster gap={{ column: 1.5, row: 1 }}>
-                          <CheckBox>法人・団体</CheckBox>
-                          <CheckBox checked>雇入れ又は離職に係る事業所</CheckBox>
-                          <CheckBox checked>短期雇用特例被保険者</CheckBox>
+                          <CheckBox name="checkbox_4">法人・団体</CheckBox>
+                          <CheckBox name="checkbox_5" checked>
+                            雇入れ又は離職に係る事業所
+                          </CheckBox>
+                          <CheckBox name="checkbox_6" checked>
+                            短期雇用特例被保険者
+                          </CheckBox>
                         </Cluster>
                       </BaseColumn>
                     </Fieldset>
@@ -149,7 +158,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
                         titleType="subBlockTitle"
                         errorMessages="削除したカスタムマスターは元に戻せません。"
                       >
-                        <DatePicker />
+                        <DatePicker name="datepicker" />
                       </FormControl>
                     </Fieldset>
                   </Base>

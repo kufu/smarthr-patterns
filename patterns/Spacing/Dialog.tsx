@@ -41,9 +41,13 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
           <Fieldset title={`進捗状況${i + 1}`} key={i} innerMargin={0.5}>
             <BaseColumn padding={1}>
               <Cluster gap={{ column: 1.5, row: 1 }}>
-                <CheckBox>系列</CheckBox>
-                <CheckBox checked>タスク</CheckBox>
-                <CheckBox checked>主たる事務所</CheckBox>
+                <CheckBox name="checkbox_1">系列</CheckBox>
+                <CheckBox name="checkbox_2" checked>
+                  タスク
+                </CheckBox>
+                <CheckBox name="checkbox_3" checked>
+                  主たる事務所
+                </CheckBox>
               </Cluster>
             </BaseColumn>
           </Fieldset>
@@ -55,7 +59,7 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
                 ダウンロード項目を連携先のフォーマットに変換する設定です。「項目を追加」から連携先項目を登録できます。連携先項目名を登録の上、対応するSmartHRの項目や変換方法を設定してください。
               </Text>
               <FormControl title="被保険者氏名（ヨミ）" titleType="subBlockTitle">
-                <Select options={[]} width="10em" />
+                <Select options={[]} width="10em" name="select" />
               </FormControl>
             </Stack>
           </BaseColumn>

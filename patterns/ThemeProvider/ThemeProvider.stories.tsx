@@ -68,20 +68,22 @@ const Template: StoryFn<StoryProps> = ({ logo, BRAND, MAIN, TEXT_BLACK }) => {
             <Base padding={1.5}>
               <Stack gap={2}>
                 <FormControl title="評価テンプレート名">
-                  <Input />
+                  <Input name="input" />
                 </FormControl>
                 <Fieldset title="添付書類" innerMargin={0.5}>
                   <BaseColumn>
-                    <CheckBox defaultChecked>デフォルトの色を復元</CheckBox>
+                    <CheckBox name="checkbox" defaultChecked>
+                      デフォルトの色を復元
+                    </CheckBox>
                   </BaseColumn>
                 </Fieldset>
                 <Fieldset title="公文書の有無" innerMargin={0.5}>
                   <BaseColumn>
                     <Cluster>
-                      <RadioButton defaultChecked name="sample-radio">
+                      <RadioButton defaultChecked name="sample_radio">
                         あり
                       </RadioButton>
-                      <RadioButton name="sample-radio">なし</RadioButton>
+                      <RadioButton name="sample_radio">なし</RadioButton>
                     </Cluster>
                   </BaseColumn>
                 </Fieldset>

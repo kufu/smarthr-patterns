@@ -10,6 +10,7 @@ export const UpwardNavigation: React.FC<Props> = ({ withAppNavi, withUpwardLink 
   <Stack gap={1.5} className="shr-mx-auto shr-py-2 shr-px-1.5 shr-max-w-[80em]">
     {withUpwardLink && (
       <UpwardLinkWrapper withAppNavi={withAppNavi}>
+        {/* eslint-disable-next-line smarthr/a11y-anchor-has-href-attribute */}
         <TextLink href="#" prefix={<FaArrowLeftIcon />}>
           分析レポートに戻る
         </TextLink>
