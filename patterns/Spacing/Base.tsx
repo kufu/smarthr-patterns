@@ -1,5 +1,4 @@
-import { Base, Heading, InformationPanel, PageHeading, Section, Stack, Text } from 'smarthr-ui'
-import styled, { css } from 'styled-components'
+import { Base, Heading, InformationPanel, PageHeading, SectioningFragment, Stack, Text } from 'smarthr-ui'
 
 type Props = {
   withInformationPanel: boolean
@@ -24,41 +23,35 @@ export const SpacingBase: React.FC<Props> = ({ withInformationPanel }) => (
           </InformationPanel>
         )}
       </Stack>
-      <Section>
-        <Stack>
-          <Heading>セクション見出し</Heading>
-          <Section>
-            <Base padding={1.5}>
-              <Stack gap={1.5}>
+      <Stack as="section">
+        <Heading>セクション見出し</Heading>
+        <SectioningFragment>
+          <Base padding={1.5} as="section">
+            <Stack gap={1.5}>
+              <Stack>
+                <Heading type="blockTitle">ブロック見出し</Heading>
+                <Text as="p">
+                  ブロックの本文。以下はダミーテキストです。ダウンロード項目を連携先のフォーマットに変換する設定です。「項目を追加」から連携先項目を登録できます。連携先項目名を登録の上、対応するSmartHRの項目や変換方法を設定してください。
+                </Text>
+              </Stack>
+              <Stack gap={1.5} as="section">
                 <Stack>
-                  <Heading type="blockTitle">ブロック見出し</Heading>
+                  <Heading type="subBlockTitle">子ブロック見出し</Heading>
                   <Text as="p">
-                    ブロックの本文。以下はダミーテキストです。ダウンロード項目を連携先のフォーマットに変換する設定です。「項目を追加」から連携先項目を登録できます。連携先項目名を登録の上、対応するSmartHRの項目や変換方法を設定してください。
+                    子ブロックの本文。以下はダミーテキストです。ダウンロード項目を連携先のフォーマットに変換する設定です。「項目を追加」から連携先項目を登録できます。連携先項目名を登録の上、対応するSmartHRの項目や変換方法を設定してください。
                   </Text>
                 </Stack>
-                <Section>
-                  <Stack gap={1.5}>
-                    <Stack>
-                      <Heading type="subBlockTitle">子ブロック見出し</Heading>
-                      <Text as="p">
-                        子ブロックの本文。以下はダミーテキストです。ダウンロード項目を連携先のフォーマットに変換する設定です。「項目を追加」から連携先項目を登録できます。連携先項目名を登録の上、対応するSmartHRの項目や変換方法を設定してください。
-                      </Text>
-                    </Stack>
-                    <Section>
-                      <Stack>
-                        <Heading type="subSubBlockTitle">孫ブロック見出し</Heading>
-                        <Text as="p">
-                          孫ブロックの本文。以下はダミーテキストです。ダウンロード項目を連携先のフォーマットに変換する設定です。「項目を追加」から連携先項目を登録できます。連携先項目名を登録の上、対応するSmartHRの項目や変換方法を設定してください。
-                        </Text>
-                      </Stack>
-                    </Section>
-                  </Stack>
-                </Section>
+                <Stack as="section">
+                  <Heading type="subSubBlockTitle">孫ブロック見出し</Heading>
+                  <Text as="p">
+                    孫ブロックの本文。以下はダミーテキストです。ダウンロード項目を連携先のフォーマットに変換する設定です。「項目を追加」から連携先項目を登録できます。連携先項目名を登録の上、対応するSmartHRの項目や変換方法を設定してください。
+                  </Text>
+                </Stack>
               </Stack>
-            </Base>
-          </Section>
-        </Stack>
-      </Section>
+            </Stack>
+          </Base>
+        </SectioningFragment>
+      </Stack>
     </Stack>
   </Stack>
 )

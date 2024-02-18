@@ -12,6 +12,7 @@ export const SelectCompanyAccount = () => {
       <p>&#x7B;機能名&#x7D;を利用する企業アカウントを選択してください。</p>
       <Stack as="ul">
         {companyList.map(({ id, name }) => (
+          // eslint-disable-next-line smarthr/a11y-input-in-form-control
           <RadioButtonPanel key={id} name="companyAccount" checked={id === selectedId} onChange={() => setSelectedId(id)}>
             {name}
           </RadioButtonPanel>

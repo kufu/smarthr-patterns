@@ -5,21 +5,24 @@ import { Theme } from '@global'
 
 import '../index.css'
 
-export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
+const preview = {
+  parameters: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
+      },
     },
+    layout: 'fullscreen',
   },
-  layout: 'fullscreen',
+  decorators: [
+    (Story: StoryFn) => (
+      <Theme>
+        <Story />
+      </Theme>
+    ),
+  ],
 }
 
-export const decorators = [
-  (Story: StoryFn) => (
-    <Theme>
-      <Story />
-    </Theme>
-  ),
-]
+export default preview
