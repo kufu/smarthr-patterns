@@ -15,7 +15,6 @@ import {
   InformationPanel,
   Input,
   PageHeading,
-  Section,
   Stack,
   StatusLabel,
   TabBar,
@@ -68,106 +67,101 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
           </InformationPanel>
         )}
       </Stack>
-      <Section>
-        <Stack gap={2}>
-          <Stack>
-            <Heading>制限されている操作</Heading>
-            <Base padding={1.5}>
-              <Stack gap={2}>
-                <Text as="p">
-                  評価シートとその工程や役割をひな形として保存します。評価シートごとにテンプレートを作成してください。
-                </Text>
-                <Stack gap={1.5}>
-                  <Fieldset title="在籍状況" innerMargin={0.5}>
-                    <BaseColumn padding={1}>
-                      <Stack>
-                        <Text as="p">
-                          作成済みの給与明細一覧に、給与明細を追加・更新するには、CSVファイルを取り込みます。取り込み処理中は、給与明細の操作（追加・削除・確定など）が一時的に制限されます。
-                        </Text>
-                        <Cluster gap={{ column: 1.5, row: 1 }}>
-                          <CheckBox name="checkbox_1" checked>
-                            扶養親族が23歳未満
-                          </CheckBox>
-                          <CheckBox name="checkbox_2" checked>
-                            高齢任意加入被保険者
-                          </CheckBox>
-                          <CheckBox name="checkbox_3">退職済み</CheckBox>
-                        </Cluster>
-                      </Stack>
-                    </BaseColumn>
-                  </Fieldset>
-                  <Fieldset title="添付書類" innerMargin={0.5}>
-                    <BaseColumn padding={1}>
-                      <Stack>
-                        <Text as="p">申告書の下段の「住宅借入金等特別控除証明書」が見えるように撮影してください。</Text>
-                        <Cluster gap={1}>
-                          <FormControl title="評価ロール名" titleType="subBlockTitle">
-                            <Input name="input_1" />
-                          </FormControl>
-                          <FormControl title="健保名（任意）" titleType="subBlockTitle">
-                            <Input name="input_2" />
-                          </FormControl>
-                        </Cluster>
-                      </Stack>
-                    </BaseColumn>
-                  </Fieldset>
-                </Stack>
-              </Stack>
-            </Base>
-          </Stack>
-          <Stack>
-            <TabBar>
-              <TabItem id="tab1" onClick={action('tab1 clicked')}>
-                手続き
-              </TabItem>
-              <TabItem id="tab2" onClick={action('tab2 clicked')} selected>
-                ペアローン
-              </TabItem>
-            </TabBar>
+      <Stack gap={2} as="section">
+        <Stack>
+          <Heading>制限されている操作</Heading>
+          <Base padding={1.5}>
             <Stack gap={2}>
-              <Section>
-                <Stack>
-                  <Heading>質問番号</Heading>
-                  <Base padding={1.5}>
-                    <Fieldset
-                      title="スコアの再計算"
-                      helpMessage="ファイルに書き出したい評価対象者の従業員項目と評価項目を選択して「書き出し」を押すと、CSVファイルをバックグラウンド処理で作成します。"
-                    >
-                      <BaseColumn padding={1}>
-                        <Cluster gap={{ column: 1.5, row: 1 }}>
-                          <CheckBox name="checkbox_4">法人・団体</CheckBox>
-                          <CheckBox name="checkbox_5" checked>
-                            雇入れ又は離職に係る事業所
-                          </CheckBox>
-                          <CheckBox name="checkbox_6" checked>
-                            短期雇用特例被保険者
-                          </CheckBox>
-                        </Cluster>
-                      </BaseColumn>
-                    </Fieldset>
-                  </Base>
-                </Stack>
-              </Section>
-              <Section>
-                <Stack>
-                  <Heading>口座情報</Heading>
-                  <Base padding={1.5}>
-                    <Fieldset title="被保険者氏名（ヨミ）" helpMessage="申請が役所に到達しました。審査終了までお待ちください。">
-                      <FormControl
-                        title="経路名"
-                        titleType="subBlockTitle"
-                        errorMessages="削除したカスタムマスターは元に戻せません。"
-                      >
-                        <DatePicker name="datepicker" />
-                      </FormControl>
-                    </Fieldset>
-                  </Base>
-                </Stack>
-              </Section>
+              <Text as="p">
+                評価シートとその工程や役割をひな形として保存します。評価シートごとにテンプレートを作成してください。
+              </Text>
+              <Stack gap={1.5}>
+                <Fieldset title="在籍状況" innerMargin={0.5}>
+                  <BaseColumn padding={1}>
+                    <Stack>
+                      <Text as="p">
+                        作成済みの給与明細一覧に、給与明細を追加・更新するには、CSVファイルを取り込みます。取り込み処理中は、給与明細の操作（追加・削除・確定など）が一時的に制限されます。
+                      </Text>
+                      <Cluster gap={{ column: 1.5, row: 1 }}>
+                        <CheckBox name="checkbox_1" checked>
+                          扶養親族が23歳未満
+                        </CheckBox>
+                        <CheckBox name="checkbox_2" checked>
+                          高齢任意加入被保険者
+                        </CheckBox>
+                        <CheckBox name="checkbox_3">退職済み</CheckBox>
+                      </Cluster>
+                    </Stack>
+                  </BaseColumn>
+                </Fieldset>
+                <Fieldset title="添付書類" innerMargin={0.5}>
+                  <BaseColumn padding={1}>
+                    <Stack>
+                      <Text as="p">申告書の下段の「住宅借入金等特別控除証明書」が見えるように撮影してください。</Text>
+                      <Cluster gap={1}>
+                        <FormControl title="評価ロール名" titleType="subBlockTitle">
+                          <Input name="input_1" />
+                        </FormControl>
+                        <FormControl title="健保名（任意）" titleType="subBlockTitle">
+                          <Input name="input_2" />
+                        </FormControl>
+                      </Cluster>
+                    </Stack>
+                  </BaseColumn>
+                </Fieldset>
+              </Stack>
+            </Stack>
+          </Base>
+        </Stack>
+        <Stack>
+          <TabBar>
+            <TabItem id="tab1" onClick={action('tab1 clicked')}>
+              手続き
+            </TabItem>
+            <TabItem id="tab2" onClick={action('tab2 clicked')} selected>
+              ペアローン
+            </TabItem>
+          </TabBar>
+          <Stack gap={2} as="section">
+            <Stack>
+              <Heading>質問番号</Heading>
+              <Base padding={1.5}>
+                <Fieldset
+                  title="スコアの再計算"
+                  helpMessage="ファイルに書き出したい評価対象者の従業員項目と評価項目を選択して「書き出し」を押すと、CSVファイルをバックグラウンド処理で作成します。"
+                >
+                  <BaseColumn padding={1}>
+                    <Cluster gap={{ column: 1.5, row: 1 }}>
+                      <CheckBox name="checkbox_4">法人・団体</CheckBox>
+                      <CheckBox name="checkbox_5" checked>
+                        雇入れ又は離職に係る事業所
+                      </CheckBox>
+                      <CheckBox name="checkbox_6" checked>
+                        短期雇用特例被保険者
+                      </CheckBox>
+                    </Cluster>
+                  </BaseColumn>
+                </Fieldset>
+              </Base>
+            </Stack>
+            <Stack>
+              {/* eslint-disable-next-line smarthr/a11y-heading-in-sectioning-content */}
+              <Heading>口座情報</Heading>
+              <Base padding={1.5}>
+                <Fieldset title="被保険者氏名（ヨミ）" helpMessage="申請が役所に到達しました。審査終了までお待ちください。">
+                  <FormControl
+                    title="経路名"
+                    titleType="subBlockTitle"
+                    errorMessages="削除したカスタムマスターは元に戻せません。"
+                  >
+                    <DatePicker name="datepicker" />
+                  </FormControl>
+                </Fieldset>
+              </Base>
             </Stack>
           </Stack>
         </Stack>
-      </Section>
+      </Stack>
     </Stack>
   </Stack>
 )

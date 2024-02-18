@@ -15,7 +15,6 @@ import {
   Input,
   PageHeading,
   RadioButton,
-  Section,
   Stack,
   TabBar,
   TabItem,
@@ -62,35 +61,33 @@ const Template: StoryFn<StoryProps> = ({ logo, BRAND, MAIN, TEXT_BLACK }) => {
           </TabItem>
         </TabBar>
 
-        <Section>
-          <Stack>
-            <Heading>SmartHR管理者以外の方</Heading>
-            <Base padding={1.5}>
-              <Stack gap={2}>
-                <FormControl title="評価テンプレート名">
-                  <Input name="input" />
-                </FormControl>
-                <Fieldset title="添付書類" innerMargin={0.5}>
-                  <BaseColumn>
-                    <CheckBox name="checkbox" defaultChecked>
-                      デフォルトの色を復元
-                    </CheckBox>
-                  </BaseColumn>
-                </Fieldset>
-                <Fieldset title="公文書の有無" innerMargin={0.5}>
-                  <BaseColumn>
-                    <Cluster>
-                      <RadioButton defaultChecked name="sample_radio">
-                        あり
-                      </RadioButton>
-                      <RadioButton name="sample_radio">なし</RadioButton>
-                    </Cluster>
-                  </BaseColumn>
-                </Fieldset>
-              </Stack>
-            </Base>
-          </Stack>
-        </Section>
+        <Stack as="section">
+          <Heading>SmartHR管理者以外の方</Heading>
+          <Base padding={1.5}>
+            <Stack gap={2}>
+              <FormControl title="評価テンプレート名">
+                <Input name="input" />
+              </FormControl>
+              <Fieldset title="添付書類" innerMargin={0.5}>
+                <BaseColumn>
+                  <CheckBox name="checkbox" defaultChecked>
+                    デフォルトの色を復元
+                  </CheckBox>
+                </BaseColumn>
+              </Fieldset>
+              <Fieldset title="公文書の有無" innerMargin={0.5}>
+                <BaseColumn>
+                  <Cluster>
+                    <RadioButton defaultChecked name="sample_radio">
+                      あり
+                    </RadioButton>
+                    <RadioButton name="sample_radio">なし</RadioButton>
+                  </Cluster>
+                </BaseColumn>
+              </Fieldset>
+            </Stack>
+          </Base>
+        </Stack>
 
         <FloatArea
           primaryButton={<Button variant="primary">保存</Button>}
