@@ -4694,10 +4694,10 @@ eslint-config-prettier@^9.1.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-9.1.0.tgz#31af3d94578645966c082fcb71a5846d3c94867f"
   integrity sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==
 
-eslint-config-smarthr@^6.24.0:
-  version "6.24.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-smarthr/-/eslint-config-smarthr-6.24.0.tgz#6a483215658e4046de26991c7d02fe904a38c406"
-  integrity sha512-kBc90/U4yTqdOH2ygx7RAUhLKFZms/52GYGHvYoWc2rvxi4AWvysKy/CUD4vFDfgEXjtJtekEKQRhsaOEtBmmg==
+eslint-config-smarthr@^6.25.0:
+  version "6.25.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-smarthr/-/eslint-config-smarthr-6.25.0.tgz#2c3f398b6109ee430f0742ed8e63b65abda7764b"
+  integrity sha512-iIsnb/pP85KmcPR6pbeZAqccF0ZvkFnIrll+zKNMxVRHakOZRttrPi17l39rtue2Z3CIGwTzTiYmMKmFz4HwGw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^7.4.0"
     "@typescript-eslint/parser" "^7.4.0"
@@ -4706,7 +4706,7 @@ eslint-config-smarthr@^6.24.0:
     eslint-plugin-jsx-a11y "^6.8.0"
     eslint-plugin-react "^7.34.1"
     eslint-plugin-react-hooks "^4.6.0"
-    eslint-plugin-smarthr "^0.5.3"
+    eslint-plugin-smarthr "^0.5.4"
 
 eslint-import-resolver-node@^0.3.9:
   version "0.3.9"
@@ -4798,10 +4798,10 @@ eslint-plugin-react@^7.34.1:
     semver "^6.3.1"
     string.prototype.matchall "^4.0.10"
 
-eslint-plugin-smarthr@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-smarthr/-/eslint-plugin-smarthr-0.5.3.tgz#d6d47baf158f2a0bb84d8983e9405d22bce53b95"
-  integrity sha512-pjcUR3mEq3ll64HUUm66JkPxujGELuH9JLp+U+5/ng4ZIITp8n0c7YMhXl1IBP04hCjbYi5/JcDBTcad6xIaKA==
+eslint-plugin-smarthr@^0.5.4:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-smarthr/-/eslint-plugin-smarthr-0.5.5.tgz#a24a0f50d072371e5dedbe519dd642521d6da1a1"
+  integrity sha512-INprSqWccwXeFnKXk9Lu2ol/4KfnhuPbceBGU1r6J7odclRIG+4o6i4eowtFM1/5NhVXP6z/9fhp4FNI4fOhow==
   dependencies:
     json5 "^2.2.0"
 
