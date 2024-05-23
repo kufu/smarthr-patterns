@@ -40,7 +40,7 @@
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.23.5.tgz#ffb878728bb6bdcb6f4510aa51b1be9afb8cfd98"
   integrity sha512-uU27kfDRlhfKl+w1U6vp16IuvSLtjAxdArVXPa9BvLkrr7CYIsxH5adpHObeAGY/41+syctUWOZ140a2Rvkgjw==
 
-"@babel/core@^7.11.6", "@babel/core@^7.12.3", "@babel/core@^7.18.9", "@babel/core@^7.20.12", "@babel/core@^7.23.0", "@babel/core@^7.23.2", "@babel/core@^7.23.5", "@babel/core@^7.24.5":
+"@babel/core@^7.11.6", "@babel/core@^7.12.3", "@babel/core@^7.18.9", "@babel/core@^7.20.12", "@babel/core@^7.23.0", "@babel/core@^7.23.2", "@babel/core@^7.24.5":
   version "7.24.5"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.24.5.tgz#15ab5b98e101972d171aeef92ac70d8d6718f06a"
   integrity sha512-tVQRucExLQ02Boi4vdPp49svNGcfL2GhdTCT9aldhXgCJVAI21EtRfBettiuLUwce/7r6bFdgs6JFkcdTiFttA==
@@ -183,10 +183,10 @@
   dependencies:
     "@babel/types" "^7.22.5"
 
-"@babel/helper-plugin-utils@^7.0.0", "@babel/helper-plugin-utils@^7.10.4", "@babel/helper-plugin-utils@^7.12.13", "@babel/helper-plugin-utils@^7.14.5", "@babel/helper-plugin-utils@^7.18.6", "@babel/helper-plugin-utils@^7.22.5", "@babel/helper-plugin-utils@^7.8.0", "@babel/helper-plugin-utils@^7.8.3":
-  version "7.22.5"
-  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.22.5.tgz#dd7ee3735e8a313b9f7b05a773d892e88e6d7295"
-  integrity sha512-uLls06UVKgFG9QD4OeFYLEGteMIAa5kpTPcFL28yuCIIzsf6ZyKZMllKVOCZFhiZ5ptnwX4mtKdWCBE/uT4amg==
+"@babel/helper-plugin-utils@^7.0.0", "@babel/helper-plugin-utils@^7.10.4", "@babel/helper-plugin-utils@^7.12.13", "@babel/helper-plugin-utils@^7.14.5", "@babel/helper-plugin-utils@^7.18.6", "@babel/helper-plugin-utils@^7.22.5", "@babel/helper-plugin-utils@^7.24.0", "@babel/helper-plugin-utils@^7.24.5", "@babel/helper-plugin-utils@^7.8.0", "@babel/helper-plugin-utils@^7.8.3":
+  version "7.24.5"
+  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.24.5.tgz#a924607dd254a65695e5bd209b98b902b3b2f11a"
+  integrity sha512-xjNLDopRzW2o6ba0gKbkZq5YWEBaK3PCyTOY1K2P/O07LGMhMqlMXPxwN4S5/RhWuCobT8z0jrlKGlYmeR1OhQ==
 
 "@babel/helper-remap-async-to-generator@^7.22.20":
   version "7.22.20"
@@ -766,19 +766,19 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.22.5"
 
-"@babel/plugin-transform-react-jsx-self@^7.18.6", "@babel/plugin-transform-react-jsx-self@^7.23.3":
-  version "7.23.3"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-self/-/plugin-transform-react-jsx-self-7.23.3.tgz#ed3e7dadde046cce761a8e3cf003a13d1a7972d9"
-  integrity sha512-qXRvbeKDSfwnlJnanVRp0SfuWE5DQhwQr5xtLBzp56Wabyo+4CMosF6Kfp+eOD/4FYpql64XVJ2W0pVLlJZxOQ==
+"@babel/plugin-transform-react-jsx-self@^7.18.6", "@babel/plugin-transform-react-jsx-self@^7.24.5":
+  version "7.24.5"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-self/-/plugin-transform-react-jsx-self-7.24.5.tgz#22cc7572947895c8e4cd034462e65d8ecf857756"
+  integrity sha512-RtCJoUO2oYrYwFPtR1/jkoBEcFuI1ae9a9IMxeyAVa3a1Ap4AnxmyIKG2b2FaJKqkidw/0cxRbWN+HOs6ZWd1w==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.22.5"
+    "@babel/helper-plugin-utils" "^7.24.5"
 
-"@babel/plugin-transform-react-jsx-source@^7.19.6", "@babel/plugin-transform-react-jsx-source@^7.23.3":
-  version "7.23.3"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-source/-/plugin-transform-react-jsx-source-7.23.3.tgz#03527006bdc8775247a78643c51d4e715fe39a3e"
-  integrity sha512-91RS0MDnAWDNvGC6Wio5XYkyWI39FMFO+JK9+4AlgaTH+yWwVTsw7/sn6LK0lH7c5F+TFkpv/3LfCJ1Ydwof/g==
+"@babel/plugin-transform-react-jsx-source@^7.19.6", "@babel/plugin-transform-react-jsx-source@^7.24.1":
+  version "7.24.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-source/-/plugin-transform-react-jsx-source-7.24.1.tgz#a2dedb12b09532846721b5df99e52ef8dc3351d0"
+  integrity sha512-1v202n7aUq4uXAieRTKcwPzNyphlCuqHHDcdSNc+vdhoTEZcFMh+L5yZuCmGaIO7bs1nJUNfHB89TZyoL48xNA==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.22.5"
+    "@babel/helper-plugin-utils" "^7.24.0"
 
 "@babel/plugin-transform-regenerator@^7.23.3":
   version "7.23.3"
@@ -3166,16 +3166,16 @@
     magic-string "^0.27.0"
     react-refresh "^0.14.0"
 
-"@vitejs/plugin-react@^4.2.1":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@vitejs/plugin-react/-/plugin-react-4.2.1.tgz#744d8e4fcb120fc3dbaa471dadd3483f5a304bb9"
-  integrity sha512-oojO9IDc4nCUUi8qIR11KoQm0XFFLIwsRBwHRR4d/88IWghn1y6ckz/bJ8GHDCsYEJee8mDzqtJxh15/cisJNQ==
+"@vitejs/plugin-react@^4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-react/-/plugin-react-4.3.0.tgz#f20ec2369a92d8abaaefa60da8b7157819d20481"
+  integrity sha512-KcEbMsn4Dpk+LIbHMj7gDPRKaTMStxxWRkRmxsg/jVdFdJCZWt1SchZcf0M4t8lIKdwwMsEyzhrcOXRrDPtOBw==
   dependencies:
-    "@babel/core" "^7.23.5"
-    "@babel/plugin-transform-react-jsx-self" "^7.23.3"
-    "@babel/plugin-transform-react-jsx-source" "^7.23.3"
+    "@babel/core" "^7.24.5"
+    "@babel/plugin-transform-react-jsx-self" "^7.24.5"
+    "@babel/plugin-transform-react-jsx-source" "^7.24.1"
     "@types/babel__core" "^7.20.5"
-    react-refresh "^0.14.0"
+    react-refresh "^0.14.2"
 
 "@yarnpkg/esbuild-plugin-pnp@^3.0.0-rc.10":
   version "3.0.0-rc.15"
@@ -7353,10 +7353,10 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-react-refresh@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
-  integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
+react-refresh@^0.14.0, react-refresh@^0.14.2:
+  version "0.14.2"
+  resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.2.tgz#3833da01ce32da470f1f936b9d477da5c7028bf9"
+  integrity sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==
 
 react-remove-scroll-bar@^2.3.3:
   version "2.3.4"
