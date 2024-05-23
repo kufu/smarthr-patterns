@@ -8129,10 +8129,10 @@ styled-reset@^4.4.2:
   resolved "https://registry.yarnpkg.com/styled-reset/-/styled-reset-4.4.2.tgz#4da1becb2f6d22a2b22c7ee7ca09b739fe6a685f"
   integrity sha512-VzVhEZHpO/CD/F5ZllqTAY+GTaKlNDZt5mTrtPf/kXZSe85+wMkhRIiPARgvCP9/HQMk+ZGaEWk1IkdP2SYAUQ==
 
-stylelint-config-smarthr@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-smarthr/-/stylelint-config-smarthr-3.0.0.tgz#9ec37dbe2801af7474cc58c322ae612025afebea"
-  integrity sha512-2KaqcZzE0IamquRCaulfkQfFe97G1yqW8glykBI2pkDvEjvfHiwqS3c15UaWio7Ldx8yc8de1Up5i6PCJBQ5cw==
+stylelint-config-smarthr@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/stylelint-config-smarthr/-/stylelint-config-smarthr-3.0.1.tgz#db3a5f5981439f222406e37b35aec0795ce0cb04"
+  integrity sha512-51w5PmdlVTsTHbiARzbHj8tJXd036E16rdUz2Dsn1rGIHcJxeeDuSGQh8vYzWSoduukS4u5RDAKXNP6MtIVs7Q==
 
 sucrase@^3.32.0:
   version "3.35.0"
