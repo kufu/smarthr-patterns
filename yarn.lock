@@ -4711,10 +4711,10 @@ eslint-config-prettier@^9.1.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-9.1.0.tgz#31af3d94578645966c082fcb71a5846d3c94867f"
   integrity sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==
 
-eslint-config-smarthr@^6.32.0:
-  version "6.32.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-smarthr/-/eslint-config-smarthr-6.32.0.tgz#894cb16714d15ea99c5e6fd52f511d7614e9fee2"
-  integrity sha512-W6ekXsV28KbMFwR2fM2W0ov/uGrVz3ufjSwSI/r7LPfl5zrSZrHoKvm9BHJtFVnocJE9rBT78vDROmOE8k90Hw==
+eslint-config-smarthr@^6.32.1:
+  version "6.32.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-smarthr/-/eslint-config-smarthr-6.32.1.tgz#62fc89935d2bcf6ea3ad87fd522b165e9db9ca59"
+  integrity sha512-BeG6MSNnBu++Ryu/pfbfzTxBftNtEfy2j4aF02yGRS8MCY43pBdQ+PePHoV+VzSYcytoKLgdR/nFpOBvkxDWpw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^7.12.0"
     "@typescript-eslint/parser" "^7.12.0"
@@ -4723,7 +4723,7 @@ eslint-config-smarthr@^6.32.0:
     eslint-plugin-jsx-a11y "^6.8.0"
     eslint-plugin-react "^7.34.2"
     eslint-plugin-react-hooks "^4.6.2"
-    eslint-plugin-smarthr "^0.5.11"
+    eslint-plugin-smarthr "^0.5.12"
 
 eslint-import-resolver-node@^0.3.9:
   version "0.3.9"
@@ -4815,10 +4815,10 @@ eslint-plugin-react@^7.34.2:
     semver "^6.3.1"
     string.prototype.matchall "^4.0.11"
 
-eslint-plugin-smarthr@^0.5.11:
-  version "0.5.11"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-smarthr/-/eslint-plugin-smarthr-0.5.11.tgz#26a763e0e7740dad30f9dbe21b1eef339548ba71"
-  integrity sha512-WszU6Cz3A07anRJ3HzQvfbKNvjJaq9I8DqTEh/hsf88HHt28IjWzgSY4me9A+M8+G0fYvrMGkrEpOigXz4+zIw==
+eslint-plugin-smarthr@^0.5.12:
+  version "0.5.12"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-smarthr/-/eslint-plugin-smarthr-0.5.12.tgz#61312719592bb8b0a294dcfea136794c2334a417"
+  integrity sha512-ak9FMcwsyZMV4tdr1eukrv1EuwXoALPM2CYlipD84bRSW9tJLoOihvLuwsznhmBBMLTmkhtW+1oXyD2x+ANg1A==
   dependencies:
     json5 "^2.2.0"
 
