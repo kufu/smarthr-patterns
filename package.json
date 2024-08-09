@@ -47,7 +47,7 @@
     "prettier-config-smarthr": "^1.0.0",
     "storybook": "^7.6.20",
     "stylelint-config-smarthr": "^3.0.1",
-    "tailwindcss": "^3.4.8",
+    "tailwindcss": "^3.4.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "vite": "^5.4.0",
