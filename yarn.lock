@@ -4176,7 +4176,7 @@ data-view-byte-offset@^1.0.0:
     es-errors "^1.3.0"
     is-data-view "^1.0.1"
 
-dayjs@^1.11.10, dayjs@^1.11.13:
+dayjs@^1.11.13:
   version "1.11.13"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.13.tgz#92430b0139055c3ebb60150aa13e860a4b5a366c"
   integrity sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==
@@ -7334,10 +7334,10 @@ react-element-to-jsx-string@^15.0.0:
     is-plain-object "5.0.0"
     react-is "18.1.0"
 
-react-icons@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.0.1.tgz#1694e11bfa2a2888cab47dcc30154ce90485feee"
-  integrity sha512-WqLZJ4bLzlhmsvme6iFdgO8gfZP17rfjYEJ2m9RsZjZ+cc4k1hTzknEz63YS1MeT50kVzoa1Nz36f4BEx+Wigw==
+react-icons@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.3.0.tgz#ccad07a30aebd40a89f8cfa7d82e466019203f1c"
+  integrity sha512-DnUk8aFbTyQPSkCfF8dbX6kQjXA9DktMeJqfjrg6cK9vwQVMxmcA3BfP4QoiztVmEHtwlTgLFsPuH2NskKT6eg==
 
 react-innertext@^1.1.5:
   version "1.1.5"
@@ -7905,22 +7905,22 @@ smarthr-normalize-css@^1.1.0:
   dependencies:
     styled-reset "^4.4.2"
 
-smarthr-ui@^42.0.0:
-  version "42.0.0"
-  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-42.0.0.tgz#29d0d51aa233e066f15387eb26416f004c438797"
-  integrity sha512-2pge7i+6QLFXqlYWW/LtBLjEgjqRXRzgGWXCeG5PBLA1Kk6CmI8ej9oekAqjFnluFQfPoyihE7i3BQgxfEsbmg==
+smarthr-ui@^57.1.0:
+  version "57.1.0"
+  resolved "https://registry.yarnpkg.com/smarthr-ui/-/smarthr-ui-57.1.0.tgz#741259222c25e69b220f1257f59807995a9e0124"
+  integrity sha512-Cue6iwtWtdO86GY4lG6ICkcNjEUwe3h5Hzt338TXgmVb45FGFI9A/Bj5QQPWiFD7xq4XsIkixTOpWIc2GMkghg==
   dependencies:
     "@smarthr/wareki" "^1.2.0"
-    dayjs "^1.11.10"
+    dayjs "^1.11.13"
     lodash.merge "^4.6.2"
     lodash.range "^3.2.0"
     polished "^4.3.0"
     react-draggable "^4.4.6"
-    react-icons "^5.0.1"
+    react-icons "^5.3.0"
     react-innertext "^1.1.5"
     react-transition-group "^4.4.5"
-    tailwind-variants "^0.1.20"
-    tailwindcss "^3.4.1"
+    tailwind-variants "^0.2.1"
+    tailwindcss "^3.4.10"
 
 source-map-js@^1.2.0:
   version "1.2.0"
@@ -8235,19 +8235,19 @@ synchronous-promise@^2.0.15:
   resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.15.tgz#07ca1822b9de0001f5ff73595f3d08c4f720eb8e"
   integrity sha512-k8uzYIkIVwmT+TcglpdN50pS2y1BDcUnBPK9iJeGu0Pl1lOI8pD6wtzgw91Pjpe+RxtTncw32tLxs/R0yNL2Mg==
 
-tailwind-merge@^1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.14.0.tgz#e677f55d864edc6794562c63f5001f45093cdb8b"
-  integrity sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==
+tailwind-merge@^2.2.0:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-2.5.2.tgz#000f05a703058f9f9f3829c644235f81d4c08a1f"
+  integrity sha512-kjEBm+pvD+6eAwzJL2Bi+02/9LFLal1Gs61+QB7HvTfQQ0aXwC5LGT8PEt1gS0CWKktKe6ysPTAy3cBC5MeiIg==
 
-tailwind-variants@^0.1.20:
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/tailwind-variants/-/tailwind-variants-0.1.20.tgz#8aaed9094be0379a438641a42d588943e44c5fcd"
-  integrity sha512-AMh7x313t/V+eTySKB0Dal08RHY7ggYK0MSn/ad8wKWOrDUIzyiWNayRUm2PIJ4VRkvRnfNuyRuKbLV3EN+ewQ==
+tailwind-variants@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/tailwind-variants/-/tailwind-variants-0.2.1.tgz#132f2537b0150819036f6c4f47d5c50b929b758d"
+  integrity sha512-2xmhAf4UIc3PijOUcJPA1LP4AbxhpcHuHM2C26xM0k81r0maAO6uoUSHl3APmvHZcY5cZCY/bYuJdfFa4eGoaw==
   dependencies:
-    tailwind-merge "^1.14.0"
+    tailwind-merge "^2.2.0"
 
-tailwindcss@^3.4.1, tailwindcss@^3.4.11:
+tailwindcss@^3.4.10, tailwindcss@^3.4.11:
   version "3.4.11"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.4.11.tgz#4d6df41acc05a1d0291b1319490db8df375ab709"
   integrity sha512-qhEuBcLemjSJk5ajccN9xJFtM/h0AVCPaA6C92jNP+M2J8kX+eMJHI7R2HFKUvvAsMpcfLILMCFYSeDwpMmlUg==
