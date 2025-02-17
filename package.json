@@ -23,7 +23,7 @@
     "styled-components": "^5.3.11"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.8",
+    "@babel/core": "^7.26.9",
     "@storybook/addon-actions": "^8.5.0",
     "@storybook/addon-essentials": "^8.5.0",
     "@storybook/addon-interactions": "^8.5.1",
