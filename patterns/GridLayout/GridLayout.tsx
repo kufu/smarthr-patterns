@@ -16,7 +16,7 @@ const GridContext = createContext<{
 
 const GridProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [displayGrid, setDisplayGrid] = useState(true)
-  const [gutter, setGutter] = useState(2.0)
+  const [gutter, setGutter] = useState(1.5)
 
   return (
     <GridContext.Provider
@@ -104,7 +104,7 @@ const Container = styled.div<ContainerProps>`
   padding-top: 2rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  max-width: ${({ fullWidth, gutter }) => (fullWidth ? 'none' : `calc(1rem * 8 * 8 + ${gutter}rem * 7)`)};
+  max-width: ${({ fullWidth, gutter }) => (fullWidth ? 'none' : `calc(1rem * 8.375 * 12 + ${gutter}rem * 11)`)};
 
   @media (min-width: 1256px) {
     padding-right: 2rem;
@@ -125,9 +125,9 @@ const DisplayBackgroundGrid = styled.div<DisplayBackgroundGridProps>`
   background-image: ${({ gutter }) => `repeating-linear-gradient(
     90deg,
     rgba(0, 196, 204, 0.25),
-    rgba(0, 196, 204, 0.25) calc((100% - (${gutter}rem * 7)) / 8),
-    transparent calc((100% - (${gutter}rem * 7)) / 8),
-    transparent calc(calc((100% - (${gutter}rem * 7)) / 8) + ${gutter}rem)
+    rgba(0, 196, 204, 0.25) calc((100% - (${gutter}rem * 11)) / 12),
+    transparent calc((100% - (${gutter}rem * 11)) / 12),
+    transparent calc(calc((100% - (${gutter}rem * 11)) / 12) + ${gutter}rem)
   )`};
   ${({ displayGrid }) => !displayGrid && 'background-image: none;'}
   padding-bottom: 2rem;
@@ -243,19 +243,31 @@ const ColWrapper = styled.div<ColWrapperProps>`
     ${
       span === 'auto'
         ? 'width: auto;'
-        : span === 2
-          ? 'width: 25%;'
-          : span === 3
-            ? 'width: 37.5%;'
-            : span === 4
-              ? 'width: 50%;'
-              : span === 5
-                ? 'width: 62.5%;'
-                : span === 6
-                  ? 'width: 75%;'
-                  : span === 8
-                    ? 'width: 100%;'
-                    : 'width: 100%;'
+        : span === 1
+          ? 'width: 8.333333%;'
+          : span === 2
+            ? 'width: 16.666667%;'
+            : span === 3
+              ? 'width: 25%;'
+              : span === 4
+                ? 'width: 33.333333%;'
+                : span === 5
+                  ? 'width: 41.666667%;'
+                  : span === 6
+                    ? 'width: 50%;'
+                    : span === 7
+                      ? 'width: 58.333333%;'
+                      : span === 8
+                        ? 'width: 66.666667%;'
+                        : span === 9
+                          ? 'width: 75%;'
+                          : span === 10
+                            ? 'width: 83.333333%;'
+                            : span === 11
+                              ? 'width: 91.666667%;'
+                              : span === 12
+                                ? 'width: 100%;'
+                                : 'width: 100%;'
     }
   `}
 `
@@ -324,13 +336,13 @@ const GridLayoutContent: React.FC = () => {
         </AppNavi>
       </AppNaviWrapper>
       <Container gutter={gutter}>
-        <PageHeading>SmartHR における理想のグリッドシステム</PageHeading>
+        <PageHeading>SmartHR における理想の12カラムグリッドシステム</PageHeading>
         <p>
           このグリッドシステムは{' '}
           <a href="https://codepen.io/uknmr/pen/vYKWvwZ" style={{ color: '#0077c7' }} target="_blank" rel="noopener noreferrer">
             SmartHR における理想のタイポグラフィ
           </a>
-          の上に成り立っています。このグリッドシステムがあれば "即物的" に構成できます。
+          の上に成り立っています。12カラムのグリッドシステムにより、より柔軟なレイアウトが "即物的" に構成できます。
         </p>
         <p>明確で論理的で構造化された情報は、素早く読め、理解度を深め、記憶に残ります。またこれは科学的にも証明されています。</p>
       </Container>
@@ -338,144 +350,174 @@ const GridLayoutContent: React.FC = () => {
       <Container gutter={gutter}>
         <DisplayBackgroundGrid displayGrid={displayGrid} gutter={gutter}>
           <div>
-            <div>
-              <StyledHeading>
-                基本は 8 列で最大 {16 * 8 * 8 + 7 * gutter * 16}px のグリッド構成（溝が {gutter}rem の場合）
-              </StyledHeading>
-              <p>
-                フィールドごとの溝は 1.5rem とし、行ごとの溝は 2rem
-                としています。これは上下に比べて左右で情報が分断する可能性が低いことに影響しています。実際のプロダクトにおいては行ごとの溝は
-                UI 構成に依ります。
-              </p>
-              <p>
-                また、グリッドシステムでは縦の分割も画面の構成を決める重要な変数になるが、ここはウェブだ。縦はコンテンツの長さに依り無限である。だから気にしたら負け。余白や高さなどすべての大きさをデフォルトフォントサイズ基準にすることで縦方向のリズムを守れる。
-              </p>
-              <p>
-                一つのフィールドは 2 列 280px から 8 列 1192px までの 6
-                段階で、その中から大体使えそうなレイアウトは下記の通りです。
-              </p>
-              <p>
-                ウィンドウ幅が 1192px
-                より小さくなる場合はフィールドごとの横幅間隔を維持したまま小さくなります。ここではブレークポイントのことは考えないので際限なく小さくなります。
-              </p>
-              <p>
-                これは思いつきですがボタンやラベルの最小幅、ダイアログサイズなどもこのグリッドを基準に考えていくと統一感があり美しい
-                UI を構成できそうです。
-              </p>
-            </div>
-            <Row>
-              <Col span={2} displayWidth />
-              <Col span={4} displayWidth />
-              <Col span={2} displayWidth />
-            </Row>
-            <Row>
-              <Col span={2} displayWidth />
-              <Col span={6} displayWidth />
-            </Row>
-            <Row>
-              <Col span={3} displayWidth />
-              <Col span={5} displayWidth />
-            </Row>
-            <Row>
-              <Col span={4} displayWidth />
-              <Col span={4} displayWidth />
-            </Row>
-            <Row>
-              <Col span={5} displayWidth />
-              <Col span={3} displayWidth />
-            </Row>
-            <Row>
-              <Col span={6} displayWidth />
-              <Col span={2} displayWidth />
-            </Row>
-            <Row>
-              <Col span={8} displayWidth />
-            </Row>
+            <StyledHeading>
+              基本は 12 列で最大 {16 * 8.375 * 12 + 11 * gutter * 16}px のグリッド構成（溝が {gutter}rem の場合）
+            </StyledHeading>
+            <p>
+              フィールドごとの溝は 1.5rem とし、行ごとの溝は 2rem
+              としています。これは上下に比べて左右で情報が分断する可能性が低いことに影響しています。実際のプロダクトにおいては行ごとの溝は
+              UI 構成に依ります。
+            </p>
+            <p>
+              また、グリッドシステムでは縦の分割も画面の構成を決める重要な変数になるが、ここはウェブだ。縦はコンテンツの長さに依り無限である。だから気にしたら負け。余白や高さなどすべての大きさをデフォルトフォントサイズ基準にすることで縦方向のリズムを守れる。
+            </p>
+            <p>
+              一つのフィールドは 1 列から 12 列までの柔軟な幅設定ができ、Bootstrap
+              のような標準的な12カラムグリッドと同様の使い勝手を提供します。
+            </p>
+            <p>
+              ウィンドウ幅が最大幅より小さくなる場合はフィールドごとの横幅間隔を維持したまま小さくなります。ここではブレークポイントのことは考えないので際限なく小さくなります。
+            </p>
+            <p>
+              これは思いつきですがボタンやラベルの最小幅、ダイアログサイズなどもこのグリッドを基準に考えていくと統一感があり美しい
+              UI を構成できそうです。
+            </p>
           </div>
+
+          {/* 12カラムの基本的なレイアウト例 */}
+          <Row>
+            <Col span={12} displayWidth />
+          </Row>
+          <Row>
+            <Col span={6} displayWidth />
+            <Col span={6} displayWidth />
+          </Row>
+          <Row>
+            <Col span={4} displayWidth />
+            <Col span={4} displayWidth />
+            <Col span={4} displayWidth />
+          </Row>
+          <Row>
+            <Col span={3} displayWidth />
+            <Col span={3} displayWidth />
+            <Col span={3} displayWidth />
+            <Col span={3} displayWidth />
+          </Row>
+          <Row>
+            <Col span={2} displayWidth />
+            <Col span={8} displayWidth />
+            <Col span={2} displayWidth />
+          </Row>
+          <Row>
+            <Col span={1} displayWidth />
+            <Col span={10} displayWidth />
+            <Col span={1} displayWidth />
+          </Row>
+
+          {/* 様々な組み合わせ */}
+          <Row>
+            <Col span={5} displayWidth />
+            <Col span={7} displayWidth />
+          </Row>
+          <Row>
+            <Col span={9} displayWidth />
+            <Col span={3} displayWidth />
+          </Row>
+          <Row>
+            <Col span={7} displayWidth />
+            <Col span={5} displayWidth />
+          </Row>
+          <Row>
+            <Col span={8} displayWidth />
+            <Col span={4} displayWidth />
+          </Row>
+          <Row>
+            <Col span={11} displayWidth />
+            <Col span={1} displayWidth />
+          </Row>
         </DisplayBackgroundGrid>
       </Container>
 
       <Container fullWidth gutter={gutter}>
         <DisplayBackgroundGrid displayGrid={displayGrid} gutter={gutter}>
           <div>
-            <div>
-              <StyledHeading>画面いっぱいなグリッド構成</StyledHeading>
-              <p>
-                これは欲張りなあなたのために。画面幅から左右 2rem ずつの padding
-                を引いたものが使える画面幅です（これはブレークポイントの見直しで可変する可能性があります）。
-              </p>
-              <p>
-                どんな画面解像度だろうともグリッドは常に 8
-                列です。幅（列数）を指定すればグリッドに沿って拡大縮小されます。幅を指定しない場合は、余ったスペースを埋めます。
-              </p>
-            </div>
-            <Row>
-              <Col span={8} displayWidth />
-            </Row>
-            <Row>
-              <Col span={2} displayWidth />
-              <Col>Flexible</Col>
-            </Row>
-            <Row>
-              <Col span={3} displayWidth />
-              <Col>Flexible</Col>
-            </Row>
-            <Row>
-              <Col span={4} displayWidth />
-              <Col>Flexible</Col>
-            </Row>
-            <Row>
-              <Col span={5} displayWidth />
-              <Col>Flexible</Col>
-            </Row>
-            <Row>
-              <Col span={6} displayWidth />
-              <Col>Flexible</Col>
-            </Row>
-            <Row>
-              <Col span={2} displayWidth />
-              <Col>Flexible</Col>
-              <Col span={2} displayWidth />
-            </Row>
-            <Row>
-              <Col span={3} displayWidth />
-              <Col>Flexible</Col>
-              <Col span={2} displayWidth />
-            </Row>
-            <div>
-              <p>もちろん埋めないこともできますし、必要があれば中央揃えもできます。</p>
-            </div>
-            <Row>
-              <Col span="auto">これは中のコンテンツ量によって幅が変化するフィールドです。</Col>
-            </Row>
-            <Row>
-              <Col span="auto">こんなこともできます（非推奨）。</Col>
-              <Col span={3} displayWidth />
-              <Col>Flexible</Col>
-            </Row>
-            <Row center>
-              <Col span="auto">行を中央寄せして中をよしなにすることもできる（非推奨）。</Col>
-              <Col span={4} displayWidth />
-            </Row>
-            <Row right>
-              <Col span={4}>右寄せもできる。</Col>
-            </Row>
-            <div>
-              <p>奇数列の等幅割もできる。</p>
-            </div>
-            <Row>
-              <Col displayWidth />
-              <Col displayWidth />
-              <Col displayWidth />
-            </Row>
-            <Row>
-              <Col displayWidth />
-              <Col displayWidth />
-              <Col displayWidth />
-              <Col displayWidth />
-              <Col displayWidth />
-            </Row>
+            <StyledHeading>画面いっぱいな12カラムグリッド構成</StyledHeading>
+            <p>
+              これは欲張りなあなたのために。画面幅から左右 2rem ずつの padding
+              を引いたものが使える画面幅です（これはブレークポイントの見直しで可変する可能性があります）。
+            </p>
+            <p>
+              どんな画面解像度だろうともグリッドは常に 12
+              列です。幅（列数）を指定すればグリッドに沿って拡大縮小されます。幅を指定しない場合は、余ったスペースを埋めます。
+            </p>
           </div>
+          <Row>
+            <Col span={12} displayWidth />
+          </Row>
+          <Row>
+            <Col span={2} displayWidth />
+            <Col>Flexible (10 columns)</Col>
+          </Row>
+          <Row>
+            <Col span={3} displayWidth />
+            <Col>Flexible (9 columns)</Col>
+          </Row>
+          <Row>
+            <Col span={4} displayWidth />
+            <Col>Flexible (8 columns)</Col>
+          </Row>
+          <Row>
+            <Col span={6} displayWidth />
+            <Col>Flexible (6 columns)</Col>
+          </Row>
+          <Row>
+            <Col span={8} displayWidth />
+            <Col>Flexible (4 columns)</Col>
+          </Row>
+          <Row>
+            <Col span={9} displayWidth />
+            <Col>Flexible (3 columns)</Col>
+          </Row>
+          <Row>
+            <Col span={2} displayWidth />
+            <Col>Flexible</Col>
+            <Col span={2} displayWidth />
+          </Row>
+          <Row>
+            <Col span={3} displayWidth />
+            <Col>Flexible</Col>
+            <Col span={3} displayWidth />
+          </Row>
+          <Row>
+            <Col span={1} displayWidth />
+            <Col>Flexible</Col>
+            <Col span={1} displayWidth />
+          </Row>
+          <div>
+            <p>もちろん埋めないこともできますし、必要があれば中央揃えもできます。</p>
+          </div>
+          <Row>
+            <Col span="auto">これは中のコンテンツ量によって幅が変化するフィールドです。</Col>
+          </Row>
+          <Row>
+            <Col span="auto">こんなこともできます（非推奨）。</Col>
+            <Col span={4} displayWidth />
+            <Col>Flexible</Col>
+          </Row>
+          <Row center>
+            <Col span="auto">行を中央寄せして中をよしなにすることもできる（非推奨）。</Col>
+            <Col span={6} displayWidth />
+          </Row>
+          <Row right>
+            <Col span={6}>右寄せもできる。</Col>
+          </Row>
+          <div>
+            <p>等幅割もできる。</p>
+          </div>
+          <Row>
+            <Col displayWidth />
+            <Col displayWidth />
+            <Col displayWidth />
+            <Col displayWidth />
+            <Col displayWidth />
+            <Col displayWidth />
+          </Row>
+          <Row>
+            <Col displayWidth />
+            <Col displayWidth />
+            <Col displayWidth />
+            <Col displayWidth />
+          </Row>
         </DisplayBackgroundGrid>
       </Container>
     </>
