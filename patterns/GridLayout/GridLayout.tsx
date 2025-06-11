@@ -76,12 +76,12 @@ const AppNaviWrapper = styled.div`
     display: flex;
     justify-content: space-between;
 
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
 
     @media (min-width: 1256px) {
-      padding-right: 2rem;
-      padding-left: 2rem;
+      padding-right: 4rem;
+      padding-left: 4rem;
     }
   }
 `
@@ -102,13 +102,13 @@ const Container = styled.div<ContainerProps>`
   margin-right: auto;
   margin-left: auto;
   padding-top: 2rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  max-width: ${({ fullWidth }) => (fullWidth ? 'none' : 'calc(1920px - 4rem)')};
+  padding-right: 4rem;
+  padding-left: 4rem;
+  max-width: ${({ fullWidth }) => (fullWidth ? 'none' : 'calc(1920px - 8rem)')};
 
   @media (min-width: 1256px) {
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
   }
 
   > div > * + * {
@@ -362,7 +362,7 @@ const GridLayoutContent: React.FC = () => {
       <Container gutter={gutter}>
         <DisplayBackgroundGrid displayGrid={displayGrid} gutter={gutter}>
           <div>
-            <StyledHeading>基本は 12 列で最大 1856px のグリッド構成（溝が {gutter}rem の場合）</StyledHeading>
+            <StyledHeading>基本は 12 列で最大 1792px のグリッド構成（溝が {gutter}rem の場合）</StyledHeading>
             <p>
               フィールドごとの溝は 1.5rem とし、行ごとの溝は 2rem
               としています。これは上下に比べて左右で情報が分断する可能性が低いことに影響しています。実際のプロダクトにおいては行ごとの溝は
@@ -443,7 +443,7 @@ const GridLayoutContent: React.FC = () => {
           <div>
             <StyledHeading>画面いっぱいな12カラムグリッド構成</StyledHeading>
             <p>
-              これは欲張りなあなたのために。画面幅から左右 2rem ずつの padding
+              これは欲張りなあなたのために。画面幅から左右 4rem ずつの padding
               を引いたものが使える画面幅です（これはブレークポイントの見直しで可変する可能性があります）。
             </p>
             <p>
