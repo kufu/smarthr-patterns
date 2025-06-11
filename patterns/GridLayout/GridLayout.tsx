@@ -16,7 +16,7 @@ const GridContext = createContext<{
 
 const GridProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [displayGrid, setDisplayGrid] = useState(true)
-  const [gutter, setGutter] = useState(1.5)
+  const [gutter, setGutter] = useState(2)
 
   return (
     <GridContext.Provider
@@ -104,7 +104,7 @@ const Container = styled.div<ContainerProps>`
   padding-top: 2rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  max-width: ${({ fullWidth, gutter }) => (fullWidth ? 'none' : `calc(1rem * 8.375 * 12 + ${gutter}rem * 11)`)};
+  max-width: ${({ fullWidth }) => (fullWidth ? 'none' : 'calc(1920px - 4rem)')};
 
   @media (min-width: 1256px) {
     padding-right: 2rem;
@@ -179,11 +179,12 @@ const GridBoxBase = styled(shrBase)<GridBoxProps>`
 
 interface DisplayDimensionsBoxProps extends GridBoxProps {
   ref?: React.RefObject<HTMLDivElement>
+  span?: number | 'auto'
 }
 
 const DisplayDimensionsBox: React.FC<DisplayDimensionsBoxProps> = (props) => {
   const target = useRef<HTMLDivElement>(null)
-  const { displayGrid } = props
+  const { displayGrid, gutter, span } = props
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
 
   const testDimensions = () => {
@@ -214,9 +215,20 @@ const DisplayDimensionsBox: React.FC<DisplayDimensionsBoxProps> = (props) => {
     }
   }, [])
 
+  // padding（gutter）を除いた実際のコンテンツ幅を計算
+  const paddingTotal = gutter * 16 * 2 // 左右のpadding（1rem = 16px）
+  const contentWidth = Math.max(0, dimensions.width - paddingTotal)
+  // remでの表現
+  const remWidth = Math.round((contentWidth / 16) * 10) / 10
+
+  // カラム表示
+  const columnText = span === 'auto' ? 'auto' : span || 'flex'
+
   return (
     <GridBoxBase {...props} ref={target}>
-      <strong style={{ fontSize: '1.1rem', display: 'block' }}>{dimensions.width}px</strong>
+      <strong style={{ fontSize: '1.1rem', display: 'block' }}>
+        {columnText}col: {dimensions.width}px ({remWidth}em: {contentWidth}px)
+      </strong>
       <p
         style={{
           marginTop: '1.5rem',
@@ -284,7 +296,7 @@ const Col: React.FC<ColProps> = ({ displayWidth, children, ...props }) => {
 
   return (
     <ColWrapper {...props}>
-      <Component displayGrid={displayGrid} gutter={gutter}>
+      <Component displayGrid={displayGrid} gutter={gutter} span={displayWidth ? props.span : undefined}>
         {children || 'hoge'}
       </Component>
     </ColWrapper>
@@ -350,9 +362,7 @@ const GridLayoutContent: React.FC = () => {
       <Container gutter={gutter}>
         <DisplayBackgroundGrid displayGrid={displayGrid} gutter={gutter}>
           <div>
-            <StyledHeading>
-              基本は 12 列で最大 {16 * 8.375 * 12 + 11 * gutter * 16}px のグリッド構成（溝が {gutter}rem の場合）
-            </StyledHeading>
+            <StyledHeading>基本は 12 列で最大 1856px のグリッド構成（溝が {gutter}rem の場合）</StyledHeading>
             <p>
               フィールドごとの溝は 1.5rem とし、行ごとの溝は 2rem
               としています。これは上下に比べて左右で情報が分断する可能性が低いことに影響しています。実際のプロダクトにおいては行ごとの溝は
