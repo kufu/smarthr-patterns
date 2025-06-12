@@ -386,6 +386,39 @@ const GridLayoutContent: React.FC = () => {
 
           {/* 12カラムの基本的なレイアウト例 */}
           <Row>
+            <Col span={1} displayWidth />
+          </Row>
+          <Row>
+            <Col span={2} displayWidth />
+          </Row>
+          <Row>
+            <Col span={3} displayWidth />
+          </Row>
+          <Row>
+            <Col span={4} displayWidth />
+          </Row>
+          <Row>
+            <Col span={5} displayWidth />
+          </Row>
+          <Row>
+            <Col span={6} displayWidth />
+          </Row>
+          <Row>
+            <Col span={7} displayWidth />
+          </Row>
+          <Row>
+            <Col span={8} displayWidth />
+          </Row>
+          <Row>
+            <Col span={9} displayWidth />
+          </Row>
+          <Row>
+            <Col span={10} displayWidth />
+          </Row>
+          <Row>
+            <Col span={11} displayWidth />
+          </Row>
+          <Row>
             <Col span={12} displayWidth />
           </Row>
           <Row>
