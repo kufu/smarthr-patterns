@@ -15,7 +15,7 @@ export const TemporaryOperationArea: React.FC<Props> = (props) => {
     <Cluster justify="space-between" align="center" className="shr-p-1">
       <form role="search" onSubmit={(e) => e.preventDefault()}>
         <Cluster align="center" gap={1}>
-          <Cluster gap={0.5}>
+          <Cluster>
             <SearchInput tooltipMessage="オブジェクト名で検索できます。" value={searchValue} name="search" />
             <Button type="submit">検索</Button>
           </Cluster>

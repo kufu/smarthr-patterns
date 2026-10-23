@@ -1,9 +1,7 @@
 import { GlobalNav } from '@global'
 import { UpwardLinkWrapper } from '@patterns'
 import { hrefTo } from '@storybook/addon-links'
-import { StoryFn } from '@storybook/react'
 import dayjs from 'dayjs'
-import { ComponentProps } from 'react'
 import {
   Base,
   Button,
@@ -19,6 +17,10 @@ import {
   StatusLabel,
   TextLink,
 } from 'smarthr-ui'
+
+import type { StoryFn } from '@storybook/react'
+import type { ComponentProps } from 'react'
+
 
 const Template: StoryFn<{
   jobTitle: string

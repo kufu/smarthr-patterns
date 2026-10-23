@@ -1,7 +1,10 @@
-import React, { ComponentProps } from 'react'
+
 import { Base, Center, Cluster, Pagination, Stack } from 'smarthr-ui'
 
 import { Table, TableOperationArea, TemporaryOperationArea, TitleArea } from './components'
+
+import type {ComponentProps} from 'react';
+import type React from 'react'
 
 type Props = {
   title: string
@@ -22,7 +25,7 @@ export const CommonTable: React.FC<Props> = (props) => {
   const hasNoSearchResult = searchValue !== '' && totalCount === 0
 
   return (
-    <Stack gap={1}>
+    <Stack>
       <TitleAreaWrapper>
         <TitleArea title={title} description={description} />
         <TableOperationArea isInitialState={isInitialState} className="shr-ms-auto" />

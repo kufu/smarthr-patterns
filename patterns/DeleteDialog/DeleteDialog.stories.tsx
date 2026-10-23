@@ -1,7 +1,8 @@
-import { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 
 import { CancelDialog, DeleteDialog, DeleteWithInfluenceDialog } from './DeleteDialog'
+
+import type { StoryFn } from '@storybook/react'
 
 const Template: StoryFn = ({ withInfluence, cancel }) => {
   const [isOpen, setIsOpen] = useState(true)

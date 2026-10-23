@@ -1,6 +1,4 @@
 import { action } from '@storybook/addon-actions'
-import { StoryFn } from '@storybook/react'
-import { ReactElement } from 'react'
 import {
   AppNavi,
   Base,
@@ -24,6 +22,9 @@ import {
 import styled, { css } from 'styled-components'
 
 import { Theme } from './Theme'
+
+import type { StoryFn } from '@storybook/react'
+import type { ReactElement } from 'react'
 
 type StoryProps = {
   logo?: ReactElement

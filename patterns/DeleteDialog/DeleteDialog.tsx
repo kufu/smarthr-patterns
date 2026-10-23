@@ -1,4 +1,4 @@
-import { ActionDialog, Stack, Text } from 'smarthr-ui'
+import { ActionDialog, Stack } from 'smarthr-ui'
 import styled, { css } from 'styled-components'
 
 type Props = {
@@ -23,7 +23,7 @@ export const DeleteDialog: React.FC<Props> = ({ isOpen, handleAction, handleClos
     onClickClose={handleClose}
   >
     <WrapperStack>
-      <Text as="p">【{'{オブジェクトのインスタンス名}'}】を削除します。</Text>
+      <p>【{'{オブジェクトのインスタンス名}'}】を削除します。</p>
     </WrapperStack>
   </ActionDialog>
 )
@@ -38,7 +38,7 @@ export const DeleteWithInfluenceDialog: React.FC<Props> = ({ isOpen, handleActio
     onClickClose={handleClose}
   >
     <WrapperStack>
-      <Text as="p">
+      <p>
         【{'{オブジェクトのインスタンス名}'}】を削除します。
         <br />
         {'{関連するオブジェクト名など}'}に登録されているデータも削除されます。
@@ -46,8 +46,8 @@ export const DeleteWithInfluenceDialog: React.FC<Props> = ({ isOpen, handleActio
         {'{オブジェクトのインスタンス名}'}に含まれる{'{オブジェクト名}'}も削除されます。
         <br />
         削除した{'{オブジェクト名}'}は元に戻せません。
-      </Text>
-      <Text as="p">{'{オブジェクト名}'}を削除しますか？</Text>
+      </p>
+      <p>{'{オブジェクト名}'}を削除しますか？</p>
     </WrapperStack>
   </ActionDialog>
 )
@@ -62,11 +62,11 @@ export const CancelDialog: React.FC<Props> = ({ isOpen, handleAction, handleClos
     onClickClose={handleClose}
   >
     <WrapperStack>
-      <Text as="p">
+      <p>
         {'{操作名}'}を取り消します。
         <br />
         「取り消し」を押すと変更内容が破棄されます。
-      </Text>
+      </p>
     </WrapperStack>
   </ActionDialog>
 )

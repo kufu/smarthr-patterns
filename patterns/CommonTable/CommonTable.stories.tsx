@@ -1,8 +1,9 @@
-import { StoryFn } from '@storybook/react'
-import { ComponentProps } from 'react'
-
 import { CommonTable } from './CommonTable'
 import mdx from './CommonTable.mdx'
+
+import type { StoryFn } from '@storybook/react'
+import type { ComponentProps } from 'react'
+
 
 const Template: StoryFn<ComponentProps<typeof CommonTable>> = (props) => (
   <div className="shr-p-2">

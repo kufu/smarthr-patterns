@@ -1,7 +1,9 @@
 import { GlobalNav } from '@global'
-import { StoryFn } from '@storybook/react'
 
 import { SelectCompanyAccount } from './SelectCompanyAccount'
+
+import type { StoryFn } from '@storybook/react'
+
 
 const Template: StoryFn = () => (
   <>

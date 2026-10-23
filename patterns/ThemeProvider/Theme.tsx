@@ -1,6 +1,7 @@
 import { ThemeProvider as SHRThemeProvider } from 'smarthr-ui'
-import { CreatedTheme } from 'smarthr-ui/lib/themes/createTheme'
 import { ThemeProvider } from 'styled-components'
+
+import type { CreatedTheme } from 'smarthr-ui/lib/themes/createTheme'
 
 type Props = {
   theme: CreatedTheme
