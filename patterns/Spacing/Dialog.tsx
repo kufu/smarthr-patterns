@@ -33,9 +33,9 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
       {withInformationPanel && (
         <CompactInformationPanel type="warning">1行目を削除します。削除された行は元には戻せません。</CompactInformationPanel>
       )}
-      <Text as="p">
+      <p>
         選択した評価を削除します。評価シートの入力内容や評価者設定などのデータも削除されます。削除された評価は元に戻せません。
-      </Text>
+      </p>
       <Stack gap={1.5}>
         {[...Array(numberOfBlocks).fill(0)].map((_, i) => (
           <Fieldset title={`進捗状況${i + 1}`} key={i} innerMargin={0.5}>
@@ -55,9 +55,9 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
         <Fieldset title="分析対象の従業員項目" innerMargin={0.5}>
           <BaseColumn padding={1}>
             <Stack align="flex-start">
-              <Text as="p">
+              <p>
                 ダウンロード項目を連携先のフォーマットに変換する設定です。「項目を追加」から連携先項目を登録できます。連携先項目名を登録の上、対応するSmartHRの項目や変換方法を設定してください。
-              </Text>
+              </p>
               <FormControl title="被保険者氏名（ヨミ）" titleType="subBlockTitle">
                 <Select options={[]} width="10em" name="select" />
               </FormControl>

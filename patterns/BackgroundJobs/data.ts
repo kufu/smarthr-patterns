@@ -1,5 +1,5 @@
-import { ComponentProps } from 'react'
-import { StatusLabel } from 'smarthr-ui'
+import type { ComponentProps } from 'react'
+import type { StatusLabel } from 'smarthr-ui'
 
 type StatusLabelType = ComponentProps<typeof StatusLabel>
 type BackgroundJobsData = Array<{

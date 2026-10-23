@@ -9,7 +9,7 @@ export const TableOperationArea: React.FC<Props> = (props) => {
   const { className, isInitialState } = props
 
   return (
-    <Cluster className={className} gap={0.5}>
+    <Cluster className={className}>
       {!isInitialState && <Button prefix={<FaArrowsAltVIcon />}>並べ替え</Button>}
       <DropdownMenuButton label="一括操作">
         <Button>オブジェクトの一括追加（CSV）</Button>

@@ -1,4 +1,4 @@
-import { Heading, Stack, Text } from 'smarthr-ui'
+import { Heading, Stack } from 'smarthr-ui'
 
 type Props = {
   title: string
@@ -9,10 +9,10 @@ export const TitleArea: React.FC<Props> = (props) => {
   const { title, description } = props
 
   return (
-    <Stack gap={1}>
+    <Stack>
       {/* eslint-disable-next-line smarthr/a11y-heading-in-sectioning-content */}
       <Heading type="screenTitle">{title}</Heading>
-      {description && <Text as="p">{description}</Text>}
+      {description && <p>{description}</p>}
     </Stack>
   )
 }

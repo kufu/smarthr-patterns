@@ -1,11 +1,12 @@
 import { GlobalNav } from '@global'
 import { action } from '@storybook/addon-actions'
 import { hrefTo } from '@storybook/addon-links'
-import { StoryFn } from '@storybook/react'
 import dayjs from 'dayjs'
 import { Base, Center, PageHeading, Pagination, Stack, StatusLabel, Table, Td, Text, TextLink, Th } from 'smarthr-ui'
 
 import { backgroundJobsData } from './data'
+
+import type { StoryFn } from '@storybook/react'
 
 const Template: StoryFn = (_, { loaded: { detailProcessUri, detailSuccessUri, detailPartFailUri, detailFailUri } }) => {
   const data = backgroundJobsData.map((item) => {

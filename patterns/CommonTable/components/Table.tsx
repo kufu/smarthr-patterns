@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Button,
   Cluster,
@@ -16,6 +15,8 @@ import {
   Th,
   ThCheckbox,
 } from 'smarthr-ui'
+
+import type React from 'react'
 
 type Props = {
   isInitialState: boolean
@@ -57,17 +58,17 @@ export const Table: React.FC<Props> = (props) => {
         </EmptyTableBody>
       ) : hasNoSearchResult ? (
         <EmptyTableBody>
-          <Text as="p">
+          <p>
             <Text>お探しの条件に該当するオブジェクトはありません。</Text>
             <br />
             <Text>別の条件をお試しください。</Text>
-          </Text>
+          </p>
         </EmptyTableBody>
       ) : (
         <tbody>
           {sampleObjects.map(({ id, status, name, info1, info2 }) => (
             <tr key={id}>
-              <TdCheckbox name={`table-checkbox`} aria-labelledby={`name-${id}`} />
+              <TdCheckbox name="table-checkbox" aria-labelledby={`name-${id}`} />
               <Td>
                 <StatusLabel>{status}</StatusLabel>
               </Td>

@@ -1,8 +1,10 @@
 import { GlobalNav } from '@global'
-import { StoryFn } from '@storybook/react'
-import { ComponentProps } from 'react'
 
 import { SpacingBase } from './Base'
+
+import type { StoryFn } from '@storybook/react'
+import type { ComponentProps } from 'react'
+
 
 export default {
   title: '余白の取り方/基本',

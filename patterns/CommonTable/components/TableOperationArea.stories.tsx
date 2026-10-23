@@ -1,7 +1,8 @@
-import { StoryFn } from '@storybook/react'
-import { ComponentProps } from 'react'
-
 import { TableOperationArea } from '.'
+
+import type { StoryFn } from '@storybook/react'
+import type { ComponentProps } from 'react'
+
 
 const Template: StoryFn<ComponentProps<typeof TableOperationArea>> = (props) => <TableOperationArea {...props} />
 
