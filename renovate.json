@@ -7,8 +7,8 @@
       {
         "matchDepTypes": ["dependencies"],
         "matchUpdateTypes": ["minor", "patch"],
-        "excludeDepNames": ["smarthr-ui", "smarthr-normalize-css"],
-        "automerge": true
+        "automerge": true,
+        "matchDepNames": ["!smarthr-ui", "!smarthr-normalize-css"]
       },
       {
         "matchDepTypes": ["devDependencies"],
