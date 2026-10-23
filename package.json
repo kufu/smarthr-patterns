@@ -55,6 +55,6 @@
     "vite-tsconfig-paths": "^5.1.4"
   },
   "resolutions": {
-    "jackspeak": "2.3.6"
+    "jackspeak": "4.1.1"
   }
 }
