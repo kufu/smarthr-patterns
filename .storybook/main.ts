@@ -1,5 +1,4 @@
 import { mergeConfig } from 'vite'
-import turbosnap from 'vite-plugin-turbosnap'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 import type { StorybookConfig } from '@storybook/react-vite'
@@ -25,7 +24,7 @@ const config: StorybookConfig = {
   },
   viteFinal: async (config) =>
     mergeConfig(config, {
-      plugins: [tsconfigPaths(), turbosnap({ rootDir: config.root ?? process.cwd() })],
+      plugins: [tsconfigPaths()],
     }),
 }
 
