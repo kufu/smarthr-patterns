@@ -6,6 +6,14 @@ name: 'Chromatic'
 # Event for the workflow
 on: push
 
+permissions:
+  contents: read
+
+# Cancel outdated runs on the same branch
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 # List of jobs
 jobs:
   chromatic-deployment:
@@ -16,8 +24,12 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: yarn
       - name: Install dependencies
-        run: yarn
+        run: yarn install --frozen-lockfile
         # 👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic
         uses: chromaui/action@e50abd573c8a789526f165fec06137a7c21d7299 # v18.13.0
