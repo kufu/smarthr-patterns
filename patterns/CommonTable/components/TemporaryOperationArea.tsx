@@ -1,4 +1,4 @@
-import { Button, Cluster, FaCloudDownloadAltIcon, FilterDropdown, PageCounter, Pagination, SearchInput } from 'smarthr-ui'
+import { Button, Cluster, FaCloudArrowDownIcon, FilterDropdown, PageCounter, Pagination, SearchInput } from 'smarthr-ui'
 
 type Props = {
   searchValue: string
@@ -20,7 +20,7 @@ export const TemporaryOperationArea: React.FC<Props> = (props) => {
             <Button type="submit">検索</Button>
           </Cluster>
           <FilterDropdown onApply={() => null}>絞り込みの中身</FilterDropdown>
-          <Button type="submit" prefix={<FaCloudDownloadAltIcon />}>
+          <Button type="submit" prefix={<FaCloudArrowDownIcon />}>
             ダウンロード
           </Button>
         </Cluster>

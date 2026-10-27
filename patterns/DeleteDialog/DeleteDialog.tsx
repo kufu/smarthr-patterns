@@ -1,5 +1,4 @@
-import { ActionDialog, Stack } from 'smarthr-ui'
-import styled, { css } from 'styled-components'
+import { ControlledActionDialog, Stack } from 'smarthr-ui'
 
 type Props = {
   isOpen: boolean
@@ -7,37 +6,29 @@ type Props = {
   handleClose: () => void
 }
 
-const WrapperStack = styled(Stack)`
-  ${({ theme: { space } }) => css`
-    padding: ${space(1.5)};
-  `}
-`
-
 export const DeleteDialog: React.FC<Props> = ({ isOpen, handleAction, handleClose }) => (
-  <ActionDialog
+  <ControlledActionDialog
     isOpen={isOpen}
-    title="{オブジェクト名}を削除しますか？"
-    actionText="削除"
-    actionTheme="danger"
+    heading="{オブジェクト名}を削除しますか？"
+    actionButton={{ text: '削除', theme: 'danger' }}
     onClickAction={handleAction}
     onClickClose={handleClose}
   >
-    <WrapperStack>
+    <Stack>
       <p>【{'{オブジェクトのインスタンス名}'}】を削除します。</p>
-    </WrapperStack>
-  </ActionDialog>
+    </Stack>
+  </ControlledActionDialog>
 )
 
 export const DeleteWithInfluenceDialog: React.FC<Props> = ({ isOpen, handleAction, handleClose }) => (
-  <ActionDialog
+  <ControlledActionDialog
     isOpen={isOpen}
-    title="{オブジェクト名}を削除しますか？"
-    actionText="削除"
-    actionTheme="danger"
+    heading="{オブジェクト名}を削除しますか？"
+    actionButton={{ text: '削除', theme: 'danger' }}
     onClickAction={handleAction}
     onClickClose={handleClose}
   >
-    <WrapperStack>
+    <Stack>
       <p>
         【{'{オブジェクトのインスタンス名}'}】を削除します。
         <br />
@@ -48,25 +39,24 @@ export const DeleteWithInfluenceDialog: React.FC<Props> = ({ isOpen, handleActio
         削除した{'{オブジェクト名}'}は元に戻せません。
       </p>
       <p>{'{オブジェクト名}'}を削除しますか？</p>
-    </WrapperStack>
-  </ActionDialog>
+    </Stack>
+  </ControlledActionDialog>
 )
 
 export const CancelDialog: React.FC<Props> = ({ isOpen, handleAction, handleClose }) => (
-  <ActionDialog
+  <ControlledActionDialog
     isOpen={isOpen}
-    title="{操作名}を取り消しますか？"
-    actionText="取り消し"
-    actionTheme="danger"
+    heading="{操作名}を取り消しますか？"
+    actionButton={{ text: '取り消し', theme: 'danger' }}
     onClickAction={handleAction}
     onClickClose={handleClose}
   >
-    <WrapperStack>
+    <Stack>
       <p>
         {'{操作名}'}を取り消します。
         <br />
         「取り消し」を押すと変更内容が破棄されます。
       </p>
-    </WrapperStack>
-  </ActionDialog>
+    </Stack>
+  </ControlledActionDialog>
 )

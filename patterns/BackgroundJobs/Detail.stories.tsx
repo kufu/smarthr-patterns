@@ -8,8 +8,9 @@ import {
   Center,
   Cluster,
   DefinitionList,
+  DefinitionListItem,
   FaArrowLeftIcon,
-  FaCloudDownloadAltIcon,
+  FaCloudArrowDownIcon,
   Heading,
   PageHeading,
   Sidebar,
@@ -19,14 +20,16 @@ import {
 } from 'smarthr-ui'
 
 import type { StoryFn } from '@storybook/react'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
+
+type DefinitionItem = { term: ReactNode; description: ReactNode; fullWidth?: boolean }
 
 
 const Template: StoryFn<{
   jobTitle: string
   status: { label: string; type: ComponentProps<typeof StatusLabel>['type'] }
-  jobInfoData: ComponentProps<typeof DefinitionList>['items']
-  jobResultData: ComponentProps<typeof DefinitionList>['items']
+  jobInfoData: DefinitionItem[]
+  jobResultData: DefinitionItem[]
 }> = ({ jobTitle, status, jobInfoData, jobResultData }, { loaded: { listUri } }) => (
   <>
     <GlobalNav current="バックグラウンド処理" />
@@ -45,13 +48,13 @@ const Template: StoryFn<{
           <Stack gap={0.75} as="section" className="shr-basis-[10em]">
             <Heading>処理情報</Heading>
             <Base padding={1.5}>
-              <DefinitionList items={jobInfoData} />
+              <DefinitionList>{renderItems(jobInfoData)}</DefinitionList>
             </Base>
           </Stack>
           <Stack gap={0.75} as="section">
             <Heading>処理結果</Heading>
             <Base padding={1.5}>
-              <DefinitionList items={jobResultData} />
+              <DefinitionList>{renderItems(jobResultData)}</DefinitionList>
             </Base>
           </Stack>
         </Sidebar>
@@ -59,6 +62,13 @@ const Template: StoryFn<{
     </Center>
   </>
 )
+
+const renderItems = (items: DefinitionItem[]) =>
+  items.map(({ term, description, fullWidth }, i) => (
+    <DefinitionListItem key={i} term={term} fullWidth={fullWidth}>
+      {description}
+    </DefinitionListItem>
+  ))
 
 export const 処理中 = {
   render: Template,
@@ -96,7 +106,7 @@ export const 成功 = {
     jobResultData: [
       { term: '結果詳細', description: 'CSVファイルを出力しました。', fullWidth: true },
       { term: 'エラー内容', description: '-', fullWidth: true },
-      { term: '添付ファイル', description: <Button prefix={<FaCloudDownloadAltIcon />}>ダウンロード</Button>, fullWidth: true },
+      { term: '添付ファイル', description: <Button prefix={<FaCloudArrowDownIcon />}>ダウンロード</Button>, fullWidth: true },
     ],
   },
   loaders: [
