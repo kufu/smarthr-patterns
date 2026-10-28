@@ -13,9 +13,13 @@ export const SelectCompanyAccount = () => {
       <Stack as="ul">
         {companyList.map(({ id, name }) => (
           // eslint-disable-next-line smarthr/a11y-input-in-form-control
-          <RadioButtonPanel key={id} name="companyAccount" checked={id === selectedId} onChange={() => setSelectedId(id)}>
-            {name}
-          </RadioButtonPanel>
+          <RadioButtonPanel
+            key={id}
+            name="companyAccount"
+            label={name}
+            checked={id === selectedId}
+            onChange={() => setSelectedId(id)}
+          />
         ))}
       </Stack>
       <div>

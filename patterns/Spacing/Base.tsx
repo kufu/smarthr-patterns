@@ -1,4 +1,4 @@
-import { Base, Heading, InformationPanel, PageHeading, SectioningFragment, Stack } from 'smarthr-ui'
+import { Base, Heading, InformationPanel, PageHeading, Section, Stack } from 'smarthr-ui'
 
 type Props = {
   withInformationPanel: boolean
@@ -15,7 +15,7 @@ export const SpacingBase: React.FC<Props> = ({ withInformationPanel }) => (
           </p>
         </Stack>
         {withInformationPanel && (
-          <InformationPanel title="インフォメーションパネルタイトル" togglable={false}>
+          <InformationPanel heading="インフォメーションパネルタイトル" toggleable={false}>
             <p>
               注意を引きたいメッセージ。以下はダミーテキストです。
               カスタムマスター項目を一括で追加・更新するにはCSVファイルを取り込みます。
@@ -25,8 +25,8 @@ export const SpacingBase: React.FC<Props> = ({ withInformationPanel }) => (
       </Stack>
       <Stack as="section">
         <Heading>セクション見出し</Heading>
-        <SectioningFragment>
-          <Base padding={1.5} as="section">
+        <Section>
+          <Base padding={1.5}>
             <Stack gap={1.5}>
               <Stack>
                 <Heading type="blockTitle">ブロック見出し</Heading>
@@ -50,7 +50,7 @@ export const SpacingBase: React.FC<Props> = ({ withInformationPanel }) => (
               </Stack>
             </Stack>
           </Base>
-        </SectioningFragment>
+        </Section>
       </Stack>
     </Stack>
   </Stack>

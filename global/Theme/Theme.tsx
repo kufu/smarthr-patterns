@@ -1,16 +1,20 @@
 import CssBaseLine from 'smarthr-normalize-css/lib'
-import { ThemeProvider as ShrThemeProvider, createTheme } from 'smarthr-ui'
+import { IntlProvider, ThemeProvider as ShrThemeProvider, createTheme } from 'smarthr-ui'
 import { ThemeProvider, createGlobalStyle, css } from 'styled-components'
+
+import 'smarthr-ui/smarthr-ui.css'
 
 const appTheme = createTheme()
 
 const Theme: React.FC<React.PropsWithChildren> = ({ children }) => (
-  <ThemeProvider theme={appTheme}>
-    <ShrThemeProvider theme={appTheme}>
-      <GlobalStyle />
-      {children}
-    </ShrThemeProvider>
-  </ThemeProvider>
+  <IntlProvider locale="ja">
+    <ThemeProvider theme={appTheme}>
+      <ShrThemeProvider theme={appTheme}>
+        <GlobalStyle />
+        {children}
+      </ShrThemeProvider>
+    </ThemeProvider>
+  </IntlProvider>
 )
 
 const GlobalStyle = createGlobalStyle`

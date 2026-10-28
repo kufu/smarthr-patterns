@@ -2,10 +2,10 @@ import {
   Button,
   Cluster,
   EmptyTableBody,
+  FaCirclePlusIcon,
   FaCopyIcon,
   FaPenIcon,
-  FaPlusCircleIcon,
-  FaTrashIcon,
+  FaTrashCanIcon,
   Table as ShrTable,
   Stack,
   StatusLabel,
@@ -50,7 +50,7 @@ export const Table: React.FC<Props> = (props) => {
           <Stack align="center">
             <Text>オブジェクトはまだ登録されていません。</Text>
             <div>
-              <Button size="s" prefix={<FaPlusCircleIcon />}>
+              <Button size="S" prefix={<FaCirclePlusIcon />}>
                 項目を追加
               </Button>
             </div>
@@ -77,13 +77,13 @@ export const Table: React.FC<Props> = (props) => {
               <Td>{info2}</Td>
               <Td>
                 <Cluster>
-                  <Button size="s" prefix={<FaPenIcon />}>
+                  <Button size="S" prefix={<FaPenIcon />}>
                     操作1
                   </Button>
-                  <Button size="s" prefix={<FaCopyIcon />}>
+                  <Button size="S" prefix={<FaCopyIcon />}>
                     操作2
                   </Button>
-                  <Button size="s" prefix={<FaTrashIcon />}>
+                  <Button size="S" prefix={<FaTrashCanIcon />}>
                     操作3
                   </Button>
                 </Cluster>
