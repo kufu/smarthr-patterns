@@ -36,7 +36,7 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@types/styled-components": "^5.1.36",
-    "autoprefixer": "^10.6.1",
+    "autoprefixer": "^10.6.2",
     "eslint": "^9.39.5",
     "eslint-config-smarthr": "^14.13.0",
     "eslint-plugin-storybook": "^0.12.0",
