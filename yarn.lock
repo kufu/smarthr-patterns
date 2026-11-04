@@ -3271,10 +3271,10 @@ eslint-config-prettier@^10.1.8:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-10.1.8.tgz#15734ce4af8c2778cc32f0b01b37b0b5cd1ecb97"
   integrity sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w==
 
-eslint-config-smarthr@^14.13.0:
-  version "14.13.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-smarthr/-/eslint-config-smarthr-14.13.0.tgz#31e52235549789867b6ad82f271b418b302d8305"
-  integrity sha512-gHWuF057UNRxHgeCF5/VYNCJRGpnu4p9OXETxgB288vMvUgBA85FXOY1g7LD6/55NjZXvabOYP4C/d6c/dwKzQ==
+eslint-config-smarthr@^14.14.0:
+  version "14.14.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-smarthr/-/eslint-config-smarthr-14.14.0.tgz#c8465611e4bbcc2fbb890f300324067a954f71ec"
+  integrity sha512-UPJJPWCjOOhvrAg8f/fc3oVV3+l6HmhTZ4pK8cQD7lyHWHvcTePxAm0OKix5/Mb6RH0xbBs5biRd4e1y/+82SA==
   dependencies:
     "@eslint/js" "9.39.5"
     "@typescript-eslint/eslint-plugin" "^8.56.1"
@@ -3284,7 +3284,7 @@ eslint-config-smarthr@^14.13.0:
     eslint-plugin-jsx-a11y "^6.10.2"
     eslint-plugin-react "^7.37.5"
     eslint-plugin-react-hooks "^7.1.1"
-    eslint-plugin-smarthr "6.27.0"
+    eslint-plugin-smarthr "6.28.0"
     globals "^17.13.0"
     typescript-eslint "^8.56.1"
 
@@ -3385,10 +3385,10 @@ eslint-plugin-react@^7.37.5:
     string.prototype.matchall "^4.0.12"
     string.prototype.repeat "^1.0.0"
 
-eslint-plugin-smarthr@6.27.0:
-  version "6.27.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-smarthr/-/eslint-plugin-smarthr-6.27.0.tgz#56cf8ecbf60c1399611759a32c140e0421074b32"
-  integrity sha512-DiZ569pj54OytjnSiYyIeOPb+1UFuKjcoCbeBR8w+U8taMcS2kgnfgq5UChulJHWiJvpbbCx4R7552Fjpuy2Ng==
+eslint-plugin-smarthr@6.28.0:
+  version "6.28.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-smarthr/-/eslint-plugin-smarthr-6.28.0.tgz#c19430284f4cf8f1943b9b5c31c5de4406e540e6"
+  integrity sha512-UfP8pcmjfGl8oDO9zclTpJuZUQqaCrtURf5vQ73QfF8uaPcZr9tV4op3qWYO2mJidNlaV75Q5BaiJidCX0mZVg==
   dependencies:
     json5 "^2.2.3"
 
