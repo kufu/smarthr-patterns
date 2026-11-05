@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "license": "MIT",
+  "packageManager": "pnpm@12.15.0",
   "scripts": {
     "dev": "run-s storybook",
     "storybook": "storybook dev -p 8008",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "@storybook/addon-actions": "^8.6.19",
+    "@storybook/addon-docs": "^8.6.14",
     "@storybook/addon-essentials": "^8.6.14",
     "@storybook/addon-interactions": "^8.6.14",
     "@storybook/addon-links": "^8.6.19",
@@ -33,6 +35,7 @@
     "@storybook/react": "^8.6.19",
     "@storybook/react-vite": "^8.6.19",
     "@storybook/testing-library": "^0.2.2",
+    "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@types/styled-components": "^5.1.36",
@@ -51,8 +54,5 @@
     "typescript": "^5.9.3",
     "vite": "^5.4.21",
     "vite-tsconfig-paths": "^5.1.4"
-  },
-  "resolutions": {
-    "jackspeak": "4.2.3"
   }
 }
