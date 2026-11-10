@@ -2,7 +2,7 @@ import { GlobalNav } from '@global'
 
 import { SpacingBase } from './Base'
 
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
 

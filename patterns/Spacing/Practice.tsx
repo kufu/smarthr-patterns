@@ -1,5 +1,4 @@
 import { UpwardLinkWrapper } from '@patterns'
-import { action } from '@storybook/addon-actions'
 import {
   Base,
   BaseColumn,
@@ -22,6 +21,7 @@ import {
   TextLink,
   WarekiPicker,
 } from 'smarthr-ui'
+import { action } from 'storybook/actions'
 
 type Props = {
   withInformationPanel: boolean

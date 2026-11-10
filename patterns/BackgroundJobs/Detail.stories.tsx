@@ -19,7 +19,7 @@ import {
   TextLink,
 } from 'smarthr-ui'
 
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps, ReactNode } from 'react'
 
 type DefinitionItem = { term: ReactNode; description: ReactNode; fullWidth?: boolean }

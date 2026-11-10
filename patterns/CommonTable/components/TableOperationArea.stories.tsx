@@ -1,6 +1,6 @@
 import { TableOperationArea } from '.'
 
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
 
