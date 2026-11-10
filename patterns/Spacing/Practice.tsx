@@ -6,7 +6,6 @@ import {
   Button,
   Checkbox,
   Cluster,
-  DatePicker,
   DropdownMenuButton,
   FaArrowLeftIcon,
   Fieldset,
@@ -21,6 +20,7 @@ import {
   TabItem,
   Text,
   TextLink,
+  WarekiPicker,
 } from 'smarthr-ui'
 
 type Props = {
@@ -153,7 +153,7 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
                     label={{ text: "経路名", styleType: "subBlockTitle" }}
                     errorMessages="削除したカスタムマスターは元に戻せません。"
                   >
-                    <DatePicker name="datepicker" />
+                    <WarekiPicker name="datepicker" showAlternative={false} />
                   </FormControl>
                 </Fieldset>
               </Base>
