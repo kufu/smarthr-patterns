@@ -2,7 +2,7 @@ import { GlobalNav } from '@global'
 
 import { SelectCompanyAccount } from './SelectCompanyAccount'
 
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 
 
 const Template: StoryFn = () => (

@@ -1,4 +1,3 @@
-import { action } from '@storybook/addon-actions'
 import {
   BaseColumn,
   Checkbox,
@@ -11,6 +10,7 @@ import {
   Stack,
   Text,
 } from 'smarthr-ui'
+import { action } from 'storybook/actions'
 import styled, { css } from 'styled-components'
 
 type Props = {

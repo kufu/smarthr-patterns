@@ -1,7 +1,7 @@
 import { CommonTable } from './CommonTable'
 import mdx from './CommonTable.mdx'
 
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 
 
