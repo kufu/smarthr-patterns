@@ -13,7 +13,6 @@ import {
   FaCloudArrowDownIcon,
   Heading,
   PageHeading,
-  Sidebar,
   Stack,
   StatusLabel,
   TextLink,
@@ -44,8 +43,8 @@ const Template: StoryFn<{
           <StatusLabel type={status.type}>{status.label}</StatusLabel>
           <PageHeading>{jobTitle}</PageHeading>
         </Cluster>
-        <Sidebar gap={1.5}>
-          <Stack gap={0.75} as="section" className="shr-basis-[10em]">
+        <Cluster gap={1.5} grow="end">
+          <Stack gap={0.75} as="section" className="shr-grow shr-basis-[10em]">
             <Heading>処理情報</Heading>
             <Base padding={1.5}>
               <DefinitionList>{renderItems(jobInfoData)}</DefinitionList>
@@ -57,7 +56,7 @@ const Template: StoryFn<{
               <DefinitionList>{renderItems(jobResultData)}</DefinitionList>
             </Base>
           </Stack>
-        </Sidebar>
+        </Cluster>
       </Stack>
     </Center>
   </>

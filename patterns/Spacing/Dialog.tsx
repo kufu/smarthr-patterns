@@ -26,7 +26,7 @@ export const SpacingDialog: React.FC<Props> = ({ withInformationPanel, numberOfB
     onClickAction={action('clicked action')}
     onClickClose={action('clicked close')}
     onClickOverlay={action('clicked overlay')}
-    width="50em"
+    className="shr-w-[50em]"
   >
     <Stack gap={2}>
       {withInformationPanel && (
