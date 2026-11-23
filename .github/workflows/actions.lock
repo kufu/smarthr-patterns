@@ -6,7 +6,7 @@ workflows:
     '.github/workflows/chromatic.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/setup-node@v7.1.0'
-        - 'chromaui/action@v18.14.3'
+        - 'chromaui/action@v18.14.4'
         - 'pnpm/action-setup@v6.1.1'
     '.github/workflows/verify-actions-lock.yml':
         - 'actions/checkout@v7.0.1'
@@ -21,9 +21,9 @@ dependencies:
         commit: 'sha1-949feb2413d6458794dcd2491c4babbbce0c15c1'
         owner_id: 44036562
         repo_id: 189476904
-    'chromaui/action@v18.14.3':
-        ref: 'v18.14.3'
-        commit: 'sha1-2b75e3340bcec86b4ae38c6a10f14831114e8137'
+    'chromaui/action@v18.14.4':
+        ref: 'v18.14.4'
+        commit: 'sha1-5d18868345f53a8f61258ad393396c7e169100fd'
         owner_id: 24584319
         repo_id: 213995974
     'pnpm/action-setup@v6.1.1':
