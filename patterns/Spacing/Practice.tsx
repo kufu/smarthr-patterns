@@ -41,8 +41,8 @@ export const SpacingPractice: React.FC<Props> = ({ withInformationPanel, withUpw
     <Stack gap={2} as="main">
       <Stack gap={1.5}>
         <Stack>
-          <Cluster justify="space-between">
-            <Cluster align="center">
+          <Cluster justify="space-between" grow="start">
+            <Cluster align="center" grow="end">
               <StatusLabel>連帯債務</StatusLabel>
               <PageHeading>雇入れ又は離職に係る事業所</PageHeading>
             </Cluster>
