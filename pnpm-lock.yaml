@@ -194,8 +194,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0(styled-components@5.3.11(react-dom@19.3.1(react@19.3.1))(react-is@19.3.1)(react@19.3.1))
       smarthr-ui:
-        specifier: ^103.1.1
-        version: 103.1.1(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react-intl@10.2.2(@types/react@19.3.0)(react@19.3.1))(react@19.3.1)
+        specifier: ^104.0.0
+        version: 104.0.0(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react-intl@10.2.2(@types/react@19.3.0)(react@19.3.1))(react@19.3.1)
       styled-components:
         specifier: ^5.3.11
         version: 5.3.11(react-dom@19.3.1(react@19.3.1))(react-is@19.3.1)(react@19.3.1)
@@ -3504,8 +3504,8 @@ packages:
   smarthr-normalize-css@1.1.0:
     resolution: {integrity: sha512-RNi5bkp8dYvZs/yqOihZ+an5Wf3oXiBMRRvSYhCKNhV+Qkg1otqIxmP3ELUWVwMZx9v+zZG1LLAJ0sxPkHXOcg==}
 
-  smarthr-ui@103.1.1:
-    resolution: {integrity: sha512-MVBc55uRpF+sVakBUx8bWm0Aq3ZkgCKqERjQWGFsOFVXmMauogVd92+lsE8ikdLf80/x743vl0J8w7lIEaUknw==}
+  smarthr-ui@104.0.0:
+    resolution: {integrity: sha512-Hastx1X+erWj3diJyh5KMc9t/pfWReMoCs55JGsS5tfkBh09+RtRO1db1JwZIr8LaLIlWgzmerncJCkEUeDw3Q==}
     peerDependencies:
       react: ^19.0.0
       react-dom: ^19.0.0
@@ -7330,7 +7330,7 @@ snapshots:
     transitivePeerDependencies:
       - styled-components
 
-  smarthr-ui@103.1.1(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react-intl@10.2.2(@types/react@19.3.0)(react@19.3.1))(react@19.3.1):
+  smarthr-ui@104.0.0(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react-intl@10.2.2(@types/react@19.3.0)(react@19.3.1))(react@19.3.1):
     dependencies:
       '@smarthr/wareki': 1.3.2
       dayjs: 1.11.23
