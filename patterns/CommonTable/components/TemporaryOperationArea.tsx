@@ -15,7 +15,7 @@ export const TemporaryOperationArea: React.FC<Props> = (props) => {
     <Cluster justify="space-between" align="center" className="shr-p-1">
       <form role="search" onSubmit={(e) => e.preventDefault()}>
         <Cluster align="center" gap={1}>
-          <Cluster>
+          <Cluster inline>
             <SearchInput tooltipMessage="オブジェクト名で検索できます。" value={searchValue} name="search" />
             <Button type="submit">検索</Button>
           </Cluster>
@@ -26,7 +26,7 @@ export const TemporaryOperationArea: React.FC<Props> = (props) => {
         </Cluster>
       </form>
       {totalCount > 0 && (
-        <Cluster gap={1} align="center">
+        <Cluster gap={1} align="center" inline>
           <PageCounter start={1 + (currentPage - 1) * limitValue} end={currentPage * limitValue} total={totalCount} />
           <Pagination current={currentPage} total={totalPages} withoutNumbers onClick={() => null} />
         </Cluster>

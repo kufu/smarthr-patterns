@@ -39,7 +39,7 @@ const Template: StoryFn<{
             一覧に戻る
           </TextLink>
         </UpwardLinkWrapper>
-        <Cluster align="center">
+        <Cluster align="center" grow="end">
           <StatusLabel type={status.type}>{status.label}</StatusLabel>
           <PageHeading>{jobTitle}</PageHeading>
         </Cluster>
